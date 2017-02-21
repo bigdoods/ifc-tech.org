@@ -1,0 +1,1116 @@
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+
+<!Doctype html>
+<html id="docs" class="Support">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto+Mono' type='text/css'>
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <link rel="stylesheet" href="/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/css/sweetalert.css">
+    
+    <script src="/js/jquery-2.2.0.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/sweetalert.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Begin Jekyll SEO tag v2.1.0 -->
+<title>Deploying Kubernetes with Calico Networking on Ubuntu - Kubernetes</title>
+<meta property="og:title" content="Deploying Kubernetes with Calico Networking on Ubuntu" />
+<meta name="description" content="Production-Grade Container Orchestration" />
+<meta property="og:description" content="Production-Grade Container Orchestration" />
+<link rel="canonical" href="http://localhost:4000/docs/getting-started-guides/ubuntu/calico/" />
+<meta property="og:url" content="http://localhost:4000/docs/getting-started-guides/ubuntu/calico/" />
+<meta property="og:site_name" content="Kubernetes" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@kubernetesio" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "WebPage",
+"headline": "Deploying Kubernetes with Calico Networking on Ubuntu",
+"description": "Production-Grade Container Orchestration",
+"publisher": {"@type": "Organization",
+"logo": {"@type": "ImageObject",
+"url": "http://localhost:4000/images/favicon.png"}},
+"url": "http://localhost:4000/docs/getting-started-guides/ubuntu/calico/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+<body>
+
+<div id="cellophane" onclick="kub.toggleMenu()"></div>
+
+<header>
+    <a href="/" class="logo"></a>
+
+    <div class="nav-buttons" data-auto-burger="primary">
+        <ul class="global-nav">
+            <li><a href="/docs/">Documentation</a></li>
+            <li><a href="http://blog.kubernetes.io/">Blog</a></li>
+            <li><a href="/partners/">Partners</a></li>
+            <li><a href="/community/">Community</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+        </ul>
+        <!-- <a href="/docs/" class="button" id="viewDocs" data-auto-burger-exclude>View Documentation</a> -->
+        <a href="/docs/tutorials/kubernetes-basics/" class="button" id="tryKubernetes" data-auto-burger-exclude>Try Kubernetes</a>
+        <button id="hamburger" onclick="kub.toggleMenu()" data-auto-burger-exclude><div></div></button>
+    </div>
+
+    <nav id="mainNav">
+        <main data-auto-burger="primary">
+        <div class="nav-box">
+            <h3><a href="/docs/hellonode/">Get Started</a></h3>
+            <p>Ready to get your hands dirty? Build a simple Kubernetes cluster that runs "Hello World" for Node.js.</p>
+        </div>
+        <div class="nav-box">
+            <h3><a href="/docs/">Documentation</a></h3>
+            <p>Learn how to use Kubernetes with the use of walkthroughs, samples, and reference documentation. You can even <a href="/editdocs/" data-auto-burger-exclude>help contribute to the docs</a>!</p>
+        </div>
+        <div class="nav-box">
+            <h3><a href="/community/">Community</a></h3>
+            <p>If you need help, you can connect with other Kubernetes users and the Kubernetes authors, attend community events, and watch video presentations from around the web.</p>
+        </div>
+        <div class="nav-box">
+            <h3><a href="http://blog.kubernetes.io">Blog</a></h3>
+            <p>Read the latest news for Kubernetes and the containers space in general, and get technical how-tos hot off the presses.</p>
+        </div>
+        </main>
+        <main data-auto-burger="primary">
+        <div class="left">
+            <h5 class="github-invite">Interested in hacking on the core Kubernetes code base?</h5>
+            <a href="https://github.com/kubernetes/kubernetes" class="button" data-auto-burger-exclude>View On Github</a>
+        </div>
+
+        <div class="right">
+            <h5 class="github-invite">Explore the community</h5>
+            <div class="social">
+                <a href="https://twitter.com/kubernetesio" class="twitter"><span>Twitter</span></a>
+                <a href="https://github.com/kubernetes/kubernetes" class="github"><span>Github</span></a>
+                <a href="http://slack.k8s.io/" class="slack"><span>Slack</span></a>
+                <a href="http://stackoverflow.com/questions/tagged/kubernetes" class="stack-overflow"><span>Stack Overflow</span></a>
+                <a href="https://groups.google.com/forum/#!forum/kubernetes-users" class="mailing-list"><span>Mailing List</span></a>
+                <a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar"><span>Events Calendar</span></a>
+            </div>
+        </div>
+        <div class="clear" style="clear: both"></div>
+        </main>
+    </nav>
+</header>
+
+
+<!--  HERO  -->
+<section id="hero" class="light-text">
+  <h1>Support</h1>
+  <h5>Troubleshooting resources, frequently asked questions, and community support channels.</h5>
+  <div id="vendorStrip" class="light-text">
+    <ul>
+      <li><a href="/docs/" >DOCS HOME</a></li>
+      <li><a href="/docs/user-guide/" >GUIDES</a></li>
+      <li><a href="/docs/tutorials/" >TUTORIALS</a></li>
+      <li><a href="/docs/tasks/" >TASKS</a></li>
+      <li><a href="/docs/concepts/" >CONCEPTS</a></li>
+      <li><a href="/docs/reference/" >REFERENCE</a></li>
+      <li><a href="/docs/tools/" >TOOLS</a></li>
+      <li><a href="/docs/samples/" >SAMPLES</a></li>
+      <li><a href="/docs/troubleshooting/" class="YAH">SUPPORT</a></li>
+    </ul>
+    <div id="searchBox">
+      <input type="text" id="search" placeholder="Search" onkeydown="if (event.keyCode==13) window.location.replace('/docs/search/?q=' + this.value)">
+    </div>
+  </div>
+</section>
+
+<section id="encyclopedia">
+  <div id="docsToc">
+        <div class="pi-accordion">
+        
+          
+  
+
+    
+
+    
+      <a class="item" data-title="Support" href="/docs/troubleshooting/"></a>
+    
+  
+
+  
+    <div class="item" data-title="Troubleshooting">
+      <div class="container">
+        
+  
+
+    
+
+    
+      <a class="item" data-title="User Guide" href="/docs/user-guide/"></a>
+    
+  
+
+
+      </div>
+    </div>
+  
+
+  
+    <div class="item" data-title="Frequently Asked Questions">
+      <div class="container">
+        
+  
+
+    
+
+    
+      <a class="item" data-title="User FAQ" href="https://github.com/kubernetes/kubernetes/wiki/User-FAQ/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Debugging FAQ" href="https://github.com/kubernetes/kubernetes/wiki/Debugging-FAQ/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Services FAQ" href="https://github.com/kubernetes/kubernetes/wiki/Services-FAQ/"></a>
+    
+  
+
+
+      </div>
+    </div>
+  
+
+  
+    <div class="item" data-title="Contributing to the Kubernetes Docs">
+      <div class="container">
+        
+  
+
+    
+
+    
+      <a class="item" data-title="Contributing to the Kubernetes Documentation" href="/editdocs/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Creating a Documentation Pull Request" href="/docs/contribute/create-pull-request/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Writing a New Topic" href="/docs/contribute/write-new-topic/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Staging Your Documentation Changes" href="/docs/contribute/stage-documentation-changes/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Using Page Templates" href="/docs/contribute/page-templates/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Reviewing Documentation Issues" href="/docs/contribute/review-issues/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Documentation Style Guide" href="/docs/contribute/style-guide/"></a>
+    
+  
+
+
+      </div>
+    </div>
+  
+
+  
+    <div class="item" data-title="Other Resources">
+      <div class="container">
+        
+  
+
+    
+
+    
+      <a class="item" data-title="Kubernetes Issue Tracker on GitHub" href="https://github.com/kubernetes/kubernetes/issues/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Report a Security Vulnerability" href="/docs/reporting-security-issues/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Release Notes" href="https://github.com/kubernetes/kubernetes/releases/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Release Roadmap" href="https://github.com/kubernetes/kubernetes/milestones/"></a>
+    
+  
+
+
+      </div>
+    </div>
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Deprecation Policy" href="/docs/deprecation-policy.md"></a>
+    
+  
+
+
+        
+        </div> <!-- /pi-accordion -->
+    <button class="push-menu-close-button" onclick="kub.toggleToc()"></button>
+  </div> <!-- /docsToc -->
+
+  <div id="docsContent">
+        <p><a href="/editdocs#docs/getting-started-guides/ubuntu/calico.md" id="editPageButton">Edit This Page</a></p>
+
+        
+          <h1>Deploying Kubernetes with Calico Networking on Ubuntu</h1>
+        
+
+        
+<h2 id="support-level">Support Level</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>IaaS Provider</th>
+      <th>Config. Mgmt</th>
+      <th>OS</th>
+      <th>Networking</th>
+      <th>Docs</th>
+      <th>Conforms</th>
+      <th>Support Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bare-metal</td>
+      <td>custom</td>
+      <td>Ubuntu</td>
+      <td>Calico</td>
+      <td><a href="/docs/getting-started-guides/ubuntu-calico">docs</a></td>
+      <td> </td>
+      <td>Community (<a href="https://github.com/djosborne">@djosborne</a>)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For support level information on all solutions, see the <a href="/docs/getting-started-guides/#table-of-solutions">Table of solutions</a> chart.</p>
+
+<p>This document describes how to deploy Kubernetes with Calico networking from scratch on <em>bare metal</em> Ubuntu. For more information on Project Calico, visit <a href="http://projectcalico.org">projectcalico.org</a> and the <a href="https://github.com/projectcalico/calico-containers">calico-containers repository</a>.</p>
+
+<p>To install Calico on an existing Kubernetes cluster, or for more information on deploying Calico with Kubernetes in a number of other environments take a look at our supported <a href="https://github.com/projectcalico/calico-containers/tree/master/docs/cni/kubernetes">deployment guides</a>.</p>
+
+<p>This guide will set up a simple Kubernetes cluster with a single Kubernetes master and two Kubernetes nodes.  We’ll run Calico’s etcd cluster on the master and install the Calico daemon on the master and nodes.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#support-level" id="markdown-toc-support-level">Support Level</a></li>
+  <li><a href="#before-you-begin" id="markdown-toc-before-you-begin">Before you begin</a></li>
+  <li><a href="#prerequisites-and-assumptions" id="markdown-toc-prerequisites-and-assumptions">Prerequisites and Assumptions</a></li>
+  <li><a href="#set-up-the-master" id="markdown-toc-set-up-the-master">Set up the master</a>    <ul>
+      <li><a href="#configure-tls" id="markdown-toc-configure-tls">Configure TLS</a></li>
+      <li><a href="#install-calicos-etcd-on-the-master" id="markdown-toc-install-calicos-etcd-on-the-master">Install Calico’s etcd on the master</a></li>
+      <li><a href="#install-calico-on-the-master" id="markdown-toc-install-calico-on-the-master">Install Calico on the master</a></li>
+      <li><a href="#install-kubernetes-on-the-master" id="markdown-toc-install-kubernetes-on-the-master">Install Kubernetes on the Master</a></li>
+    </ul>
+  </li>
+  <li><a href="#set-up-the-nodes" id="markdown-toc-set-up-the-nodes">Set up the nodes</a>    <ul>
+      <li><a href="#configure-tls-1" id="markdown-toc-configure-tls-1">Configure TLS</a></li>
+      <li><a href="#configure-the-kubelet-worker" id="markdown-toc-configure-the-kubelet-worker">Configure the kubelet worker</a></li>
+      <li><a href="#install-calico-on-the-node" id="markdown-toc-install-calico-on-the-node">Install Calico on the node</a></li>
+      <li><a href="#install-kubernetes-on-the-node" id="markdown-toc-install-kubernetes-on-the-node">Install Kubernetes on the Node</a></li>
+    </ul>
+  </li>
+  <li><a href="#configure-kubectl-remote-access" id="markdown-toc-configure-kubectl-remote-access">Configure kubectl remote access</a></li>
+  <li><a href="#install-the-dns-addon" id="markdown-toc-install-the-dns-addon">Install the DNS Addon</a></li>
+  <li><a href="#install-the-kubernetes-ui-addon-optional" id="markdown-toc-install-the-kubernetes-ui-addon-optional">Install the Kubernetes UI Addon (Optional)</a></li>
+  <li><a href="#launch-other-services-with-calico-kubernetes" id="markdown-toc-launch-other-services-with-calico-kubernetes">Launch other Services With Calico-Kubernetes</a></li>
+  <li><a href="#connectivity-to-outside-the-cluster" id="markdown-toc-connectivity-to-outside-the-cluster">Connectivity to outside the cluster</a>    <ul>
+      <li><a href="#nat-on-the-nodes" id="markdown-toc-nat-on-the-nodes">NAT on the nodes</a></li>
+      <li><a href="#nat-at-the-border-router" id="markdown-toc-nat-at-the-border-router">NAT at the border router</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="before-you-begin">Before you begin</h2>
+
+<h2 id="prerequisites-and-assumptions">Prerequisites and Assumptions</h2>
+
+<ul>
+  <li>This guide uses <code class="highlighter-rouge">systemd</code> for process management. Ubuntu 15.04 supports systemd natively as do a number of other Linux distributions.</li>
+  <li>All machines should have Docker &gt;= 1.7.0 installed.
+    <ul>
+      <li>To install Docker on Ubuntu, follow <a href="https://docs.docker.com/installation/ubuntulinux/">these instructions</a></li>
+    </ul>
+  </li>
+  <li>All machines should have connectivity to each other and the internet.</li>
+  <li>This guide assumes a DHCP server on your network to assign server IPs.</li>
+  <li>This guide uses <code class="highlighter-rouge">192.168.0.0/16</code> as the subnet from which pod IP addresses are assigned.  If this overlaps with your host subnet, you will need to configure Calico to use a different <a href="https://github.com/projectcalico/calico-containers/blob/master/docs/calicoctl/pool.md#calicoctl-pool-commands">IP pool</a>.</li>
+  <li>This guide assumes that none of the hosts have been configured with any Kubernetes or Calico software.</li>
+  <li>This guide will set up a secure, TLS-authenticated API server.</li>
+</ul>
+
+<h2 id="set-up-the-master">Set up the master</h2>
+
+<h3 id="configure-tls">Configure TLS</h3>
+
+<p>The master requires the root CA public key, <code class="highlighter-rouge">ca.pem</code>; the apiserver certificate, <code class="highlighter-rouge">apiserver.pem</code> and its private key, <code class="highlighter-rouge">apiserver-key.pem</code>.</p>
+
+<ol>
+  <li>
+    <p>Create the file <code class="highlighter-rouge">openssl.cnf</code> with the following contents.</p>
+
+    <div class="language-conf highlighter-rouge"><pre class="highlight"><code>[<span class="n">req</span>]
+<span class="n">req_extensions</span> = <span class="n">v3_req</span>
+<span class="n">distinguished_name</span> = <span class="n">req_distinguished_name</span>
+[<span class="n">req_distinguished_name</span>]
+[ <span class="n">v3_req</span> ]
+<span class="n">basicConstraints</span> = <span class="n">CA</span>:<span class="n">FALSE</span>
+<span class="n">keyUsage</span> = <span class="n">nonRepudiation</span>, <span class="n">digitalSignature</span>, <span class="n">keyEncipherment</span>
+<span class="n">subjectAltName</span> = @<span class="n">alt_names</span>
+[<span class="n">alt_names</span>]
+<span class="n">DNS</span>.<span class="m">1</span> = <span class="n">kubernetes</span>
+<span class="n">DNS</span>.<span class="m">2</span> = <span class="n">kubernetes</span>.<span class="n">default</span>
+<span class="n">IP</span>.<span class="m">1</span> = <span class="m">10</span>.<span class="m">100</span>.<span class="m">0</span>.<span class="m">1</span> 
+<span class="n">IP</span>.<span class="m">2</span> = ${<span class="n">MASTER_IPV4</span>}
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<blockquote>
+  <p>Replace ${MASTER_IPV4} with the Master’s IP address on which the Kubernetes API will be accessible.</p>
+</blockquote>
+
+<ol>
+  <li>
+    <p>Generate the necessary TLS assets.</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c"># Generate the root CA.</span>
+openssl genrsa -out ca-key.pem 2048
+openssl req -x509 -new -nodes -key ca-key.pem -days 10000 -out ca.pem -subj <span class="s2">"/CN=kube-ca"</span>
+
+<span class="c"># Generate the API server keypair.</span>
+openssl genrsa -out apiserver-key.pem 2048
+openssl req -new -key apiserver-key.pem -out apiserver.csr -subj <span class="s2">"/CN=kube-apiserver"</span> -config openssl.cnf
+openssl x509 -req -in apiserver.csr -CA ca.pem -CAkey ca-key.pem -CAcreateserial -out apiserver.pem -days 365 -extensions v3_req -extfile openssl.cnf
+</code></pre>
+    </div>
+  </li>
+  <li>You should now have the following three files: <code class="highlighter-rouge">ca.pem</code>, <code class="highlighter-rouge">apiserver.pem</code>, and <code class="highlighter-rouge">apiserver-key.pem</code>.  Send the three files to your master host (using <code class="highlighter-rouge">scp</code> for example).</li>
+  <li>
+    <p>Move them to the <code class="highlighter-rouge">/etc/kubernetes/ssl</code> folder and ensure that only the root user can read the key:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c"># Move keys</span>
+sudo mkdir -p /etc/kubernetes/ssl/
+sudo mv -t /etc/kubernetes/ssl/ ca.pem apiserver.pem apiserver-key.pem
+    
+<span class="c"># Set permissions</span>
+sudo chmod 600 /etc/kubernetes/ssl/apiserver-key.pem
+sudo chown root:root /etc/kubernetes/ssl/apiserver-key.pem
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<h3 id="install-calicos-etcd-on-the-master">Install Calico’s etcd on the master</h3>
+
+<p>Calico needs its own etcd cluster to store its state.  In this guide we install a single-node cluster on the master server.</p>
+
+<blockquote>
+  <p>Note: In a production deployment we recommend running a distributed etcd cluster for redundancy. In this guide, we use a single etcd for simplicitly.</p>
+</blockquote>
+
+<ol>
+  <li>
+    <p>Download the template manifest file:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>wget https://raw.githubusercontent.com/projectcalico/calico-cni/k8s-1.1-docs/samples/kubernetes/master/calico-etcd.manifest
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Replace all instances of <code class="highlighter-rouge">&lt;MASTER_IPV4&gt;</code> in the <code class="highlighter-rouge">calico-etcd.manifest</code> file with your master’s IP address.</p>
+  </li>
+  <li>
+    <p>Then, move the file to the <code class="highlighter-rouge">/etc/kubernetes/manifests</code> directory.  This will not have any effect until we later run the kubelet, but Calico seems to tolerate the lack of its etcd in the interim.</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>sudo mv -f calico-etcd.manifest /etc/kubernetes/manifests
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<h3 id="install-calico-on-the-master">Install Calico on the master</h3>
+
+<p>We need to install Calico on the master.  This allows the master to route packets to the pods on other nodes.</p>
+
+<ol>
+  <li>
+    <p>Install the <code class="highlighter-rouge">calicoctl</code> tool:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>wget https://github.com/projectcalico/calico-containers/releases/download/v0.15.0/calicoctl
+chmod +x calicoctl
+sudo mv calicoctl /usr/bin
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Prefetch the calico/node container (this ensures that the Calico service starts immediately when we enable it):</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>sudo docker pull calico/node:v0.15.0
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Download the <code class="highlighter-rouge">network-environment</code> template from the <code class="highlighter-rouge">calico-kubernetes</code> repository:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>wget -O network-environment https://raw.githubusercontent.com/projectcalico/calico-cni/k8s-1.1-docs/samples/kubernetes/master/network-environment-template
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Edit <code class="highlighter-rouge">network-environment</code> to represent this node’s settings:</p>
+
+    <ul>
+      <li>Replace <code class="highlighter-rouge">&lt;KUBERNETES_MASTER&gt;</code> with the IP address of the master.  This should be the source IP address used to reach the Kubernetes worker nodes.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Move <code class="highlighter-rouge">network-environment</code> into <code class="highlighter-rouge">/etc</code>:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>sudo mv -f network-environment /etc
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Install, enable, and start the <code class="highlighter-rouge">calico-node</code> service:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>sudo wget -N -P /etc/systemd https://raw.githubusercontent.com/projectcalico/calico-cni/k8s-1.1-docs/samples/kubernetes/common/calico-node.service
+sudo systemctl <span class="nb">enable</span> /etc/systemd/calico-node.service
+sudo systemctl start calico-node.service
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<h3 id="install-kubernetes-on-the-master">Install Kubernetes on the Master</h3>
+
+<p>We’ll use the <code class="highlighter-rouge">kubelet</code> to bootstrap the Kubernetes master.</p>
+
+<ol>
+  <li>
+    <p>Download and install the <code class="highlighter-rouge">kubelet</code> and <code class="highlighter-rouge">kubectl</code> binaries:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>sudo wget -N -P /usr/bin http://storage.googleapis.com/kubernetes-release/release/v1.1.4/bin/linux/amd64/kubectl
+sudo wget -N -P /usr/bin http://storage.googleapis.com/kubernetes-release/release/v1.1.4/bin/linux/amd64/kubelet
+sudo chmod +x /usr/bin/kubelet /usr/bin/kubectl
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Install the <code class="highlighter-rouge">kubelet</code> systemd unit file and start the <code class="highlighter-rouge">kubelet</code>:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c"># Install the unit file</span>
+sudo wget -N -P /etc/systemd https://raw.githubusercontent.com/projectcalico/calico-cni/k8s-1.1-docs/samples/kubernetes/master/kubelet.service
+
+<span class="c"># Enable the unit file so that it runs on boot</span>
+sudo systemctl <span class="nb">enable</span> /etc/systemd/kubelet.service
+
+<span class="c"># Start the kubelet service</span>
+sudo systemctl start kubelet.service
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Download and install the master manifest file, which will start the Kubernetes master services automatically:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>sudo mkdir -p /etc/kubernetes/manifests
+sudo wget -N -P /etc/kubernetes/manifests https://raw.githubusercontent.com/projectcalico/calico-cni/k8s-1.1-docs/samples/kubernetes/master/kubernetes-master.manifest
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Check the progress by running <code class="highlighter-rouge">docker ps</code>.  After a while, you should see the <code class="highlighter-rouge">etcd</code>, <code class="highlighter-rouge">apiserver</code>, <code class="highlighter-rouge">controller-manager</code>, <code class="highlighter-rouge">scheduler</code>, and <code class="highlighter-rouge">kube-proxy</code> containers running.</p>
+
+    <blockquote>
+      <p>Note: it may take some time for all the containers to start. Don’t worry if <code class="highlighter-rouge">docker ps</code> doesn’t show any containers for a while or if some containers start before others.</p>
+    </blockquote>
+  </li>
+</ol>
+
+<h2 id="set-up-the-nodes">Set up the nodes</h2>
+
+<p>The following steps should be run on each Kubernetes node.</p>
+
+<h3 id="configure-tls-1">Configure TLS</h3>
+
+<p>Worker nodes require three keys: <code class="highlighter-rouge">ca.pem</code>, <code class="highlighter-rouge">worker.pem</code>, and <code class="highlighter-rouge">worker-key.pem</code>.  We’ve already generated
+<code class="highlighter-rouge">ca.pem</code> and <code class="highlighter-rouge">ca-key.pem</code> for use on the Master.  The worker public/private keypair should be generated for each Kubernetes node.</p>
+
+<ol>
+  <li>
+    <p>Create the file <code class="highlighter-rouge">worker-openssl.cnf</code> with the following contents.</p>
+
+    <div class="language-conf highlighter-rouge"><pre class="highlight"><code>[<span class="n">req</span>]
+<span class="n">req_extensions</span> = <span class="n">v3_req</span>
+<span class="n">distinguished_name</span> = <span class="n">req_distinguished_name</span>
+[<span class="n">req_distinguished_name</span>]
+[ <span class="n">v3_req</span> ]
+<span class="n">basicConstraints</span> = <span class="n">CA</span>:<span class="n">FALSE</span>
+<span class="n">keyUsage</span> = <span class="n">nonRepudiation</span>, <span class="n">digitalSignature</span>, <span class="n">keyEncipherment</span>
+<span class="n">subjectAltName</span> = @<span class="n">alt_names</span>
+[<span class="n">alt_names</span>]
+<span class="n">IP</span>.<span class="m">1</span> = $<span class="n">ENV</span>::<span class="n">WORKER_IP</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Generate the necessary TLS assets for this worker. This relies on the worker’s IP address, and the <code class="highlighter-rouge">ca.pem</code> and <code class="highlighter-rouge">ca-key.pem</code> files generated earlier in the guide.</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c"># Export this worker's IP address.</span>
+<span class="nb">export </span><span class="nv">WORKER_IP</span><span class="o">=</span>&lt;WORKER_IPV4&gt;
+</code></pre>
+    </div>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c"># Generate keys.</span>
+openssl genrsa -out worker-key.pem 2048
+openssl req -new -key worker-key.pem -out worker.csr -subj <span class="s2">"/CN=worker-key"</span> -config worker-openssl.cnf
+openssl x509 -req -in worker.csr -CA ca.pem -CAkey ca-key.pem -CAcreateserial -out worker.pem -days 365 -extensions v3_req -extfile worker-openssl.cnf
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Send the three files (<code class="highlighter-rouge">ca.pem</code>, <code class="highlighter-rouge">worker.pem</code>, and <code class="highlighter-rouge">worker-key.pem</code>) to the host (using scp, for example).</p>
+  </li>
+  <li>
+    <p>Move the files to the <code class="highlighter-rouge">/etc/kubernetes/ssl</code> folder with the appropriate permissions:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c"># Move keys</span>
+sudo mkdir -p /etc/kubernetes/ssl/
+sudo mv -t /etc/kubernetes/ssl/ ca.pem worker.pem worker-key.pem
+
+<span class="c"># Set permissions</span>
+sudo chmod 600 /etc/kubernetes/ssl/worker-key.pem
+sudo chown root:root /etc/kubernetes/ssl/worker-key.pem
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<h3 id="configure-the-kubelet-worker">Configure the kubelet worker</h3>
+
+<ol>
+  <li>
+    <p>With your certs in place, create a kubeconfig for worker authentication in <code class="highlighter-rouge">/etc/kubernetes/worker-kubeconfig.yaml</code>; replace <code class="highlighter-rouge">&lt;KUBERNETES_MASTER&gt;</code> with the IP address of the master:</p>
+
+    <div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="s">kind</span><span class="pi">:</span> <span class="s">Config</span>
+<span class="s">clusters</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s">local</span>
+  <span class="s">cluster</span><span class="pi">:</span>
+    <span class="s">server</span><span class="pi">:</span> <span class="s">https://&lt;KUBERNETES_MASTER&gt;:443</span>
+    <span class="s">certificate-authority</span><span class="pi">:</span> <span class="s">/etc/kubernetes/ssl/ca.pem</span>
+<span class="s">users</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">name</span><span class="pi">:</span> <span class="s">kubelet</span>
+  <span class="s">user</span><span class="pi">:</span>
+    <span class="s">client-certificate</span><span class="pi">:</span> <span class="s">/etc/kubernetes/ssl/worker.pem</span>
+    <span class="s">client-key</span><span class="pi">:</span> <span class="s">/etc/kubernetes/ssl/worker-key.pem</span>
+<span class="s">contexts</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">context</span><span class="pi">:</span>
+    <span class="s">cluster</span><span class="pi">:</span> <span class="s">local</span>
+    <span class="s">user</span><span class="pi">:</span> <span class="s">kubelet</span>
+  <span class="s">name</span><span class="pi">:</span> <span class="s">kubelet-context</span>
+<span class="s">current-context</span><span class="pi">:</span> <span class="s">kubelet-context</span>
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<h3 id="install-calico-on-the-node">Install Calico on the node</h3>
+
+<p>On your compute nodes, it is important that you install Calico before Kubernetes. We’ll install Calico using the provided <code class="highlighter-rouge">calico-node.service</code> systemd unit file:</p>
+
+<ol>
+  <li>
+    <p>Install the <code class="highlighter-rouge">calicoctl</code> binary:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>wget https://github.com/projectcalico/calico-containers/releases/download/v0.15.0/calicoctl
+chmod +x calicoctl
+sudo mv calicoctl /usr/bin
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Fetch the calico/node container:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>sudo docker pull calico/node:v0.15.0
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Download the <code class="highlighter-rouge">network-environment</code> template from the <code class="highlighter-rouge">calico-cni</code> repository:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>wget -O network-environment https://raw.githubusercontent.com/projectcalico/calico-cni/k8s-1.1-docs/samples/kubernetes/node/network-environment-template
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Edit <code class="highlighter-rouge">network-environment</code> to represent this node’s settings:</p>
+
+    <ul>
+      <li>Replace <code class="highlighter-rouge">&lt;DEFAULT_IPV4&gt;</code> with the IP address of the node.</li>
+      <li>Replace <code class="highlighter-rouge">&lt;KUBERNETES_MASTER&gt;</code> with the IP or hostname of the master.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Move <code class="highlighter-rouge">network-environment</code> into <code class="highlighter-rouge">/etc</code>:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>sudo mv -f network-environment /etc
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Install the <code class="highlighter-rouge">calico-node</code> service:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>sudo wget -N -P /etc/systemd https://raw.githubusercontent.com/projectcalico/calico-cni/k8s-1.1-docs/samples/kubernetes/common/calico-node.service
+sudo systemctl <span class="nb">enable</span> /etc/systemd/calico-node.service
+sudo systemctl start calico-node.service
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Install the Calico CNI plugins:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>sudo mkdir -p /opt/cni/bin/
+sudo wget -N -P /opt/cni/bin/ https://github.com/projectcalico/calico-cni/releases/download/v1.0.0/calico
+sudo wget -N -P /opt/cni/bin/ https://github.com/projectcalico/calico-cni/releases/download/v1.0.0/calico-ipam
+sudo chmod +x /opt/cni/bin/calico /opt/cni/bin/calico-ipam
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Create a CNI network configuration file, which tells Kubernetes to create a network named <code class="highlighter-rouge">calico-k8s-network</code> and to use the calico plugins for that network.  Create file <code class="highlighter-rouge">/etc/cni/net.d/10-calico.conf</code> with the following contents, replacing <code class="highlighter-rouge">&lt;KUBERNETES_MASTER&gt;</code> with the IP of the master (this file should be the same on each node):</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c"># Make the directory structure.</span>
+mkdir -p /etc/cni/net.d
+
+<span class="c"># Make the network configuration file</span>
+cat &gt;/etc/cni/net.d/10-calico.conf <span class="sh">&lt;&lt;EOF
+{
+    "name": "calico-k8s-network",
+    "type": "calico",
+    "etcd_authority": "&lt;KUBERNETES_MASTER&gt;:6666",
+    "log_level": "info",
+    "ipam": {
+        "type": "calico-ipam"
+    }
+}
+EOF
+</span></code></pre>
+    </div>
+
+    <p>Since this is the only network we create, it will be used by default by the kubelet.</p>
+  </li>
+  <li>
+    <p>Verify that Calico started correctly:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>calicoctl status
+</code></pre>
+    </div>
+
+    <p>should show that Felix (Calico’s per-node agent) is running and the there should be a BGP status line for each other node that you’ve configured and the master.  The “Info” column should show “Established”:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>$ calicoctl status
+calico-node container is running. Status: Up 15 hours
+Running felix version 1.3.0rc5
+    
+IPv4 BGP status
++---------------+-------------------+-------+----------+-------------+
+|  Peer address |     Peer type     | State |  Since   |     Info    |
++---------------+-------------------+-------+----------+-------------+
+| 172.18.203.41 | node-to-node mesh |   up  | 17:32:26 | Established |
+| 172.18.203.42 | node-to-node mesh |   up  | 17:32:25 | Established |
++---------------+-------------------+-------+----------+-------------+
+    
+IPv6 BGP status
++--------------+-----------+-------+-------+------+
+| Peer address | Peer type | State | Since | Info |
++--------------+-----------+-------+-------+------+
++--------------+-----------+-------+-------+------+
+</code></pre>
+    </div>
+
+    <p>If the “Info” column shows “Active” or some other value then Calico is having difficulty connecting to the other host.  Check the IP address of the peer is correct and check that Calico is using the correct local IP address (set in the <code class="highlighter-rouge">network-environment</code> file above).</p>
+  </li>
+</ol>
+
+<h3 id="install-kubernetes-on-the-node">Install Kubernetes on the Node</h3>
+
+<ol>
+  <li>
+    <p>Download and Install the kubelet binary:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>sudo wget -N -P /usr/bin http://storage.googleapis.com/kubernetes-release/release/v1.1.4/bin/linux/amd64/kubelet
+sudo chmod +x /usr/bin/kubelet
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Install the <code class="highlighter-rouge">kubelet</code> systemd unit file:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c"># Download the unit file.</span>
+sudo wget -N -P /etc/systemd  https://raw.githubusercontent.com/projectcalico/calico-cni/k8s-1.1-docs/samples/kubernetes/node/kubelet.service
+
+<span class="c"># Enable and start the unit files so that they run on boot</span>
+sudo systemctl <span class="nb">enable</span> /etc/systemd/kubelet.service
+sudo systemctl start kubelet.service
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Download the <code class="highlighter-rouge">kube-proxy</code> manifest:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>wget https://raw.githubusercontent.com/projectcalico/calico-cni/k8s-1.1-docs/samples/kubernetes/node/kube-proxy.manifest
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>In that file, replace <code class="highlighter-rouge">&lt;KUBERNETES_MASTER&gt;</code> with your master’s IP. Then move it into place:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>sudo mkdir -p /etc/kubernetes/manifests/
+sudo mv kube-proxy.manifest /etc/kubernetes/manifests/
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<h2 id="configure-kubectl-remote-access">Configure kubectl remote access</h2>
+
+<p>To administer your cluster from a separate host (e.g. your laptop), you will need the root CA generated earlier, as well as an admin public/private keypair (<code class="highlighter-rouge">ca.pem</code>, <code class="highlighter-rouge">admin.pem</code>, <code class="highlighter-rouge">admin-key.pem</code>). Run the following steps on the machine which you will use to control your cluster.</p>
+
+<ol>
+  <li>
+    <p>Download the kubectl binary.</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>sudo wget -N -P /usr/bin http://storage.googleapis.com/kubernetes-release/release/v1.1.4/bin/linux/amd64/kubectl
+sudo chmod +x /usr/bin/kubectl
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Generate the admin public/private keypair.</p>
+  </li>
+  <li>
+    <p>Export the necessary variables, substituting in correct values for your machine.</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="c"># Export the appropriate paths.</span>
+<span class="nb">export </span><span class="nv">CA_CERT_PATH</span><span class="o">=</span>&lt;PATH_TO_CA_PEM&gt;
+<span class="nb">export </span><span class="nv">ADMIN_CERT_PATH</span><span class="o">=</span>&lt;PATH_TO_ADMIN_PEM&gt;
+<span class="nb">export </span><span class="nv">ADMIN_KEY_PATH</span><span class="o">=</span>&lt;PATH_TO_ADMIN_KEY_PEM&gt;
+
+<span class="c"># Export the Master's IP address.</span>
+<span class="nb">export </span><span class="nv">MASTER_IPV4</span><span class="o">=</span>&lt;MASTER_IPV4&gt;
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Configure your host <code class="highlighter-rouge">kubectl</code> with the admin credentials:</p>
+
+    <div class="language-shell highlighter-rouge"><pre class="highlight"><code>kubectl config <span class="nb">set</span>-cluster calico-cluster --server<span class="o">=</span>https://<span class="k">${</span><span class="nv">MASTER_IPV4</span><span class="k">}</span> --certificate-authority<span class="o">=</span><span class="k">${</span><span class="nv">CA_CERT_PATH</span><span class="k">}</span>
+kubectl config <span class="nb">set</span>-credentials calico-admin --certificate-authority<span class="o">=</span><span class="k">${</span><span class="nv">CA_CERT_PATH</span><span class="k">}</span> --client-key<span class="o">=</span><span class="k">${</span><span class="nv">ADMIN_KEY_PATH</span><span class="k">}</span> --client-certificate<span class="o">=</span><span class="k">${</span><span class="nv">ADMIN_CERT_PATH</span><span class="k">}</span>
+kubectl config <span class="nb">set</span>-context calico --cluster<span class="o">=</span>calico-cluster --user<span class="o">=</span>calico-admin
+kubectl config use-context calico
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<p>Check your work with <code class="highlighter-rouge">kubectl get nodes</code>, which should succeed and display the nodes.</p>
+
+<h2 id="install-the-dns-addon">Install the DNS Addon</h2>
+
+<p>Most Kubernetes deployments will require the DNS addon for service discovery. To install DNS, create the skydns service and replication controller provided.  This step makes use of the kubectl configuration made above.</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>kubectl create -f https://raw.githubusercontent.com/projectcalico/calico-cni/k8s-1.1-docs/samples/kubernetes/master/dns/skydns.yaml
+</code></pre>
+</div>
+
+<h2 id="install-the-kubernetes-ui-addon-optional">Install the Kubernetes UI Addon (Optional)</h2>
+
+<p>The Kubernetes UI can be installed using <code class="highlighter-rouge">kubectl</code> to run the following manifest file.</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>kubectl create -f https://raw.githubusercontent.com/projectcalico/calico-cni/k8s-1.1-docs/samples/kubernetes/master/kube-ui/kube-ui.yaml
+</code></pre>
+</div>
+
+<p>Note: The Kubernetes UI addon is deprecated and has been replaced with Kubernetes dashboard. You can install it by running:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>kubectl create -f https://rawgit.com/kubernetes/dashboard/master/src/deploy/kubernetes-dashboard.yaml
+</code></pre>
+</div>
+
+<p>You can find the docs at <a href="https://github.com/kubernetes/dashboard">Kubernetes Dashboard</a></p>
+
+<h2 id="launch-other-services-with-calico-kubernetes">Launch other Services With Calico-Kubernetes</h2>
+
+<p>At this point, you have a fully functioning cluster running on Kubernetes with a master and two nodes networked with Calico. You can now follow any of the <a href="https://github.com/kubernetes/kubernetes/tree/v1.5.1.0/examples/">standard documentation</a> to set up other services on your cluster.</p>
+
+<h2 id="connectivity-to-outside-the-cluster">Connectivity to outside the cluster</h2>
+
+<p>Because containers in this guide have private <code class="highlighter-rouge">192.168.0.0/16</code> IPs, you will need NAT to allow connectivity between containers and the internet. However, in a production data center deployment, NAT is not always necessary, since Calico can peer with the data center’s border routers over BGP.</p>
+
+<h3 id="nat-on-the-nodes">NAT on the nodes</h3>
+
+<p>The simplest method for enabling connectivity from containers to the internet is to use outgoing NAT on your Kubernetes nodes.</p>
+
+<p>Calico can provide outgoing NAT for containers.  To enable it, use the following <code class="highlighter-rouge">calicoctl</code> command:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="gp">ETCD_AUTHORITY=&lt;master_ip:6666&gt; </span>calicoctl pool add &lt;CONTAINER_SUBNET&gt; --nat-outgoing
+</code></pre>
+</div>
+
+<p>By default, <code class="highlighter-rouge">&lt;CONTAINER_SUBNET&gt;</code> will be <code class="highlighter-rouge">192.168.0.0/16</code>.  You can find out which pools have been configured with the following command:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code><span class="gp">ETCD_AUTHORITY=&lt;master_ip:6666&gt; </span>calicoctl pool show
+</code></pre>
+</div>
+
+<h3 id="nat-at-the-border-router">NAT at the border router</h3>
+
+<p>In a data center environment, it is recommended to configure Calico to peer with the border routers over BGP. This means that the container IPs will be routable anywhere in the data center, and so NAT is not needed on the nodes (though it may be enabled at the data center edge to allow outbound-only internet connectivity).</p>
+
+<p>The Calico documentation contains more information on how to configure Calico to <a href="https://github.com/projectcalico/calico-containers/blob/master/docs/ExternalConnectivity.md">peer with existing infrastructure</a>.</p>
+
+
+
+        <p><a href=""><img src="https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/docs/getting-started-guides/ubuntu/calico.md?pixel" alt="Analytics" /></a>
+        
+		<script type="text/javascript">
+	        PDRTJS_settings_8345992 = {
+		        "id" : "8345992",
+		        "unique_id" : "/docs/getting-started-guides/ubuntu/calico/",
+		        "title" : "Deploying Kubernetes with Calico Networking on Ubuntu",
+		        "permalink" : "http://kubernetes.github.io/docs/getting-started-guides/ubuntu/calico/"
+	        };
+	        (function(d,c,j){if(!document.getElementById(j)){var pd=d.createElement(c),s;pd.id=j;pd.src=('https:'==document.location.protocol)?'https://polldaddy.com/js/rating/rating.js':'http://i0.poll.fm/js/rating/rating.js';s=document.getElementsByTagName(c)[0];s.parentNode.insertBefore(pd,s);}}(document,'script','pd-rating-js'));
+		</script>
+		<a href="" onclick="window.open('https://github.com/kubernetes/kubernetes.github.io/issues/new?title=Issue%20with%20' +
+		window.location.pathname)" class="button issue">Create an Issue</a>
+		<a href="/editdocs#docs/getting-started-guides/ubuntu/calico.md" class="button issue">Edit this Page</a>
+	
+	</div>
+</section>
+
+<footer>
+	<main class="light-text">
+		<nav>
+			<a href="/docs/hellonode/">Get Started</a>
+			<a href="/docs/">Documentation</a>
+			<a href="http://blog.kubernetes.io/">Blog</a>
+			<a href="/partners/">Partners</a>
+			<a href="/community/">Community</a>
+			<a href="/case-studies/">Case Studies</a>
+		</nav>
+		<div class="social">
+			<div>
+				<a href="https://twitter.com/kubernetesio" class="twitter"><span>twitter</span></a>
+				<a href="https://github.com/kubernetes/kubernetes" class="github"><span>Github</span></a>
+				<a href="http://slack.k8s.io/" class="slack"><span>Slack</span></a>
+			</div>
+			<div>
+				<a href="http://stackoverflow.com/questions/tagged/kubernetes" class="stack-overflow"><span>Stack Overflow</span></a>
+				<a href="https://groups.google.com/forum/#!forum/kubernetes-users" class="mailing-list"><span>Mailing List</span></a>
+				<a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar"><span>Events Calendar</span></a>
+			</div>
+			<div>
+				<a href="//get.k8s.io" class="button">Download K8s</a>
+				<a href="https://github.com/kubernetes/kubernetes" class="button">Contribute to the K8s codebase</a>
+			</div>
+		</div>
+		<div id="miceType" class="center">
+			&copy; 2017 The Kubernetes Authors | Documentation Distributed under <a href="https://github.com/kubernetes/kubernetes.github.io/blob/master/LICENSE" class="light-text">CC BY 4.0</a>
+		</div>
+		<div id="miceType" class="center">
+			Copyright &copy; 2017 The Linux Foundation&reg;. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our Trademark Usage page: <a href="https://www.linuxfoundation.org/trademark-usage" class="light-text">https://www.linuxfoundation.org/trademark-usage</a>
+		</div>
+	</main>
+</footer>
+
+<button class="flyout-button" onclick="kub.toggleToc()"></button>
+
+<style>
+.cse .gsc-control-cse, .gsc-control-cse, {
+    padding: 0;
+}
+  .gsc-control-cse table, .gsc-control-cse-en table {
+      margin:0px !important;
+  }
+  .gsc-above-wrapper-area {
+      border-bottom: 0;
+  }
+</style>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-36037335-10', 'auto');
+ga('send', 'pageview');
+
+// hide docs nav area if no nav is present, or if nav only contains a link to the current page
+(function () {
+    window.addEventListener('DOMContentLoaded', init)
+
+        // play nice with our neighbors
+        function init() {
+            window.removeEventListener('DOMContentLoaded', init)
+                hideNav()
+        }
+
+    function hideNav(toc){
+        if (!toc) toc = document.querySelector('#docsToc')
+            var container = toc.querySelector('.container')
+
+                // container is built dynamically, so it may not be present on the first runloop
+                if (container) {
+                    if (container.childElementCount === 0 || toc.querySelectorAll('a.item').length === 1) {
+                        toc.style.display = 'none'
+                            document.getElementById('docsContent').style.width = '100%'
+                    }
+                } else {
+                    requestAnimationFrame(function () {
+                        hideNav(toc)
+                    })
+                }
+    }
+})();
+</script>
+
+<!-- Commenting out AnswerDash for now; we need to work on our list of questions/answers/design first
+    <!-- Start of AnswerDash script <script>var AnswerDash;!function(e,t,n,s,a){if(!t.getElementById(s)){var i,r=t.createElement(n),c=t.getElementsByTagName(n)[0];e[a]||(i=e[a]=function(){i.__oninit.push(arguments)},i.__oninit=[]),r.type="text/javascript",r.async=!0,r.src="https://p1.answerdash.com/answerdash.min.js?siteid=756",r.setAttribute("id",s),c.parentNode.insertBefore(r,c)}}(window,document,"script","answerdash-script","AnswerDash");</script> <!-- End of AnswerDash script -->
+
+
+</body>
+</html>

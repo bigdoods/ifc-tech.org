@@ -1,0 +1,437 @@
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+  
+    
+
+<!Doctype html>
+<html id="docs" class="Guides">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto+Mono' type='text/css'>
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <link rel="stylesheet" href="/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/css/sweetalert.css">
+    
+    <script src="/js/jquery-2.2.0.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/sweetalert.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Begin Jekyll SEO tag v2.1.0 -->
+<title>What is Kubernetes? - Kubernetes</title>
+<meta property="og:title" content="What is Kubernetes?" />
+<meta name="description" content="Production-Grade Container Orchestration" />
+<meta property="og:description" content="Production-Grade Container Orchestration" />
+<link rel="canonical" href="http://localhost:4000/docs/whatisk8s/" />
+<meta property="og:url" content="http://localhost:4000/docs/whatisk8s/" />
+<meta property="og:site_name" content="Kubernetes" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@kubernetesio" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "WebPage",
+"headline": "What is Kubernetes?",
+"description": "Production-Grade Container Orchestration",
+"publisher": {"@type": "Organization",
+"logo": {"@type": "ImageObject",
+"url": "http://localhost:4000/images/favicon.png"}},
+"url": "http://localhost:4000/docs/whatisk8s/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+<body>
+
+<div id="cellophane" onclick="kub.toggleMenu()"></div>
+
+<header>
+    <a href="/" class="logo"></a>
+
+    <div class="nav-buttons" data-auto-burger="primary">
+        <ul class="global-nav">
+            <li><a href="/docs/">Documentation</a></li>
+            <li><a href="http://blog.kubernetes.io/">Blog</a></li>
+            <li><a href="/partners/">Partners</a></li>
+            <li><a href="/community/">Community</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+        </ul>
+        <!-- <a href="/docs/" class="button" id="viewDocs" data-auto-burger-exclude>View Documentation</a> -->
+        <a href="/docs/tutorials/kubernetes-basics/" class="button" id="tryKubernetes" data-auto-burger-exclude>Try Kubernetes</a>
+        <button id="hamburger" onclick="kub.toggleMenu()" data-auto-burger-exclude><div></div></button>
+    </div>
+
+    <nav id="mainNav">
+        <main data-auto-burger="primary">
+        <div class="nav-box">
+            <h3><a href="/docs/hellonode/">Get Started</a></h3>
+            <p>Ready to get your hands dirty? Build a simple Kubernetes cluster that runs "Hello World" for Node.js.</p>
+        </div>
+        <div class="nav-box">
+            <h3><a href="/docs/">Documentation</a></h3>
+            <p>Learn how to use Kubernetes with the use of walkthroughs, samples, and reference documentation. You can even <a href="/editdocs/" data-auto-burger-exclude>help contribute to the docs</a>!</p>
+        </div>
+        <div class="nav-box">
+            <h3><a href="/community/">Community</a></h3>
+            <p>If you need help, you can connect with other Kubernetes users and the Kubernetes authors, attend community events, and watch video presentations from around the web.</p>
+        </div>
+        <div class="nav-box">
+            <h3><a href="http://blog.kubernetes.io">Blog</a></h3>
+            <p>Read the latest news for Kubernetes and the containers space in general, and get technical how-tos hot off the presses.</p>
+        </div>
+        </main>
+        <main data-auto-burger="primary">
+        <div class="left">
+            <h5 class="github-invite">Interested in hacking on the core Kubernetes code base?</h5>
+            <a href="https://github.com/kubernetes/kubernetes" class="button" data-auto-burger-exclude>View On Github</a>
+        </div>
+
+        <div class="right">
+            <h5 class="github-invite">Explore the community</h5>
+            <div class="social">
+                <a href="https://twitter.com/kubernetesio" class="twitter"><span>Twitter</span></a>
+                <a href="https://github.com/kubernetes/kubernetes" class="github"><span>Github</span></a>
+                <a href="http://slack.k8s.io/" class="slack"><span>Slack</span></a>
+                <a href="http://stackoverflow.com/questions/tagged/kubernetes" class="stack-overflow"><span>Stack Overflow</span></a>
+                <a href="https://groups.google.com/forum/#!forum/kubernetes-users" class="mailing-list"><span>Mailing List</span></a>
+                <a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar"><span>Events Calendar</span></a>
+            </div>
+        </div>
+        <div class="clear" style="clear: both"></div>
+        </main>
+    </nav>
+</header>
+
+
+<!--  HERO  -->
+<section id="hero" class="light-text">
+  <h1>Guides</h1>
+  <h5>How to get started, and accomplish tasks, using Kubernetes.</h5>
+  <div id="vendorStrip" class="light-text">
+    <ul>
+      <li><a href="/docs/" >DOCS HOME</a></li>
+      <li><a href="/docs/user-guide/" class="YAH">GUIDES</a></li>
+      <li><a href="/docs/tutorials/" >TUTORIALS</a></li>
+      <li><a href="/docs/tasks/" >TASKS</a></li>
+      <li><a href="/docs/concepts/" >CONCEPTS</a></li>
+      <li><a href="/docs/reference/" >REFERENCE</a></li>
+      <li><a href="/docs/tools/" >TOOLS</a></li>
+      <li><a href="/docs/samples/" >SAMPLES</a></li>
+      <li><a href="/docs/troubleshooting/" >SUPPORT</a></li>
+    </ul>
+    <div id="searchBox">
+      <input type="text" id="search" placeholder="Search" onkeydown="if (event.keyCode==13) window.location.replace('/docs/search/?q=' + this.value)">
+    </div>
+  </div>
+</section>
+
+<section id="encyclopedia">
+  <div id="docsToc">
+        <div class="pi-accordion">
+        
+          
+  
+
+    
+
+    
+      <a class="item" data-title="User Guide" href="/docs/user-guide/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="What is Kubernetes?" href="/docs/whatisk8s/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="User Guide" href="/docs/user-guide/"></a>
+    
+  
+
+  
+    <div class="item" data-title="Accessing the Cluster">
+      <div class="container">
+        
+  
+
+    
+
+    
+      <a class="item" data-title="User Guide" href="/docs/user-guide/"></a>
+    
+  
+
+
+      </div>
+    </div>
+  
+
+
+        
+        </div> <!-- /pi-accordion -->
+    <button class="push-menu-close-button" onclick="kub.toggleToc()"></button>
+  </div> <!-- /docsToc -->
+
+  <div id="docsContent">
+        <p><a href="/editdocs#docs/whatisk8s.md" id="editPageButton">Edit This Page</a></p>
+
+        
+          <h1>What is Kubernetes?</h1>
+        
+
+        <p>Kubernetes is an <a href="http://www.slideshare.net/BrianGrant11/wso2con-us-2015-kubernetes-a-platform-for-automating-deployment-scaling-and-operations">open-source platform for automating deployment, scaling, and operations of application containers</a> across clusters of hosts, providing container-centric infrastructure.</p>
+
+<p>With Kubernetes, you are able to quickly and efficiently respond to customer demand:</p>
+
+<ul>
+  <li>Deploy your applications quickly and predictably.</li>
+  <li>Scale your applications on the fly.</li>
+  <li>Seamlessly roll out new features.</li>
+  <li>Optimize use of your hardware by using only the resources you need.</li>
+</ul>
+
+<p>Our goal is to foster an ecosystem of components and tools that relieve the burden of running applications in public and private clouds.</p>
+
+<h4 id="kubernetes-is">Kubernetes is:</h4>
+
+<ul>
+  <li><strong>portable</strong>: public, private, hybrid, multi-cloud</li>
+  <li><strong>extensible</strong>: modular, pluggable, hookable, composable</li>
+  <li><strong>self-healing</strong>: auto-placement, auto-restart, auto-replication, auto-scaling</li>
+</ul>
+
+<p>The Kubernetes project was started by Google in 2014. Kubernetes builds upon a <a href="https://research.google.com/pubs/pub43438.html">decade and a half of experience that Google has with running production workloads at scale</a>, combined with best-of-breed ideas and practices from the community.</p>
+
+<h5 id="ready-to-get-started">Ready to <a href="/docs/getting-started-guides/">Get Started</a>?</h5>
+
+<h2 id="why-containers">Why containers?</h2>
+
+<p>Looking for reasons why you should be using <a href="http://aucouranton.com/2014/06/13/linux-containers-parallels-lxc-openvz-docker-and-more/">containers</a>?</p>
+
+<p><img src="/images/docs/why_containers.svg" alt="Why Containers?" /></p>
+
+<p>The <em>Old Way</em> to deploy applications was to install the applications on a host using the operating system package manager. This had the disadvantage of entangling the applications’ executables, configuration, libraries, and lifecycles with each other and with the host OS. One could build immutable virtual-machine images in order to achieve predictable rollouts and rollbacks, but VMs are heavyweight and non-portable.</p>
+
+<p>The <em>New Way</em> is to deploy containers based on operating-system-level virtualization rather than hardware virtualization. These containers are isolated from each other and from the host: they have their own filesystems, they can’t see each others’ processes, and their computational resource usage can be bounded. They are easier to build than VMs, and because they are decoupled from the underlying infrastructure and from the host filesystem, they are portable across clouds and OS distributions.</p>
+
+<p>Because containers are small and fast, one application can be packed in each container image. This one-to-one application-to-image relationship unlocks the full benefits of containers. With containers, immutable container images can be created at build/release time rather than deployment time, since each application doesn’t need to be composed with the rest of the application stack, nor married to the production infrastructure environment. Generating container images at build/release time enables a consistent environment to be carried from development into production.
+Similarly, containers are vastly more transparent than VMs, which facilitates monitoring and management. This is especially true when the containers’ process lifecycles are managed by the infrastructure rather than hidden by a process supervisor inside the container. Finally, with a single application per container, managing the containers becomes tantamount to managing deployment of the application.</p>
+
+<p>Summary of container benefits:</p>
+
+<ul>
+  <li><strong>Agile application creation and deployment</strong>:
+  Increased ease and efficiency of container image creation compared to VM image use.</li>
+  <li><strong>Continuous development, integration, and deployment</strong>:
+  Provides for reliable and frequent container image build and deployment with quick and easy rollbacks (due to image immutability).</li>
+  <li><strong>Dev and Ops separation of concerns</strong>:
+  Create application container images at build/release time rather than deployment time, thereby decoupling applications from infrastructure.</li>
+  <li><strong>Environmental consistency across development, testing, and production</strong>:
+  Runs the same on a laptop as it does in the cloud.</li>
+  <li><strong>Cloud and OS distribution portability</strong>:
+  Runs on Ubuntu, RHEL, CoreOS, on-prem, Google Container Engine, and anywhere else.</li>
+  <li><strong>Application-centric management</strong>:
+  Raises the level of abstraction from running an OS on virtual hardware to run an application on an OS using logical resources.</li>
+  <li><strong>Loosely coupled, distributed, elastic, liberated <a href="http://martinfowler.com/articles/microservices.html">micro-services</a></strong>:
+  Applications are broken into smaller, independent pieces and can be deployed and managed dynamically – not a fat monolithic stack running on one big single-purpose machine.</li>
+  <li><strong>Resource isolation</strong>:
+  Predictable application performance.</li>
+  <li><strong>Resource utilization</strong>:
+  High efficiency and density.</li>
+</ul>
+
+<h4 id="why-do-i-need-kubernetes-and-what-can-it-do">Why do I need Kubernetes and what can it do?</h4>
+
+<p>At a minimum, Kubernetes can schedule and run application containers on clusters of physical or virtual machines. However, Kubernetes also allows developers to ‘cut the cord’ to physical and virtual machines, moving from a <strong>host-centric</strong> infrastructure to a <strong>container-centric</strong> infrastructure, which provides the full advantages and benefits inherent to containers. Kubernetes provides the infrastructure to build a truly <strong>container-centric</strong> development environment.</p>
+
+<p>Kubernetes satisfies a number of common needs of applications running in production, such as:</p>
+
+<ul>
+  <li><a href="/docs/user-guide/pods/">co-locating helper processes</a>, facilitating composite applications and preserving the one-application-per-container model,</li>
+  <li><a href="/docs/user-guide/volumes/">mounting storage systems</a>,</li>
+  <li><a href="/docs/user-guide/secrets/">distributing secrets</a>,</li>
+  <li><a href="/docs/user-guide/production-pods/#liveness-and-readiness-probes-aka-health-checks">application health checking</a>,</li>
+  <li><a href="/docs/user-guide/replication-controller/">replicating application instances</a>,</li>
+  <li><a href="/docs/user-guide/horizontal-pod-autoscaling/">horizontal auto-scaling</a>,</li>
+  <li><a href="/docs/user-guide/connecting-applications/">naming and discovery</a>,</li>
+  <li><a href="/docs/user-guide/services/">load balancing</a>,</li>
+  <li><a href="/docs/user-guide/update-demo/">rolling updates</a>,</li>
+  <li><a href="/docs/user-guide/monitoring/">resource monitoring</a>,</li>
+  <li><a href="/docs/user-guide/logging/overview/">log access and ingestion</a>,</li>
+  <li><a href="/docs/user-guide/introspection-and-debugging/">support for introspection and debugging</a>, and</li>
+  <li><a href="/docs/admin/authorization/">identity and authorization</a>.</li>
+</ul>
+
+<p>This provides the simplicity of Platform as a Service (PaaS) with the flexibility of Infrastructure as a Service (IaaS), and facilitates portability across infrastructure providers.</p>
+
+<p>For more details, see the <a href="/docs/user-guide/">user guide</a>.</p>
+
+<h4 id="why-and-how-is-kubernetes-a-platform">Why and how is Kubernetes a platform?</h4>
+
+<p>Even though Kubernetes provides a lot of functionality, there are always new scenarios that would benefit from new features. Application-specific workflows can be streamlined to accelerate developer velocity. Ad hoc orchestration that is acceptable initially often requires robust automation at scale. This is why Kubernetes was also designed to serve as a platform for building an ecosystem of components and tools to make it easier to deploy, scale, and manage applications.</p>
+
+<p><a href="/docs/user-guide/labels/">Labels</a> empower users to organize their resources however they please. <a href="/docs/user-guide/annotations/">Annotations</a> enable users to decorate resources with custom information to facilitate their workflows and provide an easy way for management tools to checkpoint state.</p>
+
+<p>Additionally, the <a href="/docs/admin/cluster-components">Kubernetes control plane</a> is built upon the same <a href="/docs/api/">APIs</a> that are available to developers and users. Users can write their own controllers, <a href="https://github.com/kubernetes/kubernetes/tree/master/docs/devel/scheduler.md">schedulers</a>, etc., if they choose, with <a href="https://github.com/kubernetes/kubernetes/blob/master/docs/design/extending-api.md">their own APIs</a> that can be targeted by a general-purpose <a href="/docs/user-guide/kubectl-overview/">command-line tool</a>.</p>
+
+<p>This <a href="https://github.com/kubernetes/kubernetes/blob/master/docs/design/principles.md">design</a> has enabled a number of other systems to build atop Kubernetes.</p>
+
+<h4 id="kubernetes-is-not">Kubernetes is not:</h4>
+
+<p>Kubernetes is not a traditional, all-inclusive PaaS (Platform as a Service) system. We preserve user choice where it is important.</p>
+
+<ul>
+  <li>Kubernetes does not limit the types of applications supported. It does not dictate application frameworks (e.g., <a href="http://wildfly.org/">Wildfly</a>), restrict the set of supported language runtimes (e.g., Java, Python, Ruby), cater to only <a href="http://12factor.net/">12-factor applications</a>, nor distinguish “apps” from “services”. Kubernetes aims to support an extremely diverse variety of workloads, including stateless, stateful, and data-processing workloads. If an application can run in a container, it should run great on Kubernetes.</li>
+  <li>Kubernetes does not provide middleware (e.g., message buses), data-processing frameworks (e.g., Spark), databases (e.g., mysql), nor cluster storage systems (e.g., Ceph) as built-in services. Such applications run on Kubernetes.</li>
+  <li>Kubernetes does not have a click-to-deploy service marketplace.</li>
+  <li>Kubernetes is unopinionated in the source-to-image space. It does not deploy source code and does not build your application. Continuous Integration (CI) workflow is an area where different users and projects have their own requirements and preferences, so we support layering CI workflows on Kubernetes but don’t dictate how it should work.</li>
+  <li>Kubernetes allows users to choose the logging, monitoring, and alerting systems of their choice. (Though we do provide some integrations as proof of concept.)</li>
+  <li>Kubernetes does not provide nor mandate a comprehensive application configuration language/system (e.g., <a href="https://github.com/google/jsonnet">jsonnet</a>).</li>
+  <li>Kubernetes does not provide nor adopt any comprehensive machine configuration, maintenance, management, or self-healing systems.</li>
+</ul>
+
+<p>On the other hand, a number of PaaS systems run <em>on</em> Kubernetes, such as <a href="https://github.com/openshift/origin">Openshift</a>, <a href="http://deis.io/">Deis</a>, and <a href="http://eldarion.cloud/">Eldarion</a>. You could also roll your own custom PaaS, integrate with a CI system of your choice, or get along just fine with just Kubernetes: bring your container images and deploy them on Kubernetes.</p>
+
+<p>Since Kubernetes operates at the application level rather than at just the hardware level, it provides some generally applicable features common to PaaS offerings, such as deployment, scaling, load balancing, logging, monitoring, etc. However, Kubernetes is not monolithic, and these default solutions are optional and pluggable.</p>
+
+<p>Additionally, Kubernetes is not a mere “orchestration system”; it eliminates the need for orchestration. The technical definition of “orchestration” is execution of a defined workflow: do A, then B, then C. In contrast, Kubernetes is comprised of a set of independent, composable control processes that continuously drive current state towards the provided desired state. It shouldn’t matter how you get from A to C: make it so. Centralized control is also not required; the approach is more akin to “choreography”. This results in a system that is easier to use and more powerful, robust, resilient, and extensible.</p>
+
+<h4 id="what-does-kubernetes-mean-k8s">What does <em>Kubernetes</em> mean? K8s?</h4>
+
+<p>The name <strong>Kubernetes</strong> originates from Greek, meaning “helmsman” or “pilot”, and is the root of “governor” and <a href="http://www.etymonline.com/index.php?term=cybernetics">“cybernetic”</a>. <strong>K8s</strong> is an abbreviation derived by replacing the 8 letters “ubernete” with 8.</p>
+
+
+        <p><a href=""><img src="https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/docs/whatisk8s.md?pixel" alt="Analytics" /></a>
+        
+		<script type="text/javascript">
+	        PDRTJS_settings_8345992 = {
+		        "id" : "8345992",
+		        "unique_id" : "/docs/whatisk8s/",
+		        "title" : "What is Kubernetes?",
+		        "permalink" : "http://kubernetes.github.io/docs/whatisk8s/"
+	        };
+	        (function(d,c,j){if(!document.getElementById(j)){var pd=d.createElement(c),s;pd.id=j;pd.src=('https:'==document.location.protocol)?'https://polldaddy.com/js/rating/rating.js':'http://i0.poll.fm/js/rating/rating.js';s=document.getElementsByTagName(c)[0];s.parentNode.insertBefore(pd,s);}}(document,'script','pd-rating-js'));
+		</script>
+		<a href="" onclick="window.open('https://github.com/kubernetes/kubernetes.github.io/issues/new?title=Issue%20with%20' +
+		window.location.pathname)" class="button issue">Create an Issue</a>
+		<a href="/editdocs#docs/whatisk8s.md" class="button issue">Edit this Page</a>
+	
+	</div>
+</section>
+
+<footer>
+	<main class="light-text">
+		<nav>
+			<a href="/docs/hellonode/">Get Started</a>
+			<a href="/docs/">Documentation</a>
+			<a href="http://blog.kubernetes.io/">Blog</a>
+			<a href="/partners/">Partners</a>
+			<a href="/community/">Community</a>
+			<a href="/case-studies/">Case Studies</a>
+		</nav>
+		<div class="social">
+			<div>
+				<a href="https://twitter.com/kubernetesio" class="twitter"><span>twitter</span></a>
+				<a href="https://github.com/kubernetes/kubernetes" class="github"><span>Github</span></a>
+				<a href="http://slack.k8s.io/" class="slack"><span>Slack</span></a>
+			</div>
+			<div>
+				<a href="http://stackoverflow.com/questions/tagged/kubernetes" class="stack-overflow"><span>Stack Overflow</span></a>
+				<a href="https://groups.google.com/forum/#!forum/kubernetes-users" class="mailing-list"><span>Mailing List</span></a>
+				<a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar"><span>Events Calendar</span></a>
+			</div>
+			<div>
+				<a href="//get.k8s.io" class="button">Download K8s</a>
+				<a href="https://github.com/kubernetes/kubernetes" class="button">Contribute to the K8s codebase</a>
+			</div>
+		</div>
+		<div id="miceType" class="center">
+			&copy; 2017 The Kubernetes Authors | Documentation Distributed under <a href="https://github.com/kubernetes/kubernetes.github.io/blob/master/LICENSE" class="light-text">CC BY 4.0</a>
+		</div>
+		<div id="miceType" class="center">
+			Copyright &copy; 2017 The Linux Foundation&reg;. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our Trademark Usage page: <a href="https://www.linuxfoundation.org/trademark-usage" class="light-text">https://www.linuxfoundation.org/trademark-usage</a>
+		</div>
+	</main>
+</footer>
+
+<button class="flyout-button" onclick="kub.toggleToc()"></button>
+
+<style>
+.cse .gsc-control-cse, .gsc-control-cse, {
+    padding: 0;
+}
+  .gsc-control-cse table, .gsc-control-cse-en table {
+      margin:0px !important;
+  }
+  .gsc-above-wrapper-area {
+      border-bottom: 0;
+  }
+</style>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-36037335-10', 'auto');
+ga('send', 'pageview');
+
+// hide docs nav area if no nav is present, or if nav only contains a link to the current page
+(function () {
+    window.addEventListener('DOMContentLoaded', init)
+
+        // play nice with our neighbors
+        function init() {
+            window.removeEventListener('DOMContentLoaded', init)
+                hideNav()
+        }
+
+    function hideNav(toc){
+        if (!toc) toc = document.querySelector('#docsToc')
+            var container = toc.querySelector('.container')
+
+                // container is built dynamically, so it may not be present on the first runloop
+                if (container) {
+                    if (container.childElementCount === 0 || toc.querySelectorAll('a.item').length === 1) {
+                        toc.style.display = 'none'
+                            document.getElementById('docsContent').style.width = '100%'
+                    }
+                } else {
+                    requestAnimationFrame(function () {
+                        hideNav(toc)
+                    })
+                }
+    }
+})();
+</script>
+
+<!-- Commenting out AnswerDash for now; we need to work on our list of questions/answers/design first
+    <!-- Start of AnswerDash script <script>var AnswerDash;!function(e,t,n,s,a){if(!t.getElementById(s)){var i,r=t.createElement(n),c=t.getElementsByTagName(n)[0];e[a]||(i=e[a]=function(){i.__oninit.push(arguments)},i.__oninit=[]),r.type="text/javascript",r.async=!0,r.src="https://p1.answerdash.com/answerdash.min.js?siteid=756",r.setAttribute("id",s),c.parentNode.insertBefore(r,c)}}(window,document,"script","answerdash-script","AnswerDash");</script> <!-- End of AnswerDash script -->
+
+
+</body>
+</html>

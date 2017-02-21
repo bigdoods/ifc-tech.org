@@ -1,0 +1,723 @@
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+
+<!Doctype html>
+<html id="docs" class="Support">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto+Mono' type='text/css'>
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <link rel="stylesheet" href="/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/css/sweetalert.css">
+    
+    <script src="/js/jquery-2.2.0.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/sweetalert.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Begin Jekyll SEO tag v2.1.0 -->
+<title>Windows Server Containers - Kubernetes</title>
+<meta property="og:title" content="Windows Server Containers" />
+<meta name="description" content="Production-Grade Container Orchestration" />
+<meta property="og:description" content="Production-Grade Container Orchestration" />
+<link rel="canonical" href="http://localhost:4000/docs/getting-started-guides/windows/" />
+<meta property="og:url" content="http://localhost:4000/docs/getting-started-guides/windows/" />
+<meta property="og:site_name" content="Kubernetes" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@kubernetesio" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "WebPage",
+"headline": "Windows Server Containers",
+"description": "Production-Grade Container Orchestration",
+"publisher": {"@type": "Organization",
+"logo": {"@type": "ImageObject",
+"url": "http://localhost:4000/images/favicon.png"}},
+"url": "http://localhost:4000/docs/getting-started-guides/windows/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+<body>
+
+<div id="cellophane" onclick="kub.toggleMenu()"></div>
+
+<header>
+    <a href="/" class="logo"></a>
+
+    <div class="nav-buttons" data-auto-burger="primary">
+        <ul class="global-nav">
+            <li><a href="/docs/">Documentation</a></li>
+            <li><a href="http://blog.kubernetes.io/">Blog</a></li>
+            <li><a href="/partners/">Partners</a></li>
+            <li><a href="/community/">Community</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+        </ul>
+        <!-- <a href="/docs/" class="button" id="viewDocs" data-auto-burger-exclude>View Documentation</a> -->
+        <a href="/docs/tutorials/kubernetes-basics/" class="button" id="tryKubernetes" data-auto-burger-exclude>Try Kubernetes</a>
+        <button id="hamburger" onclick="kub.toggleMenu()" data-auto-burger-exclude><div></div></button>
+    </div>
+
+    <nav id="mainNav">
+        <main data-auto-burger="primary">
+        <div class="nav-box">
+            <h3><a href="/docs/hellonode/">Get Started</a></h3>
+            <p>Ready to get your hands dirty? Build a simple Kubernetes cluster that runs "Hello World" for Node.js.</p>
+        </div>
+        <div class="nav-box">
+            <h3><a href="/docs/">Documentation</a></h3>
+            <p>Learn how to use Kubernetes with the use of walkthroughs, samples, and reference documentation. You can even <a href="/editdocs/" data-auto-burger-exclude>help contribute to the docs</a>!</p>
+        </div>
+        <div class="nav-box">
+            <h3><a href="/community/">Community</a></h3>
+            <p>If you need help, you can connect with other Kubernetes users and the Kubernetes authors, attend community events, and watch video presentations from around the web.</p>
+        </div>
+        <div class="nav-box">
+            <h3><a href="http://blog.kubernetes.io">Blog</a></h3>
+            <p>Read the latest news for Kubernetes and the containers space in general, and get technical how-tos hot off the presses.</p>
+        </div>
+        </main>
+        <main data-auto-burger="primary">
+        <div class="left">
+            <h5 class="github-invite">Interested in hacking on the core Kubernetes code base?</h5>
+            <a href="https://github.com/kubernetes/kubernetes" class="button" data-auto-burger-exclude>View On Github</a>
+        </div>
+
+        <div class="right">
+            <h5 class="github-invite">Explore the community</h5>
+            <div class="social">
+                <a href="https://twitter.com/kubernetesio" class="twitter"><span>Twitter</span></a>
+                <a href="https://github.com/kubernetes/kubernetes" class="github"><span>Github</span></a>
+                <a href="http://slack.k8s.io/" class="slack"><span>Slack</span></a>
+                <a href="http://stackoverflow.com/questions/tagged/kubernetes" class="stack-overflow"><span>Stack Overflow</span></a>
+                <a href="https://groups.google.com/forum/#!forum/kubernetes-users" class="mailing-list"><span>Mailing List</span></a>
+                <a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar"><span>Events Calendar</span></a>
+            </div>
+        </div>
+        <div class="clear" style="clear: both"></div>
+        </main>
+    </nav>
+</header>
+
+
+<!--  HERO  -->
+<section id="hero" class="light-text">
+  <h1>Support</h1>
+  <h5>Troubleshooting resources, frequently asked questions, and community support channels.</h5>
+  <div id="vendorStrip" class="light-text">
+    <ul>
+      <li><a href="/docs/" >DOCS HOME</a></li>
+      <li><a href="/docs/user-guide/" >GUIDES</a></li>
+      <li><a href="/docs/tutorials/" >TUTORIALS</a></li>
+      <li><a href="/docs/tasks/" >TASKS</a></li>
+      <li><a href="/docs/concepts/" >CONCEPTS</a></li>
+      <li><a href="/docs/reference/" >REFERENCE</a></li>
+      <li><a href="/docs/tools/" >TOOLS</a></li>
+      <li><a href="/docs/samples/" >SAMPLES</a></li>
+      <li><a href="/docs/troubleshooting/" class="YAH">SUPPORT</a></li>
+    </ul>
+    <div id="searchBox">
+      <input type="text" id="search" placeholder="Search" onkeydown="if (event.keyCode==13) window.location.replace('/docs/search/?q=' + this.value)">
+    </div>
+  </div>
+</section>
+
+<section id="encyclopedia">
+  <div id="docsToc">
+        <div class="pi-accordion">
+        
+          
+  
+
+    
+
+    
+      <a class="item" data-title="Support" href="/docs/troubleshooting/"></a>
+    
+  
+
+  
+    <div class="item" data-title="Troubleshooting">
+      <div class="container">
+        
+  
+
+    
+
+    
+      <a class="item" data-title="User Guide" href="/docs/user-guide/"></a>
+    
+  
+
+
+      </div>
+    </div>
+  
+
+  
+    <div class="item" data-title="Frequently Asked Questions">
+      <div class="container">
+        
+  
+
+    
+
+    
+      <a class="item" data-title="User FAQ" href="https://github.com/kubernetes/kubernetes/wiki/User-FAQ/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Debugging FAQ" href="https://github.com/kubernetes/kubernetes/wiki/Debugging-FAQ/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Services FAQ" href="https://github.com/kubernetes/kubernetes/wiki/Services-FAQ/"></a>
+    
+  
+
+
+      </div>
+    </div>
+  
+
+  
+    <div class="item" data-title="Contributing to the Kubernetes Docs">
+      <div class="container">
+        
+  
+
+    
+
+    
+      <a class="item" data-title="Contributing to the Kubernetes Documentation" href="/editdocs/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Creating a Documentation Pull Request" href="/docs/contribute/create-pull-request/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Writing a New Topic" href="/docs/contribute/write-new-topic/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Staging Your Documentation Changes" href="/docs/contribute/stage-documentation-changes/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Using Page Templates" href="/docs/contribute/page-templates/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Reviewing Documentation Issues" href="/docs/contribute/review-issues/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Documentation Style Guide" href="/docs/contribute/style-guide/"></a>
+    
+  
+
+
+      </div>
+    </div>
+  
+
+  
+    <div class="item" data-title="Other Resources">
+      <div class="container">
+        
+  
+
+    
+
+    
+      <a class="item" data-title="Kubernetes Issue Tracker on GitHub" href="https://github.com/kubernetes/kubernetes/issues/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Report a Security Vulnerability" href="/docs/reporting-security-issues/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Release Notes" href="https://github.com/kubernetes/kubernetes/releases/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Release Roadmap" href="https://github.com/kubernetes/kubernetes/milestones/"></a>
+    
+  
+
+
+      </div>
+    </div>
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="Deprecation Policy" href="/docs/deprecation-policy.md"></a>
+    
+  
+
+
+        
+        </div> <!-- /pi-accordion -->
+    <button class="push-menu-close-button" onclick="kub.toggleToc()"></button>
+  </div> <!-- /docsToc -->
+
+  <div id="docsContent">
+        <p><a href="/editdocs#docs/getting-started-guides/windows/index.md" id="editPageButton">Edit This Page</a></p>
+
+        
+          <h1>Windows Server Containers</h1>
+        
+
+        <p>Kubernetes version 1.5 introduces support for Windows Server Containers. In version 1.5, the Kubernetes control plane (API Server, Scheduler, Controller Manager, etc) continue to run on Linux, while the kubelet and kube-proxy can be run on Windows Server.</p>
+
+<p><strong>Note:</strong> Windows Server Containers on Kubernetes is an Alpha feature in Kubernetes 1.5.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+<p>In Kubernetes version 1.5, Windows Server Containers for Kubernetes is supported using the following:</p>
+
+<ol>
+  <li>Kubernetes control plane running on existing Linux infrastructure (version 1.5 or later)</li>
+  <li>Kubenet network plugin setup on the Linux nodes</li>
+  <li>Windows Server 2016 (RTM version 10.0.14393 or later)</li>
+  <li>Docker Version 1.12.2-cs2-ws-beta or later for Windows Server nodes (Linux nodes and Kubernetes control plane can run any Kubernetes supported Docker Version)</li>
+</ol>
+
+<h2 id="networking">Networking</h2>
+<p>Network is achieved using L3 routing. Because third-party networking plugins (e.g. flannel, calico, etc) don’t natively work on Windows Server, existing technology that is built into the Windows and Linux operating systems is relied on. In this L3 networking approach, a /16 subnet is chosen for the cluster nodes, and a /24 subnet is assigned to each worker node. All pods on a given worker node will be connected to the /24 subnet. This allows pods on the same node to communicate with each other. In order to enable networking between pods running on different nodes, routing features that are built into Windows Server 2016 and Linux are used.</p>
+
+<h3 id="linux">Linux</h3>
+<p>The above networking approach is already supported on Linux using a bridge interface, which essentially creates a private network local to the node. Similar to the Windows side, routes to all other pod CIDRs must be created in order to send packets via the “public” NIC.</p>
+
+<h3 id="windows">Windows</h3>
+<p>Each Window Server node should have the following configuration:</p>
+
+<ol>
+  <li>Two NICs (virtual networking adapters) are required on each Windows Server node - The two Windows container networking modes of interest (transparent and L2 bridge) use an external Hyper-V virtual switch. This means that one of the NICs is entirely allocated to the bridge, creating the need for the second NIC.</li>
+  <li>Transparent container network created - This is a manual configuration step and is shown in <strong><em>Route Setup</em></strong> section below</li>
+  <li>RRAS (Routing) Windows feature enabled - Allows routing between NICs on the box, and also “captures” packets that have the destination IP of a POD running on the node. To enable, open “Server Manager”. Click on “Roles”, “Add Roles”. Click “Next”. Select “Network Policy and Access Services”. Click on “Routing and Remote Access Service” and the underlying checkboxes</li>
+  <li>Routes defined pointing to the other pod CIDRs via the “public” NIC - These routes are added to the built-in routing table as shown in <strong><em>Route Setup</em></strong> section below</li>
+</ol>
+
+<p>The following diagram illustrates the Windows Server networking setup for Kubernetes Setup
+<img src="windows-setup.png" alt="Windows Setup" /></p>
+
+<h2 id="setting-up-windows-server-containers-on-kubernetes">Setting up Windows Server Containers on Kubernetes</h2>
+<p>To run Windows Server Containers on Kubernetes, you’ll need to set up both your host machines and the Kubernetes node components for Windows and setup Routes for Pod communication on different nodes</p>
+<h3 id="host-setup">Host Setup</h3>
+<p><strong>Windows Host Setup</strong></p>
+
+<ol>
+  <li>Windows Server container host running Windows Server 2016 and Docker v1.12. Follow the setup instructions outlined by this blog post: https://msdn.microsoft.com/en-us/virtualization/windowscontainers/quick_start/quick_start_windows_server</li>
+  <li>DNS support for Windows recently got merged to docker master and is currently not supported in a stable docker release. To use DNS build docker from master or download the binary from <a href="https://master.dockerproject.org/">Docker master</a></li>
+  <li>Pull the <code class="highlighter-rouge">apprenda/pause</code> image from <code class="highlighter-rouge">https://hub.docker.com/r/apprenda/pause</code></li>
+  <li>RRAS (Routing) Windows feature enabled</li>
+  <li>Install a VMSwitch of type <code class="highlighter-rouge">Internal</code>, by running <code class="highlighter-rouge">New-VMSwitch -Name KubeProxySwitch -SwitchType Internal</code> command in <em>PowerShell</em> window. This will create a new Network Interface with name <code class="highlighter-rouge">vEthernet (KubeProxySwitch)</code>. This interface will be used by kube-proxy to add Service IPs.</li>
+</ol>
+
+<p><strong>Linux Host Setup</strong></p>
+
+<ol>
+  <li>Linux hosts should be setup according to their respective distro documentation and the requirements of the Kubernetes version you will be using.</li>
+  <li>CNI network plugin installed.</li>
+</ol>
+
+<h3 id="component-setup">Component Setup</h3>
+
+<p>Requirements</p>
+
+<ul>
+  <li>Git</li>
+  <li>Go 1.7.1+</li>
+  <li>make (if using Linux or MacOS)</li>
+  <li>Important notes and other dependencies are listed <a href="https://github.com/kubernetes/kubernetes/blob/master/docs/devel/development.md#building-kubernetes-on-a-local-osshell-environment">here</a></li>
+</ul>
+
+<p><strong>kubelet</strong></p>
+
+<p>To build the <em>kubelet</em>, run:</p>
+
+<ol>
+  <li><code class="highlighter-rouge">cd $GOPATH/src/k8s.io/kubernetes</code></li>
+  <li>Build <em>kubelet</em>
+    <ol>
+      <li>Linux/MacOS: <code class="highlighter-rouge">KUBE_BUILD_PLATFORMS=windows/amd64 make WHAT=cmd/kubelet</code></li>
+      <li>Windows: <code class="highlighter-rouge">go build cmd/kubelet/kubelet.go</code></li>
+    </ol>
+  </li>
+</ol>
+
+<p><strong>kube-proxy</strong></p>
+
+<p>To build <em>kube-proxy</em>, run:</p>
+
+<ol>
+  <li><code class="highlighter-rouge">cd $GOPATH/src/k8s.io/kubernetes</code></li>
+  <li>Build <em>kube-proxy</em>
+    <ol>
+      <li>Linux/MacOS: <code class="highlighter-rouge">KUBE_BUILD_PLATFORMS=windows/amd64 make WHAT=cmd/kube-proxy</code></li>
+      <li>Windows: <code class="highlighter-rouge">go build cmd/kube-proxy/proxy.go</code></li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="route-setup">Route Setup</h3>
+<p>The below example setup assumes one Linux and two Windows Server 2016 nodes and a cluster CIDR 192.168.0.0/16</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hostname</th>
+      <th>Routable IP address</th>
+      <th>Pod CIDR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lin01</td>
+      <td><code class="highlighter-rouge">&lt;IP of Lin01 host&gt;</code></td>
+      <td>192.168.0.0/24</td>
+    </tr>
+    <tr>
+      <td>Win01</td>
+      <td><code class="highlighter-rouge">&lt;IP of Win01 host&gt;</code></td>
+      <td>192.168.1.0/24</td>
+    </tr>
+    <tr>
+      <td>Win02</td>
+      <td><code class="highlighter-rouge">&lt;IP of Win02 host&gt;</code></td>
+      <td>192.168.2.0/24</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Lin01</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ip route add 192.168.1.0/24 via &lt;IP of Win01 host&gt;
+ip route add 192.168.2.0/24 via &lt;IP of Win02 host&gt;
+</code></pre>
+</div>
+
+<p><strong>Win01</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker network create -d transparent --gateway 192.168.1.1 --subnet 192.168.1.0/24 &lt;network name&gt;
+# A bridge is created with Adapter name "vEthernet (HNSTransparent)". Set its IP address to transparent network gateway
+netsh interface ipv4 set address "vEthernet (HNSTransparent)" addr=192.168.1.1
+route add 192.168.0.0 mask 255.255.255.0 192.168.0.1 if &lt;Interface Id of the Routable Ethernet Adapter&gt; -p
+route add 192.168.2.0 mask 255.255.255.0 192.168.2.1 if &lt;Interface Id of the Routable Ethernet Adapter&gt; -p
+</code></pre>
+</div>
+
+<p><strong>Win02</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker network create -d transparent --gateway 192.168.2.1 --subnet 192.168.2.0/24 &lt;network name&gt;
+# A bridge is created with Adapter name "vEthernet (HNSTransparent)". Set its IP address to transparent network gateway
+netsh interface ipv4 set address "vEthernet (HNSTransparent)" addr=192.168.2.1
+route add 192.168.0.0 mask 255.255.255.0 192.168.0.1 if &lt;Interface Id of the Routable Ethernet Adapter&gt; -p
+route add 192.168.1.0 mask 255.255.255.0 192.168.1.1 if &lt;Interface Id of the Routable Ethernet Adapter&gt; -p
+</code></pre>
+</div>
+
+<h2 id="starting-the-cluster">Starting the Cluster</h2>
+<p>To start your cluster, you’ll need to start both the Linux-based Kubernetes control plane, and the Windows Server-based Kubernetes node components.</p>
+<h2 id="starting-the-linux-based-control-plane">Starting the Linux-based Control Plane</h2>
+<p>Use your preferred method to start Kubernetes cluster on Linux. Please note that Cluster CIDR might need to be updated.</p>
+<h2 id="starting-the-windows-node-components">Starting the Windows Node Components</h2>
+<p>To start kubelet on your Windows node:
+Run the following in a PowerShell window. Be aware that if the node reboots or the process exits, you will have to rerun the commands below to restart the kubelet</p>
+
+<ol>
+  <li>
+    <p>Set environment variable <em>CONTAINER_NETWORK</em> value to the docker container network to use
+<code class="highlighter-rouge">$env:CONTAINER_NETWORK = "&lt;docker network&gt;"</code></p>
+  </li>
+  <li>
+    <p>Run <em>kubelet</em> executable using the below command
+<code class="highlighter-rouge">kubelet.exe --hostname-override=&lt;ip address/hostname of the windows node&gt;  --pod-infra-container-image="apprenda/pause" --resolv-conf="" --api_servers=&lt;api server location&gt;</code></p>
+  </li>
+</ol>
+
+<p>To start kube-proxy on your Windows node:</p>
+
+<p>Run the following in a PowerShell window with administrative privileges. Be aware that if the node reboots or the process exits, you will have to rerun the commands below to restart the kube-proxy.</p>
+
+<ol>
+  <li>
+    <p>Set environment variable <em>INTERFACE_TO_ADD_SERVICE_IP</em> value to <code class="highlighter-rouge">vEthernet (KubeProxySwitch)</code> which we created in <strong><em>Windows Host Setup</em></strong> above
+<code class="highlighter-rouge">$env:INTERFACE_TO_ADD_SERVICE_IP = "vEthernet (KubeProxySwitch)"</code></p>
+  </li>
+  <li>
+    <p>Run <em>kube-proxy</em> executable using the below command
+<code class="highlighter-rouge">.\proxy.exe --v=3 --proxy-mode=userspace --hostname-override=&lt;ip address/hostname of the windows node&gt; --master=&lt;api server location&gt; --bind-address=&lt;ip address of the windows node&gt;</code></p>
+  </li>
+</ol>
+
+<h2 id="scheduling-pods-on-windows">Scheduling Pods on Windows</h2>
+<p>Because your cluster has both Linux and Windows nodes, you must explicitly set the nodeSelector constraint to be able to schedule Pods to Windows nodes. You must set nodeSelector with the label beta.kubernetes.io/os to the value windows; see the following example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"apiVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pod"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iis"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iis"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"spec"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"containers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iis"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"microsoft/iis"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"ports"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"containerPort"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"nodeSelector"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"beta.kubernetes.io/os"</span><span class="p">:</span><span class="w"> </span><span class="s2">"windows"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h2 id="known-limitations">Known Limitations:</h2>
+<ol>
+  <li>There is no network namespace in Windows and as a result currently only one container per pod is supported</li>
+  <li>Secrets currently do not work because of a bug in Windows Server Containers described <a href="https://github.com/docker/docker/issues/28401">here</a></li>
+  <li>ConfigMaps have not been implemented yet.</li>
+  <li><code class="highlighter-rouge">kube-proxy</code> implementation uses <code class="highlighter-rouge">netsh portproxy</code> and as it only supports TCP, DNS currently works only if the client retries DNS query using TCP</li>
+</ol>
+
+
+        <p><a href=""><img src="https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/docs/getting-started-guides/windows/index.md?pixel" alt="Analytics" /></a>
+        
+		<script type="text/javascript">
+	        PDRTJS_settings_8345992 = {
+		        "id" : "8345992",
+		        "unique_id" : "/docs/getting-started-guides/windows/",
+		        "title" : "Windows Server Containers",
+		        "permalink" : "http://kubernetes.github.io/docs/getting-started-guides/windows/"
+	        };
+	        (function(d,c,j){if(!document.getElementById(j)){var pd=d.createElement(c),s;pd.id=j;pd.src=('https:'==document.location.protocol)?'https://polldaddy.com/js/rating/rating.js':'http://i0.poll.fm/js/rating/rating.js';s=document.getElementsByTagName(c)[0];s.parentNode.insertBefore(pd,s);}}(document,'script','pd-rating-js'));
+		</script>
+		<a href="" onclick="window.open('https://github.com/kubernetes/kubernetes.github.io/issues/new?title=Issue%20with%20' +
+		window.location.pathname)" class="button issue">Create an Issue</a>
+		<a href="/editdocs#docs/getting-started-guides/windows/index.md" class="button issue">Edit this Page</a>
+	
+	</div>
+</section>
+
+<footer>
+	<main class="light-text">
+		<nav>
+			<a href="/docs/hellonode/">Get Started</a>
+			<a href="/docs/">Documentation</a>
+			<a href="http://blog.kubernetes.io/">Blog</a>
+			<a href="/partners/">Partners</a>
+			<a href="/community/">Community</a>
+			<a href="/case-studies/">Case Studies</a>
+		</nav>
+		<div class="social">
+			<div>
+				<a href="https://twitter.com/kubernetesio" class="twitter"><span>twitter</span></a>
+				<a href="https://github.com/kubernetes/kubernetes" class="github"><span>Github</span></a>
+				<a href="http://slack.k8s.io/" class="slack"><span>Slack</span></a>
+			</div>
+			<div>
+				<a href="http://stackoverflow.com/questions/tagged/kubernetes" class="stack-overflow"><span>Stack Overflow</span></a>
+				<a href="https://groups.google.com/forum/#!forum/kubernetes-users" class="mailing-list"><span>Mailing List</span></a>
+				<a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar"><span>Events Calendar</span></a>
+			</div>
+			<div>
+				<a href="//get.k8s.io" class="button">Download K8s</a>
+				<a href="https://github.com/kubernetes/kubernetes" class="button">Contribute to the K8s codebase</a>
+			</div>
+		</div>
+		<div id="miceType" class="center">
+			&copy; 2017 The Kubernetes Authors | Documentation Distributed under <a href="https://github.com/kubernetes/kubernetes.github.io/blob/master/LICENSE" class="light-text">CC BY 4.0</a>
+		</div>
+		<div id="miceType" class="center">
+			Copyright &copy; 2017 The Linux Foundation&reg;. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our Trademark Usage page: <a href="https://www.linuxfoundation.org/trademark-usage" class="light-text">https://www.linuxfoundation.org/trademark-usage</a>
+		</div>
+	</main>
+</footer>
+
+<button class="flyout-button" onclick="kub.toggleToc()"></button>
+
+<style>
+.cse .gsc-control-cse, .gsc-control-cse, {
+    padding: 0;
+}
+  .gsc-control-cse table, .gsc-control-cse-en table {
+      margin:0px !important;
+  }
+  .gsc-above-wrapper-area {
+      border-bottom: 0;
+  }
+</style>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-36037335-10', 'auto');
+ga('send', 'pageview');
+
+// hide docs nav area if no nav is present, or if nav only contains a link to the current page
+(function () {
+    window.addEventListener('DOMContentLoaded', init)
+
+        // play nice with our neighbors
+        function init() {
+            window.removeEventListener('DOMContentLoaded', init)
+                hideNav()
+        }
+
+    function hideNav(toc){
+        if (!toc) toc = document.querySelector('#docsToc')
+            var container = toc.querySelector('.container')
+
+                // container is built dynamically, so it may not be present on the first runloop
+                if (container) {
+                    if (container.childElementCount === 0 || toc.querySelectorAll('a.item').length === 1) {
+                        toc.style.display = 'none'
+                            document.getElementById('docsContent').style.width = '100%'
+                    }
+                } else {
+                    requestAnimationFrame(function () {
+                        hideNav(toc)
+                    })
+                }
+    }
+})();
+</script>
+
+<!-- Commenting out AnswerDash for now; we need to work on our list of questions/answers/design first
+    <!-- Start of AnswerDash script <script>var AnswerDash;!function(e,t,n,s,a){if(!t.getElementById(s)){var i,r=t.createElement(n),c=t.getElementsByTagName(n)[0];e[a]||(i=e[a]=function(){i.__oninit.push(arguments)},i.__oninit=[]),r.type="text/javascript",r.async=!0,r.src="https://p1.answerdash.com/answerdash.min.js?siteid=756",r.setAttribute("id",s),c.parentNode.insertBefore(r,c)}}(window,document,"script","answerdash-script","AnswerDash");</script> <!-- End of AnswerDash script -->
+
+
+</body>
+</html>

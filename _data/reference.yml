@@ -1,0 +1,31 @@
+bigheader: "Reference Documentation"
+abstract: "Design docs, concept definitions, and references for APIs and CLIs."
+toc:
+- docs/reference.md
+
+- title: "Kubernetes Resource Types (New Docs Style)"
+  section:
+  - title: Version 1.5
+    path: /docs/resources-reference/v1.5/
+
+- title: "Kubernetes API (New Docs Style)"
+  section:
+  - title: Version 1.5
+    path: /docs/api-reference/v1.5/
+
+- title: "Kubectl Commands (New Docs Style)"
+  section:
+  - title: Version 1.5
+    path: /docs/user-guide/kubectl/v1.5/
+
+- title: Glossary
+  section:
+  - docs/user-guide/annotations.md
+  - docs/admin/daemons.md
+
+- title: Kubernetes Design Docs
+  section:
+  - title: Kubernetes Architecture
+    path: https://github.com/kubernetes/kubernetes/blob/release-1.5/docs/design/architecture.md
+  - title: Kubernetes Design Overview
+    path: https://github.com/kubernetes/kubernetes/blob/release-1.5/docs/design/

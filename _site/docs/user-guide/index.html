@@ -1,0 +1,401 @@
+
+  
+    
+    
+
+  
+
+  
+    
+    
+
+  
+
+  
+    
+
+<!Doctype html>
+<html id="docs" class="Guides">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto+Mono' type='text/css'>
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <link rel="stylesheet" href="/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/css/sweetalert.css">
+    
+    <script src="/js/jquery-2.2.0.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/sweetalert.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Begin Jekyll SEO tag v2.1.0 -->
+<title>User Guide - Kubernetes</title>
+<meta property="og:title" content="User Guide" />
+<meta name="description" content="Production-Grade Container Orchestration" />
+<meta property="og:description" content="Production-Grade Container Orchestration" />
+<link rel="canonical" href="http://localhost:4000/docs/user-guide/" />
+<meta property="og:url" content="http://localhost:4000/docs/user-guide/" />
+<meta property="og:site_name" content="Kubernetes" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@kubernetesio" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "WebPage",
+"headline": "User Guide",
+"description": "Production-Grade Container Orchestration",
+"publisher": {"@type": "Organization",
+"logo": {"@type": "ImageObject",
+"url": "http://localhost:4000/images/favicon.png"}},
+"url": "http://localhost:4000/docs/user-guide/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+<body>
+
+<div id="cellophane" onclick="kub.toggleMenu()"></div>
+
+<header>
+    <a href="/" class="logo"></a>
+
+    <div class="nav-buttons" data-auto-burger="primary">
+        <ul class="global-nav">
+            <li><a href="/docs/">Documentation</a></li>
+            <li><a href="http://blog.kubernetes.io/">Blog</a></li>
+            <li><a href="/partners/">Partners</a></li>
+            <li><a href="/community/">Community</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+        </ul>
+        <!-- <a href="/docs/" class="button" id="viewDocs" data-auto-burger-exclude>View Documentation</a> -->
+        <a href="/docs/tutorials/kubernetes-basics/" class="button" id="tryKubernetes" data-auto-burger-exclude>Try Kubernetes</a>
+        <button id="hamburger" onclick="kub.toggleMenu()" data-auto-burger-exclude><div></div></button>
+    </div>
+
+    <nav id="mainNav">
+        <main data-auto-burger="primary">
+        <div class="nav-box">
+            <h3><a href="/docs/hellonode/">Get Started</a></h3>
+            <p>Ready to get your hands dirty? Build a simple Kubernetes cluster that runs "Hello World" for Node.js.</p>
+        </div>
+        <div class="nav-box">
+            <h3><a href="/docs/">Documentation</a></h3>
+            <p>Learn how to use Kubernetes with the use of walkthroughs, samples, and reference documentation. You can even <a href="/editdocs/" data-auto-burger-exclude>help contribute to the docs</a>!</p>
+        </div>
+        <div class="nav-box">
+            <h3><a href="/community/">Community</a></h3>
+            <p>If you need help, you can connect with other Kubernetes users and the Kubernetes authors, attend community events, and watch video presentations from around the web.</p>
+        </div>
+        <div class="nav-box">
+            <h3><a href="http://blog.kubernetes.io">Blog</a></h3>
+            <p>Read the latest news for Kubernetes and the containers space in general, and get technical how-tos hot off the presses.</p>
+        </div>
+        </main>
+        <main data-auto-burger="primary">
+        <div class="left">
+            <h5 class="github-invite">Interested in hacking on the core Kubernetes code base?</h5>
+            <a href="https://github.com/kubernetes/kubernetes" class="button" data-auto-burger-exclude>View On Github</a>
+        </div>
+
+        <div class="right">
+            <h5 class="github-invite">Explore the community</h5>
+            <div class="social">
+                <a href="https://twitter.com/kubernetesio" class="twitter"><span>Twitter</span></a>
+                <a href="https://github.com/kubernetes/kubernetes" class="github"><span>Github</span></a>
+                <a href="http://slack.k8s.io/" class="slack"><span>Slack</span></a>
+                <a href="http://stackoverflow.com/questions/tagged/kubernetes" class="stack-overflow"><span>Stack Overflow</span></a>
+                <a href="https://groups.google.com/forum/#!forum/kubernetes-users" class="mailing-list"><span>Mailing List</span></a>
+                <a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar"><span>Events Calendar</span></a>
+            </div>
+        </div>
+        <div class="clear" style="clear: both"></div>
+        </main>
+    </nav>
+</header>
+
+
+<!--  HERO  -->
+<section id="hero" class="light-text">
+  <h1>Guides</h1>
+  <h5>How to get started, and accomplish tasks, using Kubernetes.</h5>
+  <div id="vendorStrip" class="light-text">
+    <ul>
+      <li><a href="/docs/" >DOCS HOME</a></li>
+      <li><a href="/docs/user-guide/" class="YAH">GUIDES</a></li>
+      <li><a href="/docs/tutorials/" >TUTORIALS</a></li>
+      <li><a href="/docs/tasks/" >TASKS</a></li>
+      <li><a href="/docs/concepts/" >CONCEPTS</a></li>
+      <li><a href="/docs/reference/" >REFERENCE</a></li>
+      <li><a href="/docs/tools/" >TOOLS</a></li>
+      <li><a href="/docs/samples/" >SAMPLES</a></li>
+      <li><a href="/docs/troubleshooting/" >SUPPORT</a></li>
+    </ul>
+    <div id="searchBox">
+      <input type="text" id="search" placeholder="Search" onkeydown="if (event.keyCode==13) window.location.replace('/docs/search/?q=' + this.value)">
+    </div>
+  </div>
+</section>
+
+<section id="encyclopedia">
+  <div id="docsToc">
+        <div class="pi-accordion">
+        
+          
+  
+
+    
+
+    
+      <a class="item" data-title="User Guide" href="/docs/user-guide/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="What is Kubernetes?" href="/docs/whatisk8s/"></a>
+    
+  
+
+  
+
+    
+
+    
+      <a class="item" data-title="User Guide" href="/docs/user-guide/"></a>
+    
+  
+
+  
+    <div class="item" data-title="Accessing the Cluster">
+      <div class="container">
+        
+  
+
+    
+
+    
+      <a class="item" data-title="User Guide" href="/docs/user-guide/"></a>
+    
+  
+
+
+      </div>
+    </div>
+  
+
+
+        
+        </div> <!-- /pi-accordion -->
+    <button class="push-menu-close-button" onclick="kub.toggleToc()"></button>
+  </div> <!-- /docsToc -->
+
+  <div id="docsContent">
+        <p><a href="/editdocs#docs/user-guide/index.md" id="editPageButton">Edit This Page</a></p>
+
+        
+          <h1>User Guide</h1>
+        
+
+        <p>The IFC <strong>Guides</strong> can help you work with various aspects of the IFC system.</p>
+
+<ul>
+  <li>The IFC <a href="#user-guide-internal">User Guide</a> can help you run programs and services on an existing IFC cluster.</li>
+  <li>The <a href="/docs/admin/">Cluster Admin Guide</a> can help you set up and administrate your own IFC cluster.</li>
+  <li>The <a href="https://github.com/kubernetes/kubernetes/tree/master/docs/devel">Developer Guide</a> can help you either write code to directly access the IFC API, or to contribute directly to the IFC project.</li>
+</ul>
+
+<h2 id="kubernetes-user-guide"><a name="user-guide-internal"></a>Kubernetes User Guide</h2>
+
+<p>The following topics in the IFC User Guide can help you run applications and services on a IFC cluster:</p>
+
+<ol>
+  <li><a href="/docs/user-guide/quick-start/">Quick start: launch and expose an application</a></li>
+  <li><a href="/docs/user-guide/configuring-containers/">Configuring and launching containers: configuring common container parameters</a></li>
+  <li><a href="/docs/user-guide/deploying-applications/">Deploying continuously running applications</a></li>
+  <li><a href="/docs/user-guide/connecting-applications/">Connecting applications: exposing applications to clients and users</a></li>
+  <li><a href="/docs/user-guide/production-pods/">Working with containers in production</a></li>
+  <li><a href="/docs/user-guide/managing-deployments/">Managing deployments</a></li>
+  <li><a href="/docs/user-guide/introspection-and-debugging/">Application introspection and debugging</a>
+    <ol>
+      <li><a href="/docs/user-guide/ui/">Using the IFC web user interface</a></li>
+      <li><a href="/docs/user-guide/logging/overview/">Logging</a></li>
+      <li><a href="/docs/user-guide/monitoring/">Monitoring</a></li>
+      <li><a href="/docs/user-guide/getting-into-containers/">Getting into containers via <code class="highlighter-rouge">exec</code></a></li>
+      <li><a href="/docs/user-guide/connecting-to-applications-proxy/">Connecting to containers via proxies</a></li>
+      <li><a href="/docs/user-guide/connecting-to-applications-port-forward/">Connecting to containers via port forwarding</a></li>
+    </ol>
+  </li>
+</ol>
+
+<p>Before running examples in the user guides, please ensure you have completed the <a href="/docs/user-guide/prereqs/">prerequisites</a>.</p>
+
+<h2 id="ifc-concepts">IFC Concepts</h2>
+
+<dl>
+  <dt><a href="/docs/admin/"><strong>Cluster</strong></a></dt>
+  <dd>A cluster is a set of physical or virtual machines and other infrastructure resources used by IFC to run your applications.</dd>
+  <dt><a href="/docs/admin/node/"><strong>Node</strong></a></dt>
+  <dd>A node is a physical or virtual machine running IFC, onto which pods can be scheduled.</dd>
+  <dt><a href="/docs/user-guide/pods/"><strong>Pod</strong></a></dt>
+  <dd>A pod is a co-located group of containers and volumes.</dd>
+  <dt><a href="/docs/user-guide/labels/"><strong>Label</strong></a></dt>
+  <dd>A label is a key/value pair that is attached to a resource, such as a pod, to convey a user-defined identifying attribute. Labels can be used to organize and to select subsets of resources.</dd>
+  <dt><a href="/docs/user-guide/labels/#label-selectors"><strong>Selector</strong></a></dt>
+  <dd>A selector is an expression that matches labels in order to identify related resources, such as which pods are targeted by a load-balanced service.</dd>
+  <dt><a href="/docs/user-guide/replication-controller/"><strong>Replication Controller</strong></a></dt>
+  <dd>A replication controller ensures that a specified number of pod replicas are running at any one time. It both allows for easy scaling of replicated systems and handles re-creation of a pod when the machine it is on reboots or otherwise fails.</dd>
+  <dt><a href="/docs/user-guide/services/"><strong>Service</strong></a></dt>
+  <dd>A service defines a set of pods and a means by which to access them, such as single stable IP address and corresponding DNS name.</dd>
+  <dt><a href="/docs/user-guide/volumes/"><strong>Volume</strong></a></dt>
+  <dd>A volume is a directory, possibly with some data in it, which is accessible to a Container as part of its filesystem.  IFC volumes build upon <a href="https://docs.docker.com/engine/tutorials/dockervolumes/">Docker Volumes</a>, adding provisioning of the volume directory and/or device.</dd>
+  <dt><a href="/docs/user-guide/secrets/"><strong>Secret</strong></a></dt>
+  <dd>A secret stores sensitive data, such as authentication tokens, which can be made available to containers upon request.</dd>
+  <dt><a href="/docs/user-guide/identifiers/"><strong>Name</strong></a></dt>
+  <dd>A user- or client-provided name for a resource.</dd>
+  <dt><a href="/docs/user-guide/namespaces/"><strong>Namespace</strong></a></dt>
+  <dd>A namespace is like a prefix to the name of a resource. Namespaces help different projects, teams, or customers to share a cluster, such as by preventing name collisions between unrelated teams.</dd>
+  <dt><a href="/docs/user-guide/annotations/"><strong>Annotation</strong></a></dt>
+  <dd>A key/value pair that can hold larger (compared to a label), and possibly not human-readable, data, intended to store non-identifying auxiliary data, especially data manipulated by tools and system extensions.  Efficient filtering by annotation values is not supported.</dd>
+</dl>
+
+<h2 id="further-reading">Further reading</h2>
+
+<p>API resources</p>
+
+<ul>
+  <li><a href="/docs/user-guide/working-with-resources/">Working with resources</a></li>
+</ul>
+
+<p>Pods and containers</p>
+
+<ul>
+  <li><a href="/docs/user-guide/pod-states/">Pod lifecycle and restart policies</a></li>
+  <li><a href="/docs/user-guide/container-environment/">Lifecycle hooks</a></li>
+  <li><a href="/docs/user-guide/compute-resources/">Compute resources, such as cpu and memory</a></li>
+  <li><a href="/docs/user-guide/containers/">Specifying commands and requesting capabilities</a></li>
+  <li><a href="/docs/user-guide/downward-api/">Downward API: accessing system configuration from a pod</a></li>
+  <li><a href="/docs/user-guide/images/">Images and registries</a></li>
+  <li><a href="/docs/user-guide/docker-cli-to-kubectl/">Migrating from docker-cli to kubectl</a></li>
+  <li><a href="/docs/user-guide/config-best-practices/">Configuration Best Practices and Tips</a></li>
+  <li><a href="/docs/user-guide/node-selection/">Assign pods to selected nodes</a></li>
+  <li><a href="/docs/user-guide/update-demo/">Perform a rolling update on a running group of pods</a></li>
+</ul>
+
+
+        <p><a href=""><img src="https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/docs/user-guide/index.md?pixel" alt="Analytics" /></a>
+        
+		<script type="text/javascript">
+	        PDRTJS_settings_8345992 = {
+		        "id" : "8345992",
+		        "unique_id" : "/docs/user-guide/",
+		        "title" : "User Guide",
+		        "permalink" : "http://kubernetes.github.io/docs/user-guide/"
+	        };
+	        (function(d,c,j){if(!document.getElementById(j)){var pd=d.createElement(c),s;pd.id=j;pd.src=('https:'==document.location.protocol)?'https://polldaddy.com/js/rating/rating.js':'http://i0.poll.fm/js/rating/rating.js';s=document.getElementsByTagName(c)[0];s.parentNode.insertBefore(pd,s);}}(document,'script','pd-rating-js'));
+		</script>
+		<a href="" onclick="window.open('https://github.com/kubernetes/kubernetes.github.io/issues/new?title=Issue%20with%20' +
+		window.location.pathname)" class="button issue">Create an Issue</a>
+		<a href="/editdocs#docs/user-guide/index.md" class="button issue">Edit this Page</a>
+	
+	</div>
+</section>
+
+<footer>
+	<main class="light-text">
+		<nav>
+			<a href="/docs/hellonode/">Get Started</a>
+			<a href="/docs/">Documentation</a>
+			<a href="http://blog.kubernetes.io/">Blog</a>
+			<a href="/partners/">Partners</a>
+			<a href="/community/">Community</a>
+			<a href="/case-studies/">Case Studies</a>
+		</nav>
+		<div class="social">
+			<div>
+				<a href="https://twitter.com/kubernetesio" class="twitter"><span>twitter</span></a>
+				<a href="https://github.com/kubernetes/kubernetes" class="github"><span>Github</span></a>
+				<a href="http://slack.k8s.io/" class="slack"><span>Slack</span></a>
+			</div>
+			<div>
+				<a href="http://stackoverflow.com/questions/tagged/kubernetes" class="stack-overflow"><span>Stack Overflow</span></a>
+				<a href="https://groups.google.com/forum/#!forum/kubernetes-users" class="mailing-list"><span>Mailing List</span></a>
+				<a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar"><span>Events Calendar</span></a>
+			</div>
+			<div>
+				<a href="//get.k8s.io" class="button">Download K8s</a>
+				<a href="https://github.com/kubernetes/kubernetes" class="button">Contribute to the K8s codebase</a>
+			</div>
+		</div>
+		<div id="miceType" class="center">
+			&copy; 2017 The Kubernetes Authors | Documentation Distributed under <a href="https://github.com/kubernetes/kubernetes.github.io/blob/master/LICENSE" class="light-text">CC BY 4.0</a>
+		</div>
+		<div id="miceType" class="center">
+			Copyright &copy; 2017 The Linux Foundation&reg;. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our Trademark Usage page: <a href="https://www.linuxfoundation.org/trademark-usage" class="light-text">https://www.linuxfoundation.org/trademark-usage</a>
+		</div>
+	</main>
+</footer>
+
+<button class="flyout-button" onclick="kub.toggleToc()"></button>
+
+<style>
+.cse .gsc-control-cse, .gsc-control-cse, {
+    padding: 0;
+}
+  .gsc-control-cse table, .gsc-control-cse-en table {
+      margin:0px !important;
+  }
+  .gsc-above-wrapper-area {
+      border-bottom: 0;
+  }
+</style>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-36037335-10', 'auto');
+ga('send', 'pageview');
+
+// hide docs nav area if no nav is present, or if nav only contains a link to the current page
+(function () {
+    window.addEventListener('DOMContentLoaded', init)
+
+        // play nice with our neighbors
+        function init() {
+            window.removeEventListener('DOMContentLoaded', init)
+                hideNav()
+        }
+
+    function hideNav(toc){
+        if (!toc) toc = document.querySelector('#docsToc')
+            var container = toc.querySelector('.container')
+
+                // container is built dynamically, so it may not be present on the first runloop
+                if (container) {
+                    if (container.childElementCount === 0 || toc.querySelectorAll('a.item').length === 1) {
+                        toc.style.display = 'none'
+                            document.getElementById('docsContent').style.width = '100%'
+                    }
+                } else {
+                    requestAnimationFrame(function () {
+                        hideNav(toc)
+                    })
+                }
+    }
+})();
+</script>
+
+<!-- Commenting out AnswerDash for now; we need to work on our list of questions/answers/design first
+    <!-- Start of AnswerDash script <script>var AnswerDash;!function(e,t,n,s,a){if(!t.getElementById(s)){var i,r=t.createElement(n),c=t.getElementsByTagName(n)[0];e[a]||(i=e[a]=function(){i.__oninit.push(arguments)},i.__oninit=[]),r.type="text/javascript",r.async=!0,r.src="https://p1.answerdash.com/answerdash.min.js?siteid=756",r.setAttribute("id",s),c.parentNode.insertBefore(r,c)}}(window,document,"script","answerdash-script","AnswerDash");</script> <!-- End of AnswerDash script -->
+
+
+</body>
+</html>
