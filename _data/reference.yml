@@ -1,31 +1,43 @@
 bigheader: "Reference Documentation"
-abstract: "Design docs, concept definitions, and references for APIs and CLIs."
+abstract: "Specification for core design docs, concept definitions, and references for extensions"
 toc:
 - docs/reference.md
 
-- title: "Kubernetes Resource Types (New Docs Style)"
+- title: "IFC EXPRESS"
   section:
-  - title: Version 1.5
-    path: /docs/resources-reference/v1.5/
+  - docs/ifc-express/express-overview.md
+  - docs/ifc-express/express-specification.md
+  - docs/ifc-express/express-g-overview.md
+  - docs/ifc-express/express-g-overview.md
 
-- title: "Kubernetes API (New Docs Style)"
+- title: "IFC XML"
   section:
-  - title: Version 1.5
-    path: /docs/api-reference/v1.5/
+  - docs/ifc-xml/xml-overview.md
+  - docs/ifc-xml/xml-specification.md
 
-- title: "Kubectl Commands (New Docs Style)"
+- title: "IFC STEP"
   section:
-  - title: Version 1.5
-    path: /docs/user-guide/kubectl/v1.5/
+  - docs/ifc-step/step-overview.md
+  - docs/ifc-step/step-specification.md
+
+- title: "IFC OWL"
+  section:
+  - docs/ifc-owl/owl-overview.md
+  - docs/ifc-owl/owl-specification.md
+
+- title: "IFC MVD"
+  section:
+  - docs/ifc-mvd/mvd-overview.md
+  - docs/ifc-mvd/mvd-xml.md
 
 - title: Glossary
   section:
-  - docs/user-guide/annotations.md
-  - docs/admin/daemons.md
+  - docs/glossary/ifc-kernel.md
+  - docs/glossary/ifc-object.md
+  - docs/glossary/ifc-schema.md
+  - docs/glossary/step-ap-classes.md
 
-- title: Kubernetes Design Docs
+- title: IFC Design Docs
   section:
-  - title: Kubernetes Architecture
-    path: https://github.com/kubernetes/kubernetes/blob/release-1.5/docs/design/architecture.md
-  - title: Kubernetes Design Overview
-    path: https://github.com/kubernetes/kubernetes/blob/release-1.5/docs/design/
+  - docs/design/architecture.md
+  - docs/design/design-overview.md

@@ -1,8 +1,13 @@
 bigheader: "Concepts"
-abstract: "Detailed explanations of Kubernetes system concepts and abstractions."
+abstract: "An overview into the concepts and origins of IFC"
 toc:
 - docs/concepts/index.md
 
-- title: Kubectl Command Line
+- docs/concepts/overview.md
+
+- title: IFC model architecture
   section:
-  - docs/concepts/index.md
+  - docs/concepts/domain-layer.md
+  - docs/concepts/resource-layer.md
+  - docs/concepts/core-layer.md
+  - docs/concepts/interoperability-layer.md

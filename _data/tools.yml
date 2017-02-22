@@ -1,15 +1,67 @@
 bigheader: "Tools"
-abstract: "Tools to help you use and enhance Kubernetes."
+abstract: "A collection of tools and resources for working with IFC"
 toc:
 - docs/tools/index.md
 
-- title: Native Tools
+- title: Adopted tools
   section:
-  - title: Kubectl
-    path: /docs/user-guide/kubectl/
+    - docs/tools/adopted/ifcdoc/overview.md
+    - docs/tools/adopted/ifcdoc/user-guide.md
+
+- title: Converters
+  section:
+  - title: IFC object to PSET
+    path: /docs/adopted/ifcdoc/overview.md
+  - title: IFC to BCF
+    path: /docs/adopted/ifcdoc/overview.md
+  - title: IFC to bsdd
+    path: /docs/adopted/ifcdoc/overview.md
+  - title: IFC to OWL
+    path: /docs/adopted/ifcdoc/overview.md
+  - title: IFC to ifcXML
+    path: /docs/adopted/ifcdoc/overview.md
+  - title: IFC to JSON
+    path: /docs/adopted/ifcdoc/overview.md
+- title: Exporters
+  section:
+  - title: IFC - MVD
+    section:
+    - title: Overview
+      path: /docs/adopted/ifcdoc/overview.md
+    - title: MVD generators
+      path: /docs/adopted/ifcdoc/overview.md
+  - title: Application specific
+    section:
+    - title: Autodesk applications
+      path: /docs/adopted/ifcdoc/overview.md
+    - title: Sketchup and applications
+      path: /docs/adopted/ifcdoc/overview.md
+    - title: Bentley and applications
+      path: /docs/adopted/ifcdoc/overview.md
+    - title: Rhino and applications
+      path: /docs/adopted/ifcdoc/overview.md
+    - title: Graphisoft applications
+      path: /docs/adopted/ifcdoc/overview.md
+  section:
+  - title: Read and Write classes
+    path: /docs/adopted/ifcdoc/overview.md
+
+- title: Validators
+  section:
+  - title: IFC XML validation checker
+    path: /docs/adopted/ifcdoc/overview.md
+  - title: IFC JSON checker
+    path: /docs/adopted/ifcdoc/overview.md
+
+- title: Viewers
+  section:
+  - title: IFC file viewers
+    path: /docs/adopted/ifcdoc/overview.md
+  - title: IFC JSON viewers
+    path: /docs/adopted/ifcdoc/overview.md
+  - title: IFC openShell
+    path: /docs/adopted/ifcdoc/overview.md
 
 - title: Third-Party Tools
   section:
-  - docs/tools/kompose/index.md
-  - title: Helm
-    path: https://github.com/kubernetes/helm
+  - docs/tools/third-paty/overview.md

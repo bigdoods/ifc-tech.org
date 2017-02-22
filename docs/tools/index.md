@@ -1,6 +1,4 @@
 ---
-assignees:
-- janetkuo
 title: Tools
 ---
 
@@ -8,11 +6,11 @@ IFC contains several built-in tools to help you work with the IFC system, and al
 
 #### Native Tools
 
-IFC contains the following built-in tools:
+IFC contains tools that are built into the express langauge to assist with object references. There are other tools that assist with working with objects developed by both buildingsmart and the community:
 
-##### Kubectl
+##### IFCdocs
 
-[`kubectl`](/docs/user-guide/kubectl/) is the command line tool for IFC. It controls the IFC cluster manager.
+[`IFCdocs`](/docs/user-guide/kubectl/) is the command line tool for IFC. It controls the IFC .... (tbc)
 
 ##### Kubeadm
 
