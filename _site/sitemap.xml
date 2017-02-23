@@ -220,6 +220,9 @@
 <loc>http://localhost:4000/security/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/index_stash/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/docs/getting-started-guides/ubuntu/installation/</loc>
 </url>
 <url>

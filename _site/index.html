@@ -25,7 +25,7 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Kubernetes" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@kubernetesio" />
+<meta name="twitter:site" content="@" />
 <script type="application/ld+json">
 {"@context": "http://schema.org",
 "@type": "WebSite",
@@ -106,10 +106,10 @@
 <section id="hero" class="light-text">
 	<main>
 		<div id="headlineWrapper">
-			<h1>Production-Grade Container Orchestration</h1>
-			<h5>Automated container deployment, scaling, and management</h5>
+			<h1>Develop for interoperability</h1>
+			<h5>Write software to use the IFC schema and guarantee compatibility with other industry software</h5>
 		</div>
-		<a href="/docs/tutorials/kubernetes-basics/" id="quickstartButton" class="button">Try Our Interactive Tutorials</a>
+		<a href="/docs/tutorials/index/" id="quickstartButton" class="button">Try Our Hello Wall</a>
 	</main>
 	<!--<div id="vendorStrip" class="light-text">-->
 		<!--<img src="images/logos/viacom_logo.png">-->
@@ -123,41 +123,39 @@
 <!--  OCEAN NODES  -->
 <section id="oceanNodes">
 	<main>
-		<div class="image-wrapper"><img src="images/flower.png"></div>
+		<div class="image-wrapper"><img src="images/pop.png"></div>
 		<div class="content">
-			<h3><a href="docs/whatisk8s">Kubernetes</a> is an open-source system for automating deployment, scaling, and management of containerized applications.</h3>
-			<p>It groups containers that make up an application into logical units for easy management and discovery. Kubernetes builds
-            upon <a href="http://queue.acm.org/detail.cfm?id=2898444">15 years of experience of running production workloads at Google</a>,
-            combined with best-of-breed ideas and practices from the community.</p>
+			<h3>Since 2001, IFC is a data model structure that makes it possible to hold and exchange relevant data between different software applications</h3>
+			<p>It builds upon a robust set of standards for product data exchange developied by the international standards organisation <a href="http://www.iso.org/iso/home.html"></a> and has a long history ensuring stability and success with software vendors.</p>
 		</div>
 	</main>
 	<main>
 		<div class="image-wrapper"><img src="images/scalable.png"></div>
 		<div class="content">
-			<h4>Planet Scale</h4>
-			<p>Designed on the same principles that allows Google to run billions of containers a week, Kubernetes can scale without increasing your ops team.</p>
+			<h4>OpenBIM</h4>
+			<p>IFC builds on the principles of <a href="http://www.graphisoft.com/archicad/open_bim/">OpenBIM*</a> sharing of information between project team members and across the software applications that they commonly use for design, construction, procurement, maintenance and operations </p>
 		</div>
 	</main>
 	<main>
 		<div class="image-wrapper"><img src="images/blocks.png"></div>
 		<div class="content">
-			<h4>Never Outgrow</h4>
-			<p>Whether testing locally or running a global enterprise, Kubernetes flexibility grows with you to deliver your applications consistently and easily no matter how complex your need is.</p>
+			<h4>IFC classes</h4>
+			<p>Digital building data represented in the EXPRESS data modelling language enable the application of an expanding set of building elements for a building. </br> For example: Walls, Slabs, Doors, Windows and their relations between a wall and a window, door and a wall.</p>
 		</div>
 	</main>
 	<main>
 		<div class="image-wrapper"><img src="images/suitcase.png"></div>
 		<div class="content">
-			<h4>Run Anywhere</h4>
-			<p>Kubernetes is open source giving you the freedom to take advantage of on-premise, hybrid, or public cloud infrastructure, letting you effortlessly move workloads to where it matters to you.</p>
+			<h4>BuildingSmart mark of approval</h4>
+			<p>This specification, ISO 16739, developed and updated by <a href="http://www.buildingsmart.org/">Buildingsmart</a> International gives your customers assurance when using your software in their workflows</p>
 		</div>
 	</main>
 </section>
 
 <section id="video">
 	<div class="light-text">
-		<h2>Kubernetes: Finally&hellip; A True Cloud Platform</h2>
-		<p>Sam Ghods, Co-Founder and Services Architect at Box, gives a passionate talk showing that with Kubernetes, we have for first time a universal interface that one can build real deployment tooling against.</p>
+		<h2>IFC - Where it all started<br></h2>
+		<p>This video gives an explanation and background and context to how IFC came about.</p>
 		<button id="desktopShowVideoButton" onclick="kub.showVideo()">Watch Video</button>
 	</div>
 	<button id="mobileShowVideoButton" onclick="kub.showVideo()"></button>
@@ -165,59 +163,40 @@
 
 <section id="features">
 	<main>
-		<h3 class="center">Kubernetes Features</h3>
+		<h3 class="center">IFC Features</h3>
 
 		<div class="feature-box">
 			<div>
-				<h4><a href="/docs/user-guide/compute-resources/">Automatic binpacking</a></h4>
-				<p>Automatically places containers based on their resource requirements and other constraints, while not
-					sacrificing availability. Mix critical and best-effort workloads in order to drive up utilization and save even more resources.</p>
+				<h4>Data modelling at the semantic level</h4>
+				<p>The EXPRESS schema language has rich facilities for data modeling at the semantic level (e.g., an expression sublanguage, semantic constraint mechanisms, aggregate data types [bag, set, list, array] for attribute values, etc).</p>
 			</div>
 			<div>
-				<h4><a href="/docs/user-guide/replication-controller/#what-is-a-replication-controller">Self-healing</a></h4>
-				<p>Restarts containers that fail, replaces and reschedules containers when nodes die, kills containers
-					that don't respond to your user-defined health check, and doesn't advertise them to clients until they are ready to serve.</p>
+				<h4>STEP ecosystem </h4>
+				<p>STEP (ISO 10303 - Industrial automation systems and integration - Product data representation and exchange) is developed by a specialist group in the International Standards Organisation. They have built many tools(classes) for working with the STEP standard.</p>
 			</div>
 		</div>
 
 		<div class="feature-box">
 			<div>
-				<h4><a href="/docs/user-guide/horizontal-pod-autoscaling/">Horizontal scaling</a></h4>
-				<p>Scale your application up and down with a simple command, with a UI, or automatically based on CPU usage.</p>
+				<h4>AP classes</h4>
+				<p>IFC progressively makes use of the AP classes developed by the international standards organisation. Take advantage of a growing ecosystem of interoperability solutions.</p>
 			</div>
 			<div>
-				<h4><a href="/docs/user-guide/services/">Service discovery and load balancing</a></h4>
-				<p>No need to modify your application to use an unfamiliar service discovery mechanism. Kubernetes gives
-					containers their own IP addresses and a single DNS name for a set of containers, and can load-balance across them.</p>
+				<h4>Good file header management</h4>
+				<p>The files have explicit file headers so your software knows what to do with it.</p>
 			</div>
 		</div>
 
-		<div class="feature-box">
-			<div>
-				<h4><a href="/docs/user-guide/deployments/#what-is-a-deployment">Automated rollouts and rollbacks</a></h4>
-				<p>Kubernetes progressively rolls out changes to your application or its configuration, while monitoring
-					application health to ensure it doesn't kill all your instances at the same time. If something goes
-					wrong, Kubernetes will rollback the change for you. Take advantage of a growing ecosystem of deployment solutions.</p>
-			</div>
-			<div>
-				<h4><a href="/docs/user-guide/secrets/">Secret</a> and <a href="/docs/user-guide/configmap/">configuration</a> management</h4>
-				<p>Deploy and update secrets and application configuration without rebuilding your image and without
-					exposing secrets in your stack configuration.</p>
-			</div>
-		</div>
-
-		<div class="feature-box">
-			<div>
-				<h4><a href="/docs/user-guide/persistent-volumes/">Storage orchestration</a></h4>
-				<p>Automatically mount the storage system of your choice, whether from local storage, a public cloud provider
-                such as <a href="https://cloud.google.com/storage/">GCP</a> or <a href="http://media.amazonwebservices.com/AWS_Storage_Options.pdf">AWS</a>, or a network storage system such as NFS, iSCSI,
-                Gluster, Ceph, Cinder, or Flocker.</p>
-			</div>
-			<div>
-				<h4><a href="/docs/user-guide/jobs/">Batch execution</a></h4>
-				<p>In addition to services, Kubernetes can manage your batch and CI workloads, replacing containers that fail, if desired.</p>
-			</div>
-		</div>
+		<!-- <div class="feature-box">
+		 <div>
+			 <h4>Feature</h4>
+			 <p>The IFC also fetaures this and this is why you should use it</p>
+		 </div>
+		 <div>
+			 <h4>Trasferrable</h4>
+			 <p>No need to modify your application to use an unfamiliar file format - Just use IFC</p>
+		 </div>
+		</div> -->
 
 	</main>
 </section>
@@ -226,46 +205,22 @@
 	<main>
 		<h3>Case Studies</h3>
 		<div id="caseStudiesWrapper">
-			<div>
-				<p>Using Kubernetes to reinvent the world's largest educational company</p>
-				<a href="/case-studies/pearson/">Read more</a>
-			</div>
-			<div>
-				<p>Kubernetes at Box: Microservices at Maximum Velocity</p>
-				<a href="https://blog.box.com/blog/kubernetes-box-microservices-maximum-velocity/">Read more</a>
-			</div>
-			<div>
-				<p>Inside eBay's shift to Kubernetes and containers atop OpenStack</p>
-				<a href="http://www.nextplatform.com/2015/11/12/inside-ebays-shift-to-kubernetes-and-containers-atop-openstack/">Read more</a>
-			</div>
-			<div>
-				<p>Migrating from a homegrown 'cluster' to Kubernetes</p>
-				<a href="https://www.youtube.com/watch?v=6XGUTu3WhBw">Watch the video</a>
-			</div>
+	  	<div>
+	  		<a href="https://youtu.be/I4bRxVVSIsI">Watch the video</a>
+	  		<p>Creating Next Generation Infrastructure with IFC</p>
+	  	</div>
+	  	<div>
+		  	<a href="https://youtu.be/I4bRxVVSIsI">Read the story</a>
+		  	<p>Inside companys shift to IFC</p>
+		  </div>
+		  <div>
+		  	<a href="https://youtu.be/I4bRxVVSIsI">Watch the video</a>
+		  	<p>Migrating from a proprietary file format to IFC</p>
+		  </div>
 		</div>
 
-		<!--<div id="bigSocial">-->
-			<!--&lt;!&ndash;<div>&ndash;&gt;-->
-				<!--&lt;!&ndash;<a href="https://youtu.be/OLwzSHBtxhI">Watch the video</a>&ndash;&gt;-->
-				<!--&lt;!&ndash;<p>Creating Next Generation Kubernetes Infrastructure at Viacom</p>&ndash;&gt;-->
-			<!--&lt;!&ndash;</div>&ndash;&gt;-->
-			<!--<div>-->
-				<!--<p>Using Kubernetes to reinvent the world's largest educational company</p>-->
-				<!--<a href="/case-studies/pearson/">Read more</a>-->
-			<!--</div>-->
-			<!--<div>-->
-				<!--<p>Kubernetes at Box: Microservices at Maximum Velocity</p>-->
-				<!--<a href="https://blog.box.com/blog/kubernetes-box-microservices-maximum-velocity/">Read more</a>-->
-			<!--</div>-->
-			<!--<div>-->
-				<!--<p>Inside eBay's shift to Kubernetes and containers atop OpenStack</p>-->
-				<!--<a href="http://www.nextplatform.com/2015/11/12/inside-ebays-shift-to-kubernetes-and-containers-atop-openstack/">Read the story</a>-->
-			<!--</div>-->
-			<!--<div>-->
-				<!--<p>Migrating from a homegrown 'cluster' to Kubernetes</p>-->
-				<!--<a href="https://www.youtube.com/watch?v=6XGUTu3WhBw">Watch the video</a>-->
-			<!--</div>-->
-		<!--</div>-->
+
+
 		<h5 style="text-align: center"><a href="/case-studies/" style="color: #3371E3; font-weight: 400">View all case studies</a></h5>
 	</main>
 </section>
@@ -274,7 +229,7 @@
 
 
 <div id="videoPlayer">
-	<iframe data-url="https://www.youtube.com/embed/of45hYbkIZs?autoplay=1" frameborder="0" allowfullscreen></iframe>
+	<iframe data-url="https://www.youtube.com/embed/g_jmGQvr6dQ?autoplay=1" frameborder="0" allowfullscreen></iframe>
 	<button id="closeButton"></button>
 </div>
 
@@ -284,32 +239,33 @@
 		<nav>
 			<a href="/docs/hellonode/">Get Started</a>
 			<a href="/docs/">Documentation</a>
-			<a href="http://blog.kubernetes.io/">Blog</a>
-			<a href="/partners/">Partners</a>
+			<a href="http://www.buildingsmart-tech.org/blogs">Blog</a>
 			<a href="/community/">Community</a>
-			<a href="/case-studies/">Case Studies</a>
 		</nav>
 		<div class="social">
 			<div>
-				<a href="https://twitter.com/kubernetesio" class="twitter"><span>twitter</span></a>
-				<a href="https://github.com/kubernetes/kubernetes" class="github"><span>Github</span></a>
-				<a href="http://slack.k8s.io/" class="slack"><span>Slack</span></a>
+				<a href="https://twitter.com/buildingSMART" class="twitter"><span>twitter</span></a>
+				<a href="https://github.com/BuildingSMART" class="github"><span>Github</span></a>
+				<a href="https://buildingsmart-team-slackin.herokuapp.com/" class="slack"><span>Slack</span></a>
 			</div>
 			<div>
-				<a href="http://stackoverflow.com/questions/tagged/kubernetes" class="stack-overflow"><span>Stack Overflow</span></a>
-				<a href="https://groups.google.com/forum/#!forum/kubernetes-users" class="mailing-list"><span>Mailing List</span></a>
+				<a href="http://stackoverflow.com/questions/tagged/ifc" class="stack-overflow"><span>Stack Overflow</span></a>
+				<a href="https://buildingsmartapi.mobilize.io/" class="mailing-list"><span>Mailing List</span></a>
 				<a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar"><span>Events Calendar</span></a>
 			</div>
 			<div>
-				<a href="//get.k8s.io" class="button">Download K8s</a>
-				<a href="https://github.com/kubernetes/kubernetes" class="button">Contribute to the K8s codebase</a>
+				<a href="https://www.linkedin.com/groups/3690870" class="linkedIn"><span>LinkedIn</span></a>
+			</div>
+			<div>
+				<span>I wish this page</span>
+				<input type="text" id="wishField" name="wishField" placeholder="enter your wish">
 			</div>
 		</div>
 		<div id="miceType" class="center">
-			&copy; 2017 The Kubernetes Authors | Documentation Distributed under <a href="https://github.com/kubernetes/kubernetes.github.io/blob/master/LICENSE" class="light-text">CC BY 4.0</a>
+			<!-- &copy; 2017 The Kubernetes Authors | Documentation Distributed under <a href="https://github.com/kubernetes/kubernetes.github.io/blob/master/LICENSE" class="light-text">CC BY 4.0</a> -->
 		</div>
 		<div id="miceType" class="center">
-			Copyright &copy; 2017 The Linux Foundation&reg;. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our Trademark Usage page: <a href="https://www.linuxfoundation.org/trademark-usage" class="light-text">https://www.linuxfoundation.org/trademark-usage</a>
+			<!-- Copyright &copy; 2017 The Linux Foundation&reg;. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our Trademark Usage page: <a href="https://www.linuxfoundation.org/trademark-usage" class="light-text">https://www.linuxfoundation.org/trademark-usage</a> -->
 		</div>
 	</main>
 </footer>
