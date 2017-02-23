@@ -46,6 +46,9 @@
 <loc>http://localhost:4000/docs/contribute/create-pull-request/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/docs/contribute_backup/create-pull-request/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/docs/getting-started-guides/dcos/</loc>
 </url>
 <url>
@@ -107,6 +110,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/docs/design/design-overview/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/docs/faq/developer/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/docs/getting-started-guides/docker-multinode/</loc>
@@ -346,6 +352,9 @@
 <loc>http://localhost:4000/docs/contribute/page-templates/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/docs/contribute_backup/page-templates/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/case-studies/pearson/</loc>
 </url>
 <url>
@@ -365,6 +374,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/docs/contribute/review-issues/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/docs/contribute_backup/review-issues/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/docs/getting-started-guides/network-policy/romana/</loc>
@@ -391,6 +403,9 @@
 <loc>http://localhost:4000/docs/contribute/stage-documentation-changes/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/docs/contribute_backup/stage-documentation-changes/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/docs/glossary/step-ap-classes/</loc>
 </url>
 <url>
@@ -406,6 +421,9 @@
 <loc>http://localhost:4000/docs/contribute/style-guide/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/docs/contribute_backup/style-guide/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/docs/getting-started-guides/ubuntu/troubleshooting/</loc>
 </url>
 <url>
@@ -416,6 +434,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/docs/tools/adopted/ifcdoc/user-guide/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/docs/faq/user/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/docs/getting-started-guides/ubuntu/validation/</loc>
@@ -437,6 +458,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/docs/contribute/write-new-topic/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/docs/contribute_backup/write-new-topic/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/docs/ifc-xml/xml-overview/</loc>
@@ -470,6 +494,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/docs/resources-reference/v1.5/node_modules/marked/doc/todo/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/docs/troubleshooting/troubleshooting/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/docs/api-reference/v1.5/index.html</loc>

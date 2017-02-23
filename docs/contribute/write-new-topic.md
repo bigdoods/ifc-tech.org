@@ -3,11 +3,11 @@ title: Writing a New Topic
 ---
 
 {% capture overview %}
-This page shows how to create a new topic for the Kubernetes docs.
+This page shows how to create a new topic for the IFC docs.
 {% endcapture %}
 
 {% capture prerequisites %}
-Create a fork of the Kubernetes documentation repository as described in
+Create a fork of the IFC documentation repository as described in
 [Creating a Documentation Pull Request](/docs/contribute/create-pull-request/).
 {% endcapture %}
 
@@ -27,12 +27,12 @@ is the best fit for your content:
 
   <tr>
     <td>Tutorial</td>
-    <td>A tutorial page shows how to accomplish a goal that is larger than a single task. Typically a tutorial page has several sections, each of which has a sequence of steps. For example, a tutorial might provide a walkthrough of a code sample that illustrates a certain feature of Kubernetes. Tutorials can include surface-level explanations, but should link to related concept topics for deep explanations.</td>
+    <td>A tutorial page shows how to accomplish a goal that is larger than a single task. Typically a tutorial page has several sections, each of which has a sequence of steps. For example, a tutorial might provide a walkthrough of a code sample that illustrates a certain feature of IFC. Tutorials can include surface-level explanations, but should link to related concept topics for deep explanations.</td>
   </tr>
 
   <tr>
     <td>Concept</td>
-    <td>A concept page explains some aspect of Kubernetes. For example, a concept page might describe the Kubernetes Deployment object and explain the role it plays as an application is deployed, scaled, and updated. Typically, concept pages don't include sequences of steps, but instead provide links to tasks or tutorials.</td>
+    <td>A concept page explains some aspect of IFC. For example, a concept page might describe the IFC Deployment object and explain the role it plays as an application is deployed, scaled, and updated. Typically, concept pages don't include sequences of steps, but instead provide links to tasks or tutorials.</td>
   </tr>
 
 </table>
@@ -47,12 +47,12 @@ Using templates helps ensure consistency among topics of a given type.
 Choose a title that has the keywords you want search engines to find.
 Create a filename that uses the words in your title separated by hyphens.
 For example, the topic with title
-[Using an HTTP Proxy to Access the Kubernetes API](/docs/tasks/access-kubernetes-api/http-proxy-access-api/)
-has filename `http-proxy-access-api.md`. You don't need to put
-"kubernetes" in the filename, because "kubernetes" is already in the
+[Using a object meta-model to abstract IFC data](/docs/tasks/sample-task.md)
+has filename `data extraction using library`. You don't need to put
+"ifc" in the filename, because "ifc" is already in the
 URL for the topic, for example:
 
-       http://kubernetes.io/docs/tasks/access-kubernetes-api/http-proxy-access-api/
+       http://kubernetes.io/docs/tasks/accessing-ifc-classes/data extraction/
 
 ## Adding the topic title to the front matter
 
@@ -62,7 +62,7 @@ The front matter is the YAML block that is between the
 triple-dashed lines at the top of the page. Here's an example:
 
     ---
-    title: Using an HTTP Proxy to Access the Kubernetes API
+    title: Using a object meta-model to abstract IFC data
     ---
 
 ## Choosing a directory
@@ -90,7 +90,7 @@ Here's an example of an entry in /_data/tasks.yaml:
 
 ## Including code from another file
 
-To include a code file in your topic, place the code file in the Kubernetes
+To include a code file in your topic, place the code file in the IFC
 documentation repository, preferably in the same directory as your topic
 file. In your topic file, use the `include` tag:
 
@@ -100,32 +100,32 @@ where:
 
 * `<LEXERVALUE>` is the language in which the file was written. This must be
 [a value supported by Rouge](https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers).
-* `<RELATIVEPATH>` is the path to the file you're including, relative to the current file, for example, `gce-volume.yaml`.
-* `<PATHFROMROOT>` is the path to the file relative to root, for example, `docs/tutorials/stateful-application/gce-volume.yaml`.
+* `<RELATIVEPATH>` is the path to the file you're including, relative to the current file, for example, `clinic.ifc`.
+* `<PATHFROMROOT>` is the path to the file relative to root, for example, `docs/tutorials/tutorial.md`.
 
 Here's an example of using the `include` tag:
 
-<pre>&#123;% include code.html language="yaml" file="gce-volume.yaml" ghlink="/docs/tutorials/stateful-application/gce-volume.yaml" %&#125;</pre>
+<pre>&#123;% include code.html language="XML" file="clinic.xml" ghlink="/docs/tutorials/tutorial.xml" %&#125;</pre>
 
-## Showing how to create an API object from a configuration file
+## Showing how to create an IFC object from a configuration file
 
-If you need to show the reader how to create an API object based on a
-configuration file, place the configuration file in the Kubernetes documentation
+If you need to show the reader how to create an IFC object based on a
+configuration file, place the configuration file in the IFC documentation
 repository, preferably in the same directory as your topic file.
 
 In your topic, show this command:
 
-    kubectl create -f http://k8s.io/<PATHFROMROOT>
+    ifc doSomething http://ifc.com/<PATHFROMROOT>
 
 where `<PATHFROMROOT>` is the path to the configuration file relative to root,
-for example, `docs/tutorials/stateful-application/gce-volume.yaml`.
+for example, `docs/tutorials/tutorial.xml`.
 
-Here's an example of a command that creates an API object from a configuration file:
+Here's an example of a command that creates an IFC object from a configuration file:
 
-    kubectl create -f http://k8s.io/docs/tutorials/stateful-application/gce-volume.yaml
+    ifc doSomething http://ifc.com/docs/tutorials/tutorial.xml
 
 For an example of a topic that uses this technique, see
-[Running a Single-Instance Stateful Application](/docs/tutorials/stateful-application/run-stateful-application/).
+[An example](/docs/tutorials/tutorial/).
 
 ## Adding images to a topic
 

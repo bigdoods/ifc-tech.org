@@ -1,12 +1,4 @@
 bigheader: "Guides"
-abstract: "How to get started, and accomplish tasks, using Kubernetes."
+abstract: "How to get started, and accomplish tasks, using IFC."
 toc:
 - docs/user-guide/index.md
-
-- docs/whatisk8s.md
-
-- docs/user-guide/index.md
-
-- title: Accessing the Cluster
-  section:
-  - docs/user-guide/index.md

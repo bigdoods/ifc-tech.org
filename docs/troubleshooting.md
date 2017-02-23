@@ -1,7 +1,4 @@
 ---
-assignees:
-- brendandburns
-- davidopp
 title: Support
 ---
 
@@ -10,10 +7,10 @@ title: Support
 Sometimes things go wrong. This guide is aimed at making them right. It has
 two sections:
 
-   * [Troubleshooting your application](/docs/user-guide/application-troubleshooting) - Useful for users who are deploying code into IFC and wondering why it is not working.
-   * [Troubleshooting your cluster](/docs/admin/cluster-troubleshooting) - Useful for cluster administrators and people whose IFC cluster is unhappy.
+   * [Troubleshooting your .ifc as an end-user](/docs/troubleshooting/troubleshooting) - Useful for users who are deploying code into IFC and wondering why it is not working.
+   * [Troubleshooting your .ifc as a developer](/docs/troubleshooting/troubleshooting) - Useful for people using IFC for something else.
 
-You should also check the known issues for the [release](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG.md)
+You should also check the known issues for the [release](https://github.com/)
 you're using.
 
 ### Getting help
@@ -28,14 +25,14 @@ If you aren't familiar with it, many of your questions may be answered by the
 
 We also have a number of FAQ pages:
 
-   * [User FAQ](https://github.com/kubernetes/kubernetes/wiki/User-FAQ)
-   * [Debugging FAQ](https://github.com/kubernetes/kubernetes/wiki/Debugging-FAQ)
-   * [Services FAQ](https://github.com/kubernetes/kubernetes/wiki/Services-FAQ)
+   * [User FAQ](https://github.com/)
+   * [Developer FAQ](https://github.com/)
+
 
 You may also find the Stack Overflow topics relevant:
 
-   * [IFC](http://stackoverflow.com/questions/tagged/kubernetes)
-   * [Google Container Engine - GKE](http://stackoverflow.com/questions/tagged/google-container-engine)
+   * [IFC](http://stackoverflow.com/questions/tagged/ifc)
+   * [EXPRESS](http://stackoverflow.com/questions/tagged/express)
 
 ## Help! My question isn't covered!  I need help now!
 
@@ -43,16 +40,12 @@ You may also find the Stack Overflow topics relevant:
 
 Someone else from the community may have already asked a similar question or may
 be able to help with your problem. The IFC team will also monitor
-[posts tagged IFC](http://stackoverflow.com/questions/tagged/kubernetes).
-If there aren't any existing questions that help, please [ask a new one](http://stackoverflow.com/questions/ask?tags=kubernetes)!
+[posts tagged IFC](http://stackoverflow.com/questions/tagged/ifc).
+If there aren't any existing questions that help, please [ask a new one](http://stackoverflow.com/questions/ask?tags=ifc)!
 
 ### Slack
 
-The IFC team hangs out on Slack in the `#IFC-users` channel. You
-can participate in discussion with the IFC team [here](https://kubernetes.slack.com).
-Slack requires registration, but the IFC team is open invitation to
-anyone to register [here](http://slack.kubernetes.io). Feel free to come and ask
-any and all questions.
+The IFC team hangs out on Slack in the `#IFC-users` channel. You can participate in the IFC team [here](https://buildingsmart-team.slack.com/).  Slack requires registration, but the IFC team is open invitation to anyone to register [here](https://buildingsmart-team-slackin.herokuapp.com/).  Feel free to come and ask any and all questions.
 
 Once registered, browse the growing list of channels for various subjects of
 interest. For example, people new to IFC may also want to join the
@@ -68,19 +61,16 @@ these channels for localized support and info:
 
 ### Mailing List
 
-The IFC / Google Container Engine mailing list is [kubernetes-users@googlegroups.com](https://groups.google.com/forum/#!forum/kubernetes-users)
+The user group and forum is based on [mobilize here](https://buildingsmartapi.mobilize.io/)
 
 ### Bugs and Feature requests
 
-If you have what looks like a bug, or you would like to make a feature request,
-please use the [Github issue tracking system](https://github.com/kubernetes/kubernetes/issues).
+If you have what looks like a bug, or you would like to make a feature request, please use the [Github issue tracking system](https://github.com/buildingsmart/IFC).
 
-Before you file an issue, please search existing issues to see if your issue is
-already covered.
+Before you file an issue, please search existing issues to see if your issue is already covered.
 
-If filing a bug, please include detailed information about how to reproduce the
-problem, such as:
+If filing a bug, please include detailed information about how to reproduce the problem, such as:
 
-* IFC version: `kubectl version`
-* Cloud provider, OS distro, network configuration, and Docker version
+* IFC version.
+* OS distro, fs configuration, and ifc kernel version
 * Steps to reproduce the problem

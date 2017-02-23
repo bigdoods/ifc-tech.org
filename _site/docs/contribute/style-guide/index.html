@@ -165,13 +165,13 @@
   <div id="vendorStrip" class="light-text">
     <ul>
       <li><a href="/docs/" >DOCS HOME</a></li>
-      <li><a href="/docs/user-guide/" >GUIDES</a></li>
+      <!-- <li><a href="/docs/user-guide/" >GUIDES</a></li> -->
       <li><a href="/docs/tutorials/" >TUTORIALS</a></li>
-      <li><a href="/docs/tasks/" >TASKS</a></li>
+      <!-- <li><a href="/docs/tasks/" >TASKS</a></li> -->
       <li><a href="/docs/concepts/" >CONCEPTS</a></li>
       <li><a href="/docs/reference/" >REFERENCE</a></li>
       <li><a href="/docs/tools/" >TOOLS</a></li>
-      <li><a href="/docs/samples/" >SAMPLES</a></li>
+      <!-- <li><a href="/docs/samples/" >SAMPLES</a></li> -->
       <li><a href="/docs/troubleshooting/" class="YAH">SUPPORT</a></li>
     </ul>
     <div id="searchBox">
@@ -388,18 +388,17 @@
         
 
         
-<p>This page gives writing style guidelines for the Kubernetes documentation.
+<p>This page gives writing style guidelines for the IFC documentation.
 These are guidelines, not rules. Use your best judgment, and feel free to
 propose changes to this document in a pull request.</p>
 
-<p>For additional information on creating new content for the Kubernetes
+<p>For additional information on creating new content for the IFC
 docs, follow the instructions on
 <a href="/docs/contribute/page-templates/">using page templates</a> and
 <a href="/docs/contribute/create-pull-request/">creating a documentation pull request</a>.</p>
 
 <ul id="markdown-toc">
   <li><a href="#documentation-formatting-standards" id="markdown-toc-documentation-formatting-standards">Documentation formatting standards</a>    <ul>
-      <li><a href="#use-camel-case-for-api-objects" id="markdown-toc-use-camel-case-for-api-objects">Use camel case for API objects</a></li>
       <li><a href="#use-angle-brackets-for-placeholders" id="markdown-toc-use-angle-brackets-for-placeholders">Use angle brackets for placeholders</a></li>
       <li><a href="#use-bold-for-user-interface-elements" id="markdown-toc-use-bold-for-user-interface-elements">Use bold for user interface elements</a></li>
       <li><a href="#use-italics-to-define-or-introduce-new-terms" id="markdown-toc-use-italics-to-define-or-introduce-new-terms">Use italics to define or introduce new terms</a></li>
@@ -414,7 +413,6 @@ docs, follow the instructions on
   </li>
   <li><a href="#code-snippet-formatting" id="markdown-toc-code-snippet-formatting">Code snippet formatting</a>    <ul>
       <li><a href="#dont-include-the-command-prompt" id="markdown-toc-dont-include-the-command-prompt">Don’t include the command prompt</a></li>
-      <li><a href="#separate-commands-from-output" id="markdown-toc-separate-commands-from-output">Separate commands from output</a></li>
     </ul>
   </li>
   <li><a href="#content-best-practices" id="markdown-toc-content-best-practices">Content best practices</a>    <ul>
@@ -436,28 +434,6 @@ docs, follow the instructions on
 
 <h2 id="documentation-formatting-standards">Documentation formatting standards</h2>
 
-<h3 id="use-camel-case-for-api-objects">Use camel case for API objects</h3>
-
-<p>When you refer to an API object, use the same uppercase and lowercase letters
-that are used in the actual object name. Typically, the names of API
-objects use
-<a href="https://en.wikipedia.org/wiki/Camel_case">camel case</a>.</p>
-
-<p>Don’t split the API object name into separate words. For example, use
-PodTemplateList, not Pod Template List.</p>
-
-<p>Refer to API objects without saying “object,” unless omitting “object”
-leads to an awkward construction.</p>
-
-<table>
-  <tr><th>Do</th><th>Don't</th></tr>
-  <tr><td>The Pod has two Containers.</td><td>The pod has two containers.</td></tr>
-  <tr><td>The Deployment is responsible for ...</td><td>The Deployment object is responsible for ...</td></tr>
-  <tr><td>A PodList is a list of Pods.</td><td>A Pod List is a list of pods.</td></tr>
-  <tr><td>The two ContainerPorts ...</td><td>The two ContainerPort objects ...</td></tr>
-  <tr><td>The two ContainerStateTerminated objects ...</td><td>The two ContainerStateTerminateds ...</td></tr>
-</table>
-
 <h3 id="use-angle-brackets-for-placeholders">Use angle brackets for placeholders</h3>
 
 <p>Use angle brackets for placeholders. Tell the reader what a placeholder
@@ -465,13 +441,13 @@ represents.</p>
 
 <ol>
   <li>
-    <p>Display information about a pod:</p>
+    <p>Display contents of a folder:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code> kubectl describe pod &lt;pod-name&gt;
+    <div class="highlighter-rouge"><pre class="highlight"><code> ls -la &lt;folder-name&gt;
 </code></pre>
     </div>
 
-    <p>where <code class="highlighter-rouge">&lt;pod-name&gt;</code> is the name of one of your pods.</p>
+    <p>where <code class="highlighter-rouge">&lt;folder-name&gt;</code> is the name of one of a folder in the current directory.</p>
   </li>
 </ol>
 
@@ -487,8 +463,7 @@ represents.</p>
 
 <table>
   <tr><th>Do</th><th>Don't</th></tr>
-  <tr><td>A <i>cluster</i> is a set of nodes ...</td><td>A "cluster" is a set of nodes ...</td></tr>
-  <tr><td>These components form the <i>control plane.</i></td><td>These components form the <b>control plane.</b></td></tr>
+  <tr><td>A <i>object class</i> is a set of characteristics ...</td><td>An "object" is a set of metadata to decribe an object ...</td></tr>
 </table>
 
 <h3 id="use-code-style-for-filenames-directories-and-paths">Use code style for filenames, directories, and paths</h3>
@@ -509,16 +484,16 @@ document, use the backtick (`).</p>
 
 <table>
   <tr><th>Do</th><th>Don't</th></tr>
-  <tr><td>The <code>kubectl run</code> command creates a Deployment.</td><td>The "kubectl run" command creates a Deployment.</td></tr>
-  <tr><td>For declarative management, use <code>kubectl apply</code>.</td><td>For declarative management, use "kubectl apply".</td></tr>
+  <tr><td>The <code>IFC</code> file is used for interoperability.</td><td>IFC is used for interoperability.</td></tr>
+  <tr><td>The <code>IFC</code> file is used for interoperability.</td><td>IFC is used for interoperability.</td></tr>
 </table>
 
 <h3 id="use-code-style-for-object-field-names">Use code style for object field names</h3>
 
 <table>
   <tr><th>Do</th><th>Don't</th></tr>
-  <tr><td>Set the value of the <code>replicas</code> field in the configuration file.</td><td>Set the value of the "replicas" field in the configuration file.</td></tr>
-  <tr><td>The value of the <code>exec</code> field is an ExecAction object.</td><td>The value of the "exec" field is an ExecAction object.</td></tr>
+  <tr><td>Set the value of the <code>something</code> field in the file.</td><td>Set the value of the "something" field in the file.</td></tr>
+  <tr><td>The value of the <code>something</code> field is a something object.</td><td>The value of some object.</td></tr>
 </table>
 
 <h3 id="use-normal-style-for-string-and-integer-field-values">Use normal style for string and integer field values</h3>
@@ -527,9 +502,9 @@ document, use the backtick (`).</p>
 
 <table>
   <tr><th>Do</th><th>Don't</th></tr>
-  <tr><td>Set the value of <code>imagePullPolicy</code> to Always.</td><td>Set the value of <code>imagePullPolicy</code> to "Always".</td></tr>
-  <tr><td>Set the value of <code>image</code> to nginx:1.8.</td><td>Set the value of <code>image</code> to <code>nginx:1.8</code>.</td></tr>
-  <tr><td>Set the value of the <code>replicas</code> field to 2.</td><td>Set the value of the <code>replicas</code> field to <code>2</code>.</td></tr>
+  <tr><td>Set the value of <code>something</code> to Always.</td><td>Set the value of <code>something</code> to "Always".</td></tr>
+  <tr><td>Set the value of <code>something</code> to something.</td><td>Set the value of <code>something</code> to <code>something</code>.</td></tr>
+  <tr><td>Set the value of the <code>something</code> field to 2.</td><td>Set the value of the <code>something</code> field to <code>2</code>.</td></tr>
 </table>
 
 <h2 id="code-snippet-formatting">Code snippet formatting</h2>
@@ -538,23 +513,8 @@ document, use the backtick (`).</p>
 
 <table>
   <tr><th>Do</th><th>Don't</th></tr>
-  <tr><td>kubectl get pods</td><td>$ kubectl get pods</td></tr>
+  <tr><td>change directory</td><td>$ cd somewhere</td></tr>
 </table>
-
-<h3 id="separate-commands-from-output">Separate commands from output</h3>
-
-<p>Verify that the pod is running on your chosen node:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>kubectl get pods --output=wide
-</code></pre>
-</div>
-
-<p>The output is similar to this:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>NAME     READY     STATUS    RESTARTS   AGE    IP           NODE
-nginx    1/1       Running   0          13s    10.200.0.4   worker0
-</code></pre>
-</div>
 
 <h2 id="content-best-practices">Content best practices</h2>
 
@@ -564,7 +524,7 @@ nginx    1/1       Running   0          13s    10.200.0.4   worker0
 
 <table>
   <tr><th>Do</th><th>Don't</th></tr>
-  <tr><td>This command starts a proxy.</td><td>This command will start a proxy.</td></tr>
+  <tr><td>This command does something.</td><td>This command will do something.</td></tr>
 </table>
 
 <p>Exception: Use future or past tense if it is required to convey the correct
@@ -574,8 +534,8 @@ meaning.</p>
 
 <table>
   <tr><th>Do</th><th>Don't</th></tr>
-  <tr><td>You can explore the API using a browser.</td><td>The API can be explored using a browser.</td></tr>
-  <tr><td>The YAML file specifies the replica count.</td><td>The replica count is specified in the YAML file.</td></tr>
+  <tr><td>You can explore IFC using a browser.</td><td>The IFC can be explored using a browser.</td></tr>
+  <tr><td>The IFC file specifies the file header.</td><td>The file header is specified in the IFC file.</td></tr>
 </table>
 
 <p>Exception: Use passive voice if active voice leads to an awkward construction.</p>
@@ -586,9 +546,9 @@ meaning.</p>
 
 <table>
   <tr><th>Do</th><th>Don't</th></tr>
-  <tr><td>To create a ReplicaSet, ...</td><td>In order to create a ReplicaSet, ...</td></tr>
+  <tr><td>To open the IFC file, ...</td><td>In order to read the header, ...</td></tr>
   <tr><td>See the configuration file.</td><td>Please see the configuration file.</td></tr>
-  <tr><td>View the Pods.</td><td>With this next command, we'll view the Pods.</td></tr>
+  <tr><td>View the object classes.</td><td>With this next command, we'll view the object classes.</td></tr>
 
 </table>
 
@@ -596,7 +556,7 @@ meaning.</p>
 
 <table>
   <tr><th>Do</th><th>Don't</th></tr>
-  <tr><td>You can create a Deployment by ...</td><td>We'll create a Deployment by ...</td></tr>
+  <tr><td>You can create an IFC file by ...</td><td>We'll create a IFC file by ...</td></tr>
     <tr><td>In the preceding output, you can see...</td><td>In the preceding output, we can see ...</td></tr>
 </table>
 
@@ -609,9 +569,9 @@ whether they’re part of the “we” you’re describing.</p>
 
 <table>
   <tr><th>Do</th><th>Don't</th></tr>
-  <tr><td>Version 1.4 includes ...</td><td>In version 1.4, we have added ...</td></tr>
-  <tr><td>Kubernetes provides a new feature for ...</td><td>We provide a new feature ...</td></tr>
-  <tr><td>This page teaches you how to use pods.</td><td>In this page, we are going to learn about pods.</td></tr>
+  <tr><td>Version IFC5 includes ...</td><td>In version IFC5, we have added ...</td></tr>
+  <tr><td>IFC provides a new feature for ...</td><td>We provide a new feature ...</td></tr>
+  <tr><td>This page teaches you how to use IFC headers.</td><td>In this page, we are going to learn about IFC headers.</td></tr>
 </table>
 
 <h3 id="avoid-jargon-and-idioms">Avoid jargon and idioms</h3>
@@ -621,7 +581,7 @@ whether they’re part of the “we” you’re describing.</p>
 <table>
   <tr><th>Do</th><th>Don't</th></tr>
   <tr><td>Internally, ...</td><td>Under the hood, ...</td></tr>
-    <tr><td>Create a new cluster.</td><td>Turn up a new cluster.</td></tr>
+    <tr><td>Create a new file.</td><td>Turn up a new file.</td></tr>
 </table>
 
 <h3 id="avoid-statements-about-the-future">Avoid statements about the future</h3>
@@ -637,8 +597,8 @@ considered new in a few months.</p>
 
 <table>
   <tr><th>Do</th><th>Don't</th></tr>
-  <tr><td>In version 1.4, ...</td><td>In the current version, ...</td></tr>
-    <tr><td>The Federation feature provides ...</td><td>The new Federation feature provides ...</td></tr>
+  <tr><td>In version IFC5, ...</td><td>In the current version, ...</td></tr>
+    <tr><td>The feature provides ...</td><td>The new feature provides ...</td></tr>
 </table>
 
 <h2 id="whats-next">What’s next</h2>

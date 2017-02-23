@@ -165,13 +165,13 @@
   <div id="vendorStrip" class="light-text">
     <ul>
       <li><a href="/docs/" >DOCS HOME</a></li>
-      <li><a href="/docs/user-guide/" >GUIDES</a></li>
+      <!-- <li><a href="/docs/user-guide/" >GUIDES</a></li> -->
       <li><a href="/docs/tutorials/" >TUTORIALS</a></li>
-      <li><a href="/docs/tasks/" >TASKS</a></li>
+      <!-- <li><a href="/docs/tasks/" >TASKS</a></li> -->
       <li><a href="/docs/concepts/" >CONCEPTS</a></li>
       <li><a href="/docs/reference/" >REFERENCE</a></li>
       <li><a href="/docs/tools/" >TOOLS</a></li>
-      <li><a href="/docs/samples/" >SAMPLES</a></li>
+      <!-- <li><a href="/docs/samples/" >SAMPLES</a></li> -->
       <li><a href="/docs/troubleshooting/" class="YAH">SUPPORT</a></li>
     </ul>
     <div id="searchBox">
@@ -389,20 +389,19 @@
 
         
 <p>This page shows how to stage content that you want to contribute
-to the Kubernetes documentation.</p>
+to the IFC documentation.</p>
 
 <ul id="markdown-toc">
   <li><a href="#before-you-begin" id="markdown-toc-before-you-begin">Before you begin</a></li>
   <li><a href="#staging-from-your-github-account" id="markdown-toc-staging-from-your-github-account">Staging from your GitHub account</a></li>
   <li><a href="#staging-a-pull-request" id="markdown-toc-staging-a-pull-request">Staging a pull request</a></li>
-  <li><a href="#staging-locally-using-docker" id="markdown-toc-staging-locally-using-docker">Staging locally using Docker</a></li>
-  <li><a href="#staging-locally-without-docker" id="markdown-toc-staging-locally-without-docker">Staging locally without Docker</a></li>
+  <li><a href="#staging-locally" id="markdown-toc-staging-locally">Staging locally</a></li>
   <li><a href="#whats-next" id="markdown-toc-whats-next">What’s next</a></li>
 </ul>
 
 <h2 id="before-you-begin">Before you begin</h2>
 
-<p>Create a fork of the Kubernetes documentation repository as described in
+<p>Create a fork of the IFC documentation repository as described in
 <a href="/docs/contribute/create-pull-request/">Creating a Documentation Pull Request</a>.</p>
 
 <h2 id="staging-from-your-github-account">Staging from your GitHub account</h2>
@@ -435,52 +434,15 @@ the master branch.</p>
 <h2 id="staging-a-pull-request">Staging a pull request</h2>
 
 <p>When you create a pull request, either against the master or &lt;vnext&gt;
-branch, your changes are staged in a custom subdomain on Netlify so that
-you can see your changes in rendered form before the pull request is merged.</p>
+branch, your changes are staged in a custom version of the docs site to ensure that nothing breaks.(perhaps integrate netlify CI to custom domain&amp; stage)</p>
 
 <ol>
-  <li>
-    <p>In your GitHub account, in your new branch, submit a pull request to the
-kubernetes/kubernetes.github.io repository. This opens a page that shows the
-status of your pull request.</p>
-  </li>
-  <li>
-    <p>Scroll down to the list of automated checks. Click <strong>Show all checks</strong>.
-Wait for the <strong>deploy/netlify</strong> check to complete. To the right of
-<strong>deploy/netlify</strong>, click <strong>Details</strong>. This opens a staging site where you
-can see your changes.</p>
-  </li>
+  <li>In your GitHub account, in your new branch, submit a pull request to the
+bigdoods/bigdoods.github.io repository. This opens a page that shows the
+status of your pull request.</li>
 </ol>
 
-<h2 id="staging-locally-using-docker">Staging locally using Docker</h2>
-
-<p>You can use the k8sdocs Docker image to run a local staging server. If you’re
-interested, you can view the
-<a href="https://github.com/kubernetes/kubernetes.github.io/blob/master/staging-container/Dockerfile" target="_blank">Dockerfile</a>
-for this image.</p>
-
-<ol>
-  <li>
-    <p>Install Docker if you don’t already have it.</p>
-  </li>
-  <li>
-    <p>Clone your fork to your local development machine.</p>
-  </li>
-  <li>
-    <p>In the root of your cloned repository, enter this command to start a local
-web server:</p>
-
-    <div class="highlighter-rouge"><pre class="highlight"><code> docker run -ti --rm -v "$PWD":/k8sdocs -p 4000:4000 gcr.io/google-samples/k8sdocs:1.0
-</code></pre>
-    </div>
-  </li>
-  <li>
-    <p>View your staged content at
-<a href="http://localhost:4000" target="_blank">http://localhost:4000</a>.</p>
-  </li>
-</ol>
-
-<h2 id="staging-locally-without-docker">Staging locally without Docker</h2>
+<h2 id="staging-locally">Staging locally</h2>
 
 <ol>
   <li>

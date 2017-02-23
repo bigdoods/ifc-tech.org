@@ -165,13 +165,13 @@
   <div id="vendorStrip" class="light-text">
     <ul>
       <li><a href="/docs/" >DOCS HOME</a></li>
-      <li><a href="/docs/user-guide/" >GUIDES</a></li>
+      <!-- <li><a href="/docs/user-guide/" >GUIDES</a></li> -->
       <li><a href="/docs/tutorials/" >TUTORIALS</a></li>
-      <li><a href="/docs/tasks/" >TASKS</a></li>
+      <!-- <li><a href="/docs/tasks/" >TASKS</a></li> -->
       <li><a href="/docs/concepts/" >CONCEPTS</a></li>
       <li><a href="/docs/reference/" >REFERENCE</a></li>
       <li><a href="/docs/tools/" >TOOLS</a></li>
-      <li><a href="/docs/samples/" >SAMPLES</a></li>
+      <!-- <li><a href="/docs/samples/" >SAMPLES</a></li> -->
       <li><a href="/docs/troubleshooting/" class="YAH">SUPPORT</a></li>
     </ul>
     <div id="searchBox">
@@ -388,7 +388,7 @@
         
 
         
-<p>This page shows how to create a new topic for the Kubernetes docs.</p>
+<p>This page shows how to create a new topic for the IFC docs.</p>
 
 <ul id="markdown-toc">
   <li><a href="#before-you-begin" id="markdown-toc-before-you-begin">Before you begin</a></li>
@@ -398,14 +398,14 @@
   <li><a href="#choosing-a-directory" id="markdown-toc-choosing-a-directory">Choosing a directory</a></li>
   <li><a href="#creating-an-entry-in-the-table-of-contents" id="markdown-toc-creating-an-entry-in-the-table-of-contents">Creating an entry in the table of contents</a></li>
   <li><a href="#including-code-from-another-file" id="markdown-toc-including-code-from-another-file">Including code from another file</a></li>
-  <li><a href="#showing-how-to-create-an-api-object-from-a-configuration-file" id="markdown-toc-showing-how-to-create-an-api-object-from-a-configuration-file">Showing how to create an API object from a configuration file</a></li>
+  <li><a href="#showing-how-to-create-an-ifc-object-from-a-configuration-file" id="markdown-toc-showing-how-to-create-an-ifc-object-from-a-configuration-file">Showing how to create an IFC object from a configuration file</a></li>
   <li><a href="#adding-images-to-a-topic" id="markdown-toc-adding-images-to-a-topic">Adding images to a topic</a></li>
   <li><a href="#whats-next" id="markdown-toc-whats-next">What’s next</a></li>
 </ul>
 
 <h2 id="before-you-begin">Before you begin</h2>
 
-<p>Create a fork of the Kubernetes documentation repository as described in
+<p>Create a fork of the IFC documentation repository as described in
 <a href="/docs/contribute/create-pull-request/">Creating a Documentation Pull Request</a>.</p>
 
 <h2 id="choosing-a-page-type">Choosing a page type</h2>
@@ -421,11 +421,11 @@ is the best fit for your content:</p>
     </tr>
     <tr>
       <td>Tutorial</td>
-      <td>A tutorial page shows how to accomplish a goal that is larger than a single task. Typically a tutorial page has several sections, each of which has a sequence of steps. For example, a tutorial might provide a walkthrough of a code sample that illustrates a certain feature of Kubernetes. Tutorials can include surface-level explanations, but should link to related concept topics for deep explanations.</td>
+      <td>A tutorial page shows how to accomplish a goal that is larger than a single task. Typically a tutorial page has several sections, each of which has a sequence of steps. For example, a tutorial might provide a walkthrough of a code sample that illustrates a certain feature of IFC. Tutorials can include surface-level explanations, but should link to related concept topics for deep explanations.</td>
     </tr>
     <tr>
       <td>Concept</td>
-      <td>A concept page explains some aspect of Kubernetes. For example, a concept page might describe the Kubernetes Deployment object and explain the role it plays as an application is deployed, scaled, and updated. Typically, concept pages don't include sequences of steps, but instead provide links to tasks or tutorials.</td>
+      <td>A concept page explains some aspect of IFC. For example, a concept page might describe the IFC Deployment object and explain the role it plays as an application is deployed, scaled, and updated. Typically, concept pages don't include sequences of steps, but instead provide links to tasks or tutorials.</td>
     </tr>
   </tbody>
 </table>
@@ -440,12 +440,12 @@ Using templates helps ensure consistency among topics of a given type.</p>
 <p>Choose a title that has the keywords you want search engines to find.
 Create a filename that uses the words in your title separated by hyphens.
 For example, the topic with title
-<a href="/docs/tasks/access-kubernetes-api/http-proxy-access-api/">Using an HTTP Proxy to Access the Kubernetes API</a>
-has filename <code class="highlighter-rouge">http-proxy-access-api.md</code>. You don’t need to put
-“kubernetes” in the filename, because “kubernetes” is already in the
+<a href="/docs/tasks/sample-task.md">Using a object meta-model to abstract IFC data</a>
+has filename <code class="highlighter-rouge">data extraction using library</code>. You don’t need to put
+“ifc” in the filename, because “ifc” is already in the
 URL for the topic, for example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>   http://kubernetes.io/docs/tasks/access-kubernetes-api/http-proxy-access-api/
+<div class="highlighter-rouge"><pre class="highlight"><code>   http://kubernetes.io/docs/tasks/accessing-ifc-classes/data extraction/
 </code></pre>
 </div>
 
@@ -457,7 +457,7 @@ The front matter is the YAML block that is between the
 triple-dashed lines at the top of the page. Here’s an example:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>---
-title: Using an HTTP Proxy to Access the Kubernetes API
+title: Using a object meta-model to abstract IFC data
 ---
 </code></pre>
 </div>
@@ -493,7 +493,7 @@ subdirectory.</p>
 
 <h2 id="including-code-from-another-file">Including code from another file</h2>
 
-<p>To include a code file in your topic, place the code file in the Kubernetes
+<p>To include a code file in your topic, place the code file in the IFC
 documentation repository, preferably in the same directory as your topic
 file. In your topic file, use the <code class="highlighter-rouge">include</code> tag:</p>
 
@@ -505,38 +505,38 @@ file. In your topic file, use the <code class="highlighter-rouge">include</code>
 <ul>
   <li><code class="highlighter-rouge">&lt;LEXERVALUE&gt;</code> is the language in which the file was written. This must be
 <a href="https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers">a value supported by Rouge</a>.</li>
-  <li><code class="highlighter-rouge">&lt;RELATIVEPATH&gt;</code> is the path to the file you’re including, relative to the current file, for example, <code class="highlighter-rouge">gce-volume.yaml</code>.</li>
-  <li><code class="highlighter-rouge">&lt;PATHFROMROOT&gt;</code> is the path to the file relative to root, for example, <code class="highlighter-rouge">docs/tutorials/stateful-application/gce-volume.yaml</code>.</li>
+  <li><code class="highlighter-rouge">&lt;RELATIVEPATH&gt;</code> is the path to the file you’re including, relative to the current file, for example, <code class="highlighter-rouge">clinic.ifc</code>.</li>
+  <li><code class="highlighter-rouge">&lt;PATHFROMROOT&gt;</code> is the path to the file relative to root, for example, <code class="highlighter-rouge">docs/tutorials/tutorial.md</code>.</li>
 </ul>
 
 <p>Here’s an example of using the <code class="highlighter-rouge">include</code> tag:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">include</span><span class="w"> </span><span class="err">code.html</span><span class="w"> </span><span class="err">language=</span><span class="nt">"yaml"</span><span class="w"> </span><span class="err">file=</span><span class="nt">"gce-volume.yaml"</span><span class="w"> </span><span class="err">ghlink=</span><span class="nt">"/docs/tutorials/stateful-application/gce-volume.yaml"</span><span class="w"> </span><span class="err">%}</span></code></pre>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">include</span><span class="w"> </span><span class="err">code.html</span><span class="w"> </span><span class="err">language=</span><span class="nt">"XML"</span><span class="w"> </span><span class="err">file=</span><span class="nt">"clinic.xml"</span><span class="w"> </span><span class="err">ghlink=</span><span class="nt">"/docs/tutorials/tutorial.xml"</span><span class="w"> </span><span class="err">%}</span></code></pre>
 </div>
 
-<h2 id="showing-how-to-create-an-api-object-from-a-configuration-file">Showing how to create an API object from a configuration file</h2>
+<h2 id="showing-how-to-create-an-ifc-object-from-a-configuration-file">Showing how to create an IFC object from a configuration file</h2>
 
-<p>If you need to show the reader how to create an API object based on a
-configuration file, place the configuration file in the Kubernetes documentation
+<p>If you need to show the reader how to create an IFC object based on a
+configuration file, place the configuration file in the IFC documentation
 repository, preferably in the same directory as your topic file.</p>
 
 <p>In your topic, show this command:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>kubectl create -f http://k8s.io/&lt;PATHFROMROOT&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>ifc doSomething http://ifc.com/&lt;PATHFROMROOT&gt;
 </code></pre>
 </div>
 
 <p>where <code class="highlighter-rouge">&lt;PATHFROMROOT&gt;</code> is the path to the configuration file relative to root,
-for example, <code class="highlighter-rouge">docs/tutorials/stateful-application/gce-volume.yaml</code>.</p>
+for example, <code class="highlighter-rouge">docs/tutorials/tutorial.xml</code>.</p>
 
-<p>Here’s an example of a command that creates an API object from a configuration file:</p>
+<p>Here’s an example of a command that creates an IFC object from a configuration file:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>kubectl create -f http://k8s.io/docs/tutorials/stateful-application/gce-volume.yaml
+<div class="highlighter-rouge"><pre class="highlight"><code>ifc doSomething http://ifc.com/docs/tutorials/tutorial.xml
 </code></pre>
 </div>
 
 <p>For an example of a topic that uses this technique, see
-<a href="/docs/tutorials/stateful-application/run-stateful-application/">Running a Single-Instance Stateful Application</a>.</p>
+<a href="/docs/tutorials/tutorial/">An example</a>.</p>
 
 <h2 id="adding-images-to-a-topic">Adding images to a topic</h2>
 

@@ -1,14 +1,11 @@
 ---
-redirect_from:
-- "/docs/templatedemos/"
-- "/docs/templatedemos.html"
 title: Using Page Templates
 ---
 
 <!--<html>
 <body>-->
 
-<p>These page templates are available for writers who would like to contribute new topics to the Kubernetes docs:</p>
+<p>These page templates are available for writers who would like to contribute new topics to the IFC docs:</p>
 
 <ul>
     <li><a href="#task_template">Task</a></li>
@@ -16,7 +13,7 @@ title: Using Page Templates
     <li><a href="#concept_template">Concept</a></li>
 </ul>
 
-<p>The page templates are in the <a href="https://github.com/kubernetes/kubernetes.github.io/tree/master/_includes/templates" target="_blank">_includes/templates</a> directory of the <a href="https://github.com/kubernetes/kubernetes.github.io">kubernetes.github.io</a> repository.
+<p>The page templates are in the <a href="https://github.com/bigdoods/bigdoods.github.com/tree/master/_includes/templates" target="_blank">_includes/templates</a> directory of the <a href="https://github.com/bigdoods/bigdoods.github.com">bigdoods.github.io</a> repository.
 
 <h2 id="task_template">Task template</h2>
 
@@ -80,14 +77,14 @@ Here's an interesting thing to know about the steps you just did.
 
 <p>Here's an example of a published topic that uses the task template:</p>
 
-<p><a href="/docs/tasks/access-kubernetes-api/http-proxy-access-api">Using an HTTP Proxy to Access the Kubernetes API</a></p>
+<p><a href="/weNeedAtopic/">the topic</a></p>
 
 <h2 id="tutorial_template">Tutorial template</h2>
 
 <p>A tutorial page shows how to accomplish a goal that is larger than a single
 task. Typically a tutorial page has several sections, each of which has a
 sequence of steps. For example, a tutorial might provide a walkthrough of a
-code sample that illustrates a certain feature of Kubernetes. Tutorials can
+code sample that illustrates a certain feature of IFC. Tutorials can
 include surface-level explanations, but should link to related concept topics
 for deep explanations.
 
@@ -111,7 +108,7 @@ use <code>###</code> and <code>####</code> as needed.
 
 {% raw %}
 <pre>---
-title: Running a Thing
+title: Using IFC to do a thing
 ---
 
 {% capture overview %}
@@ -164,8 +161,8 @@ Here's something interesting about the code you ran in the preceding steps.
 
 <h2 id="concept_template">Concept template</h2>
 
-<p>A concept page explains some aspect of Kubernetes. For example, a concept
-page might describe the Kubernetes Deployment object and explain the role it
+<p>A concept page explains some aspect of IFC. For example, a concept
+page might describe the IFC Deployment object and explain the role it
 plays as an application is deployed, scaled, and updated. Typically, concept
 pages don't include sequences of steps, but instead provide links to tasks or
 tutorials.
@@ -197,7 +194,7 @@ This page explains ...
 {% capture body %}
 ## Understanding ...
 
-Kubernetes provides ...
+IFC provides ...
 
 ## Using ...
 
@@ -219,4 +216,3 @@ To use ...
 
 <!--</body>
 </html>-->
-

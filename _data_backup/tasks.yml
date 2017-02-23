@@ -1,0 +1,8 @@
+bigheader: "Tasks"
+abstract: "Step-by-step instructions for performing operations with Kubernetes."
+toc:
+- docs/tasks/index.md
+
+- title: Using the Kubectl Command-Line
+  section:
+  - docs/tasks/index.md

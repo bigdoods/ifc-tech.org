@@ -10,13 +10,12 @@ toc:
 - title: Frequently Asked Questions
   section:
   - title: User FAQ
-    path: https://github.com/kubernetes/kubernetes/wiki/User-FAQ/
-  - title: Debugging FAQ
-    path: https://github.com/kubernetes/kubernetes/wiki/Debugging-FAQ/
-  - title: Services FAQ
-    path: https://github.com/kubernetes/kubernetes/wiki/Services-FAQ/
+    path: /docs/faq/user.md
+  - title: Developer FAQ
+    path: /docs/faq/developer.md
 
-- title: Contributing to the Kubernetes Docs
+
+- title: Contributing to the IFC Docs
   section:
   - editdocs.md
   - docs/contribute/create-pull-request.md
@@ -28,13 +27,10 @@ toc:
 
 - title: Other Resources
   section:
-  - title: Kubernetes Issue Tracker on GitHub
-    path: https://github.com/kubernetes/kubernetes/issues/
+  - title: IFC Issue Tracker on GitHub
+    path: https://github.com/
   - docs/reporting-security-issues.md
-  - title: Release Notes
-    path: https://github.com/kubernetes/kubernetes/releases/
+  - title: IFC Release Notes
+    path: https://github.com/
   - title: Release Roadmap
-    path: https://github.com/kubernetes/kubernetes/milestones/
-
-- title: Deprecation Policy
-  path: /docs/deprecation-policy.md
+    path: https://github.com/

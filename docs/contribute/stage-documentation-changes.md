@@ -4,11 +4,11 @@ title: Staging Your Documentation Changes
 
 {% capture overview %}
 This page shows how to stage content that you want to contribute
-to the Kubernetes documentation.
+to the IFC documentation.
 {% endcapture %}
 
 {% capture prerequisites %}
-Create a fork of the Kubernetes documentation repository as described in
+Create a fork of the IFC documentation repository as described in
 [Creating a Documentation Pull Request](/docs/contribute/create-pull-request/).
 {% endcapture %}
 
@@ -35,38 +35,13 @@ the master branch.
 ## Staging a pull request
 
 When you create a pull request, either against the master or &lt;vnext&gt;
-branch, your changes are staged in a custom subdomain on Netlify so that
-you can see your changes in rendered form before the pull request is merged.
+branch, your changes are staged in a custom version of the docs site to ensure that nothing breaks.(perhaps integrate netlify CI to custom domain& stage)
 
 1. In your GitHub account, in your new branch, submit a pull request to the
-kubernetes/kubernetes.github.io repository. This opens a page that shows the
+bigdoods/bigdoods.github.io repository. This opens a page that shows the
 status of your pull request.
 
-1. Scroll down to the list of automated checks. Click **Show all checks**.
-Wait for the **deploy/netlify** check to complete. To the right of
-**deploy/netlify**, click **Details**. This opens a staging site where you
-can see your changes.
-
-## Staging locally using Docker
-
-You can use the k8sdocs Docker image to run a local staging server. If you're
-interested, you can view the
-[Dockerfile](https://github.com/kubernetes/kubernetes.github.io/blob/master/staging-container/Dockerfile){: target="_blank"}
-for this image.
-
-1. Install Docker if you don't already have it.
-
-1. Clone your fork to your local development machine.
-
-1. In the root of your cloned repository, enter this command to start a local
-web server:
-
-        docker run -ti --rm -v "$PWD":/k8sdocs -p 4000:4000 gcr.io/google-samples/k8sdocs:1.0
-
-1. View your staged content at
-[http://localhost:4000](http://localhost:4000){: target="_blank"}.
-
-## Staging locally without Docker
+## Staging locally
 
 1. [Install Ruby 2.2 or later](https://www.ruby-lang.org){: target="_blank"}.
 
@@ -90,8 +65,8 @@ web server:
 1. View your staged content at
 [http://localhost:4000](http://localhost:4000){: target="_blank"}.
 
-<i>NOTE: If you do not want Jekyll to interfere with your other globally installed gems, you can use `bundler`:</i> 
- 
+<i>NOTE: If you do not want Jekyll to interfere with your other globally installed gems, you can use `bundler`:</i>
+
  	gem install bundler
  	bundle install
  	bundler exec jekyll serve
