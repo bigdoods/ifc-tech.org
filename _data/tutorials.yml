@@ -2,3 +2,7 @@ bigheader: "Tutorials"
 abstract: "Detailed walkthroughs of common IFC operations and workflows."
 toc:
 - docs/tutorials/index.md
+
+- title: "getting started with IFC"
+  section:
+  - docs/ifc-express/express-overview.md
