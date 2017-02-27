@@ -1,26 +1,17 @@
 ---
 assignees:
 - dlorenc
-- r2d4 
+- r2d4
 - aaron-prindle
 title: Running Kubernetes Locally via Minikube
 ---
 
-Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day.
+ifc-doc-tool is a tool that makes it easy to view IFC locally. ifc-doc-tool runs a view of the loaded ifc schema.
 
 * TOC
 {:toc}
 
-### Minikube Features
-
-* Minikube supports Kubernetes features such as:
-  * DNS
-  * NodePorts
-  * ConfigMaps and Secrets
-  * Dashboards
-  * Container Runtime: Docker, and [rkt](https://github.com/coreos/rkt)
-  * Enabling CNI (Container Network Interface)
-  * Ingress
+### ifc-doc-tool Features
 
 ## Installation
 

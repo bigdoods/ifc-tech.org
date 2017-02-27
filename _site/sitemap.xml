@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:4000/docs/tutorials/IFC-basics/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/docs/getting-started-guides/alternatives/</loc>
 </url>
 <url>
@@ -151,6 +154,12 @@
 <loc>http://localhost:4000/docs/getting-started-guides/ubuntu/glossary/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/images/docs/user-guide/how-to/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/docs/getting-started-guides/ifc-doc-tool/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/docs/glossary/ifc-kernel/</loc>
 </url>
 <url>
@@ -257,9 +266,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/docs/getting-started-guides/mesos-docker/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/docs/getting-started-guides/minikube/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/docs/getting-started-guides/ubuntu/monitoring/</loc>
@@ -454,7 +460,7 @@
 <loc>http://localhost:4000/docs/getting-started-guides/network-policy/weave/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/docs/whatisk8s/</loc>
+<loc>http://localhost:4000/docs/whatisIFC/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/case-studies/wikimedia/</loc>

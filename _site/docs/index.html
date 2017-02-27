@@ -59,14 +59,14 @@
 
     <div class="nav-buttons" data-auto-burger="primary">
         <ul class="global-nav">
-            <li><a href="/docs/">Documentation</a></li>
+            <li><a href="/docs/">View Documentation</a></li>
             <li><a href="http://blog.kubernetes.io/">Blog</a></li>
             <li><a href="/partners/">Partners</a></li>
             <li><a href="/community/">Community</a></li>
             <li><a href="/case-studies/">Case Studies</a></li>
         </ul>
         <!-- <a href="/docs/" class="button" id="viewDocs" data-auto-burger-exclude>View Documentation</a> -->
-        <a href="/docs/tutorials/kubernetes-basics/" class="button" id="tryKubernetes" data-auto-burger-exclude>Try Kubernetes</a>
+        <a href="/docs/tutorials/kubernetes-basics/" class="button" id="tryKubernetes" data-auto-burger-exclude>Try IFC</a>
         <button id="hamburger" onclick="kub.toggleMenu()" data-auto-burger-exclude><div></div></button>
     </div>
 
@@ -74,35 +74,35 @@
         <main data-auto-burger="primary">
         <div class="nav-box">
             <h3><a href="/docs/hellonode/">Get Started</a></h3>
-            <p>Ready to get your hands dirty? Build a simple Kubernetes cluster that runs "Hello World" for Node.js.</p>
+            <p>Ready to get your hands dirty? Build a simple ifc cluster that runs "Hello World" for Node.js.</p>
         </div>
         <div class="nav-box">
             <h3><a href="/docs/">Documentation</a></h3>
-            <p>Learn how to use Kubernetes with the use of walkthroughs, samples, and reference documentation. You can even <a href="/editdocs/" data-auto-burger-exclude>help contribute to the docs</a>!</p>
+            <p>Learn how to use ifc with the use of walkthroughs, samples, and reference documentation. You can even <a href="/editdocs/" data-auto-burger-exclude>help contribute to the docs</a>!</p>
         </div>
         <div class="nav-box">
             <h3><a href="/community/">Community</a></h3>
-            <p>If you need help, you can connect with other Kubernetes users and the Kubernetes authors, attend community events, and watch video presentations from around the web.</p>
+            <p>If you need help, you can connect with other ifc users and the ifc authors, attend community events, and watch video presentations from around the web.</p>
         </div>
         <div class="nav-box">
-            <h3><a href="http://blog.kubernetes.io">Blog</a></h3>
-            <p>Read the latest news for Kubernetes and the containers space in general, and get technical how-tos hot off the presses.</p>
+            <h3><a href="http://blog.ifc.io">Blog</a></h3>
+            <p>Read the latest news for ifc and the containers space in general, and get technical how-tos hot off the presses.</p>
         </div>
         </main>
         <main data-auto-burger="primary">
         <div class="left">
-            <h5 class="github-invite">Interested in hacking on the core Kubernetes code base?</h5>
-            <a href="https://github.com/kubernetes/kubernetes" class="button" data-auto-burger-exclude>View On Github</a>
+            <h5 class="github-invite">Interested in hacking on the core ifc code base?</h5>
+            <a href="https://github.com/ifc/ifc" class="button" data-auto-burger-exclude>View On Github</a>
         </div>
 
         <div class="right">
             <h5 class="github-invite">Explore the community</h5>
             <div class="social">
-                <a href="https://twitter.com/kubernetesio" class="twitter"><span>Twitter</span></a>
-                <a href="https://github.com/kubernetes/kubernetes" class="github"><span>Github</span></a>
+                <a href="https://twitter.com/ifcio" class="twitter"><span>Twitter</span></a>
+                <a href="https://github.com/ifc/ifc" class="github"><span>Github</span></a>
                 <a href="http://slack.k8s.io/" class="slack"><span>Slack</span></a>
-                <a href="http://stackoverflow.com/questions/tagged/kubernetes" class="stack-overflow"><span>Stack Overflow</span></a>
-                <a href="https://groups.google.com/forum/#!forum/kubernetes-users" class="mailing-list"><span>Mailing List</span></a>
+                <a href="http://stackoverflow.com/questions/tagged/ifc" class="stack-overflow"><span>Stack Overflow</span></a>
+                <a href="https://groups.google.com/forum/#!forum/ifc-users" class="mailing-list"><span>Mailing List</span></a>
                 <a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar"><span>Events Calendar</span></a>
             </div>
         </div>
@@ -119,9 +119,9 @@
   <div id="vendorStrip" class="light-text">
     <ul>
       <li><a href="/docs/" class="YAH">DOCS HOME</a></li>
-      <!-- <li><a href="/docs/user-guide/" >GUIDES</a></li> -->
+      <li><a href="/docs/user-guide/" >GUIDES</a></li>
       <li><a href="/docs/tutorials/" >TUTORIALS</a></li>
-      <!-- <li><a href="/docs/tasks/" >TASKS</a></li> -->
+      <li><a href="/docs/tasks/" >TASKS</a></li>
       <li><a href="/docs/concepts/" >CONCEPTS</a></li>
       <li><a href="/docs/reference/" >REFERENCE</a></li>
       <li><a href="/docs/tools/" >TOOLS</a></li>
@@ -169,19 +169,13 @@
 
 <h2 id="installingsetting-up-ifc">Installing/Setting Up IFC</h2>
 
-<p><a href="/docs/getting-started-guides/">Picking the Right Solution</a> can help you get IFC up and running, either for local development, or on your cloud provider of choice.(Need to include something more relevant here to what someone looking to begin development with IFC would look for)</p>
+<p><a href="/docs/getting-started-guides/">Picking the Right Solution</a> can help you get IFC up and running for local development</p>
 
-<p>Other/newer ways to set up IFC include:</p>
-<ul>
-  <li><a href="/docs/getting-started-guides/minikube/">MiniIFC</a>: Install a development environment for model view definition and test it out.</li>
-  <li><a href="/docs/getting-started-guides/kops/">Installing IFC tools on Google cloud platform</a>: Build your set of testing tools on on a google cloud platform instance.</li>
-</ul>
-
-<h2 id="guides-tutorials-tasks-and-concepts">Guides, Tutorials, Tasks, and Concepts</h2>
+<h2 id="guides-tutorials-and-concepts">Guides, Tutorials and Concepts</h2>
 
 <p>The IFC documentation contains a number of resources to help you understand and work with IFC.</p>
 <ul>
-  <li><strong><a href="/docs/user-guide/expressToOwl">Guides</a></strong> provides documentation for Kubernetes features as well as administering and spinning up clusters, including usage examples.</li>
+  <li><strong><a href="/docs/user-guide/">Guides</a></strong> provides documentation for ifc features, including usage examples.</li>
   <li><strong><a href="/docs/tutorials/">Tutorials</a></strong> contain detailed walkthroughs of the IFC workflow.</li>
   <li><strong><a href="/docs/tasks/">Tasks</a></strong> contain step-by-step instructions for common IFC tasks.</li>
   <li><strong><a href="/docs/concepts/">Concepts</a></strong> provide a deep understanding of how IFC works.</li>
