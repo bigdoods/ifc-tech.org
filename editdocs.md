@@ -1,6 +1,6 @@
 ---
 layout: docwithnav
-title: Contributing to the Kubernetes Documentation
+title: Contributing to the IFC Documentation
 ---
 
 <!-- BEGIN: Gotta keep this section JS/HTML because it swaps out content dynamically -->
@@ -43,8 +43,8 @@ $( document ).ready(function() {
 
 For more information about contributing to the Kubernetes documentation, see:
 
-* [Creating a Documentation Pull Request](http://kubernetes.io/docs/contribute/create-pull-request/)
-* [Writing a New Topic](http://kubernetes.io/docs/contribute/write-new-topic/)
-* [Staging Your Documentation Changes](http://kubernetes.io/docs/contribute/stage-documentation-changes/)
-* [Using Page Templates](http://kubernetes.io/docs/contribute/page-templates/)
-* [Documentation Style Guide](http://kubernetes.io/docs/contribute/style-guide/)
+* [Creating a Documentation Pull Request](https://github.com/bigdoods/bigdoods.github.io/docs/contribute/create-pull-request/)
+* [Writing a New Topic](https://github.com/bigdoods/bigdoods.github.io/docs/contribute/write-new-topic/)
+* [Staging Your Documentation Changes](https://github.com/bigdoods/bigdoods.github.io/docs/contribute/stage-documentation-changes/)
+* [Using Page Templates](https://github.com/bigdoods/bigdoods.github.io/docs/contribute/page-templates/)
+* [Documentation Style Guide](https://github.com/bigdoods/bigdoods.github.io/docs/contribute/style-guide/)

@@ -1,9 +1,0 @@
-bigheader: "Samples"
-abstract: "A collection of example applications that show how to use Kubernetes."
-toc:
-- docs/samples.md
-
-- title: Storage / Database / KV
-  section:
-  - title: Apache Cassandra Database
-    path: https://github.com/kubernetes/kubernetes/tree/release-1.5/examples/storage/cassandr

@@ -6,6 +6,9 @@ toc:
 - title: Troubleshooting
   section:
   - docs/user-guide/index.md
+  - docs/user-guide/troubleshooting/troubleshooting.md
+  - docs/user-guide/troubleshooting/debugging-ifc.md
+  - docs/user-guide/troubleshooting/ifc-doc-interface.md
 
 - title: Frequently Asked Questions
   section:
@@ -15,7 +18,7 @@ toc:
     path: /docs/faq/developer.md
 
 
-- title: Contributing to the IFC Docs
+- title: Contributing to the IFC Documentation
   section:
   - editdocs.md
   - docs/contribute/create-pull-request.md
@@ -29,7 +32,6 @@ toc:
   section:
   - title: IFC Issue Tracker on GitHub
     path: https://github.com/
-  - docs/reporting-security-issues.md
   - title: IFC Release Notes
     path: https://github.com/
   - title: Release Roadmap
