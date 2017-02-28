@@ -18,35 +18,36 @@ toc:
 
 - title: Exporters
   section:
-  - title: IFC - MVD
+  - title: IFC-MVD
     section:
     - docs/tools/exporters/ifc-mvd/overview.md
     - docs/tools/exporters/ifc-mvd/mvd-generators.md
     - docs/tools/exporters/ifc-mvd/ifc-bcf.md
 
-  - title: Application specific
+  - title: Vendor Specific
     section:
+    - docs/tools/application-specific/overview.md
     - title: Autodesk
       section:
       - docs/tools/application-specific/autodesk/revit.md
       - docs/tools/application-specific/autodesk/navisworks.md
     - title: Bentley
       section:
-      - aecosim.md
-      - bentley-infrastructure.md
+      - docs/tools/application-specific/bentley/aecosim.md
+      - docs/tools/application-specific/bentley/bentley-infrastructure.md
     - title: Graphisoft
       section:
-      - archicad.md
+      - docs/tools/application-specific/graphisoft/archicad.md
     - title: Rhinocerous
       section:
-      - rhinocerous.md
+      - docs/tools/application-specific/rhinocerous/rhinocerous.md
     - title: Sketch-up
       section:
-      - sketch-up.md
+      - docs/tools/application-specific/sketch-up/sketch-up.md
     - title: Tekla
-     section:
-      - tekla-structures.md
-      - bimsight.md
+      section:
+      - docs/tools/application-specific/tekla/tekla-structures.md
+      - docs/tools/application-specific/tekla/bimsight.md
 
 - title: Validators
   section:
