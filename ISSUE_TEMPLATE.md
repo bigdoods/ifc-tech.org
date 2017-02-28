@@ -2,7 +2,7 @@
 
 <!--Required Information-->
 
-**This is a...** 
+**This is a...**
 <!-- choose one by changing [ ] to [x] -->
 - [ ] Feature Request
 - [ ] Bug Report
@@ -14,9 +14,9 @@
 
 
 **Page to Update:**
-http://kubernetes.io/...
+http://bigdoods.github.io/...
 
 <!--Optional Information (remove the comment tags around information you would like to include)-->
-<!--Kubernetes Version:-->
+<!--Version:-->
 
 <!--Additional Information:-->

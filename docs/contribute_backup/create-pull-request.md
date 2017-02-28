@@ -5,7 +5,7 @@ title: Creating a Documentation Pull Request
 {% capture overview %}
 
 To contribute to the Kubernetes documentation, create a pull request against the
-[kubernetes/kubernetes.github.io](https://github.com/kubernetes/kubernetes.github.io){: target="_blank"}
+[kubernetes/kubernetes.github.io](https://github.com/bigdoods/bigdoods.github.io){: target="_blank"}
 repository. This page shows how to create a pull request.
 
 {% endcapture %}
@@ -17,7 +17,7 @@ repository. This page shows how to create a pull request.
 1. Sign the
 [Linux Foundation Contributor License Agreement](https://identity.linuxfoundation.org/projects/cncf){: target="_blank"}.
 
-Documentation will be published under the [CC BY SA 4.0](https://github.com/kubernetes/kubernetes.github.io/blob/master/LICENSE) license.
+Documentation will be published under the [CC BY SA 4.0](https://github.com/bigdoods/bigdoods.github.io/blob/master/LICENSE) license.
 
 {% endcapture %}
 
@@ -26,7 +26,7 @@ Documentation will be published under the [CC BY SA 4.0](https://github.com/kube
 ## Creating a fork of the Kubernetes documentation repository
 
 1. Go to the
-[kubernetes/kubernetes.github.io](https://github.com/kubernetes/kubernetes.github.io){: target="_blank"}
+[kubernetes/kubernetes.github.io](https://github.com/bigdoods/bigdoods.github.io){: target="_blank"}
 repository.
 
 1. In the upper-right corner, click **Fork**. This creates a copy of the
