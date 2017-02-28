@@ -2,3 +2,13 @@ bigheader: "Tasks"
 abstract: "Step-by-step instructions for performing operations with IFC"
 toc:
 - docs/tasks/index.md
+
+- title: "Editing file headers"
+  section:
+  - docs/tasks/editing-file-headers/defining-file-headers.md
+  - docs/tasks/editing-file-headers/defining-commands-file-headers.md
+  - docs/tasks/editing-file-headers/defining-ifc-ontology.md
+
+- title: "Whats next"
+  section:
+  - docs/contribute/create-pull-request.md

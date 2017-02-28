@@ -2,3 +2,11 @@ bigheader: "Guides"
 abstract: "How to get started, and accomplish tasks, using IFC."
 toc:
 - docs/user-guide/index.md
+
+- title: "IFC concepts"
+  section:
+  - docs/concepts/core-layer.md
+
+- title: "Further reading"
+  section:
+  - docs/concepts/core-layer.md

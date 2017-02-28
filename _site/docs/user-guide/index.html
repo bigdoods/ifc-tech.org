@@ -154,6 +154,42 @@
     
   
 
+  
+    <div class="item" data-title="IFC concepts">
+      <div class="container">
+        
+  
+
+    
+
+    
+      <a class="item" data-title="Core Layer" href="/docs/concepts/core-layer/"></a>
+    
+  
+
+
+      </div>
+    </div>
+  
+
+  
+    <div class="item" data-title="Further reading">
+      <div class="container">
+        
+  
+
+    
+
+    
+      <a class="item" data-title="Core Layer" href="/docs/concepts/core-layer/"></a>
+    
+  
+
+
+      </div>
+    </div>
+  
+
 
         
         </div> <!-- /pi-accordion -->
@@ -170,30 +206,24 @@
         <p>The IFC <strong>Guides</strong> can help you work with various aspects of the IFC system.</p>
 
 <ul>
-  <li>The IFC <a href="#user-guide-internal">User Guide</a> can help you run programs and services on an existing IFC cluster.</li>
-  <li>The <a href="/docs/admin/">Cluster Admin Guide</a> can help you set up and administrate your own IFC cluster.</li>
-  <li>The <a href="https://github.com/kubernetes/kubernetes/tree/master/docs/devel">Developer Guide</a> can help you either write code to directly access the IFC API, or to contribute directly to the IFC project.</li>
+  <li>The IFC <a href="#user-guide-internal">User Guide</a> can help you read IFC files.</li>
+  <li>
+    <p>The <a href="https://github.com/bigdoods/bigdoods.github.io/tree/master/docs/devel">Developer Guide</a> can help you either write code to directly access IFC, or to contribute directly to the IFC project.</p>
+  </li>
+  <li>(idea) gather all tooling that is used for accessing, querying, editing and updating IFC files that are independent of vendor influence and include them in user guide to promote usage.</li>
 </ul>
 
-<h2 id="kubernetes-user-guide"><a name="user-guide-internal"></a>Kubernetes User Guide</h2>
+<h2 id="ifc-user-guide"><a name="user-guide-internal"></a>IFC User Guide</h2>
 
-<p>The following topics in the IFC User Guide can help you run applications and services on a IFC cluster:</p>
+<p>The following topics in the IFC User Guide can help you read, write, edit and update IFC schema and file extensions.</p>
 
 <ol>
-  <li><a href="/docs/user-guide/quick-start/">Quick start: launch and expose an application</a></li>
-  <li><a href="/docs/user-guide/configuring-containers/">Configuring and launching containers: configuring common container parameters</a></li>
-  <li><a href="/docs/user-guide/deploying-applications/">Deploying continuously running applications</a></li>
-  <li><a href="/docs/user-guide/connecting-applications/">Connecting applications: exposing applications to clients and users</a></li>
-  <li><a href="/docs/user-guide/production-pods/">Working with containers in production</a></li>
-  <li><a href="/docs/user-guide/managing-deployments/">Managing deployments</a></li>
-  <li><a href="/docs/user-guide/introspection-and-debugging/">Application introspection and debugging</a>
+  <li><a href="/docs/user-guide/quick-start/">Quick start: extending the schema</a></li>
+  <li><a href="/docs/user-guide/configuring-schema/">Editing the schema</a></li>
+  <li><a href="/docs/user-guide/model-view-defintions/">Model View Definitions</a>
     <ol>
-      <li><a href="/docs/user-guide/ui/">Using the IFC web user interface</a></li>
-      <li><a href="/docs/user-guide/logging/overview/">Logging</a></li>
-      <li><a href="/docs/user-guide/monitoring/">Monitoring</a></li>
-      <li><a href="/docs/user-guide/getting-into-containers/">Getting into containers via <code class="highlighter-rouge">exec</code></a></li>
-      <li><a href="/docs/user-guide/connecting-to-applications-proxy/">Connecting to containers via proxies</a></li>
-      <li><a href="/docs/user-guide/connecting-to-applications-port-forward/">Connecting to containers via port forwarding</a></li>
+      <li><a href="/docs/user-guide/ifc-doc-interface/">IFCDoc interface</a></li>
+      <li><a href="/docs/user-guide/logging/overview/">Updating classes</a></li>
     </ol>
   </li>
 </ol>
@@ -203,53 +233,25 @@
 <h2 id="ifc-concepts">IFC Concepts</h2>
 
 <dl>
-  <dt><a href="/docs/admin/"><strong>Cluster</strong></a></dt>
-  <dd>A cluster is a set of physical or virtual machines and other infrastructure resources used by IFC to run your applications.</dd>
-  <dt><a href="/docs/admin/node/"><strong>Node</strong></a></dt>
-  <dd>A node is a physical or virtual machine running IFC, onto which pods can be scheduled.</dd>
-  <dt><a href="/docs/user-guide/pods/"><strong>Pod</strong></a></dt>
-  <dd>A pod is a co-located group of containers and volumes.</dd>
-  <dt><a href="/docs/user-guide/labels/"><strong>Label</strong></a></dt>
-  <dd>A label is a key/value pair that is attached to a resource, such as a pod, to convey a user-defined identifying attribute. Labels can be used to organize and to select subsets of resources.</dd>
-  <dt><a href="/docs/user-guide/labels/#label-selectors"><strong>Selector</strong></a></dt>
-  <dd>A selector is an expression that matches labels in order to identify related resources, such as which pods are targeted by a load-balanced service.</dd>
-  <dt><a href="/docs/user-guide/replication-controller/"><strong>Replication Controller</strong></a></dt>
-  <dd>A replication controller ensures that a specified number of pod replicas are running at any one time. It both allows for easy scaling of replicated systems and handles re-creation of a pod when the machine it is on reboots or otherwise fails.</dd>
-  <dt><a href="/docs/user-guide/services/"><strong>Service</strong></a></dt>
-  <dd>A service defines a set of pods and a means by which to access them, such as single stable IP address and corresponding DNS name.</dd>
-  <dt><a href="/docs/user-guide/volumes/"><strong>Volume</strong></a></dt>
-  <dd>A volume is a directory, possibly with some data in it, which is accessible to a Container as part of its filesystem.  IFC volumes build upon <a href="https://docs.docker.com/engine/tutorials/dockervolumes/">Docker Volumes</a>, adding provisioning of the volume directory and/or device.</dd>
-  <dt><a href="/docs/user-guide/secrets/"><strong>Secret</strong></a></dt>
-  <dd>A secret stores sensitive data, such as authentication tokens, which can be made available to containers upon request.</dd>
-  <dt><a href="/docs/user-guide/identifiers/"><strong>Name</strong></a></dt>
-  <dd>A user- or client-provided name for a resource.</dd>
-  <dt><a href="/docs/user-guide/namespaces/"><strong>Namespace</strong></a></dt>
-  <dd>A namespace is like a prefix to the name of a resource. Namespaces help different projects, teams, or customers to share a cluster, such as by preventing name collisions between unrelated teams.</dd>
-  <dt><a href="/docs/user-guide/annotations/"><strong>Annotation</strong></a></dt>
-  <dd>A key/value pair that can hold larger (compared to a label), and possibly not human-readable, data, intended to store non-identifying auxiliary data, especially data manipulated by tools and system extensions.  Efficient filtering by annotation values is not supported.</dd>
+  <dt><a href="/docs/concepts/core-layer/"><strong>Object relationship model</strong></a></dt>
+  <dd>An IFC schema is based around an object relationship data model.</dd>
+  <dt><a href="/docs/concepts/domain-layer/"><strong>Layers</strong></a></dt>
+  <dd>The IFC schema consists of a number of layers that enable IFC extensions.</dd>
 </dl>
 
 <h2 id="further-reading">Further reading</h2>
 
-<p>API resources</p>
+<p>Schema resources</p>
 
 <ul>
-  <li><a href="/docs/user-guide/working-with-resources/">Working with resources</a></li>
+  <li><a href="docs/user-guide/working-with-resources/">Working with resources</a></li>
 </ul>
 
-<p>Pods and containers</p>
+<p>Using IFC tooling</p>
 
 <ul>
-  <li><a href="/docs/user-guide/pod-states/">Pod lifecycle and restart policies</a></li>
-  <li><a href="/docs/user-guide/container-environment/">Lifecycle hooks</a></li>
-  <li><a href="/docs/user-guide/compute-resources/">Compute resources, such as cpu and memory</a></li>
-  <li><a href="/docs/user-guide/containers/">Specifying commands and requesting capabilities</a></li>
-  <li><a href="/docs/user-guide/downward-api/">Downward API: accessing system configuration from a pod</a></li>
-  <li><a href="/docs/user-guide/images/">Images and registries</a></li>
-  <li><a href="/docs/user-guide/docker-cli-to-kubectl/">Migrating from docker-cli to kubectl</a></li>
-  <li><a href="/docs/user-guide/config-best-practices/">Configuration Best Practices and Tips</a></li>
-  <li><a href="/docs/user-guide/node-selection/">Assign pods to selected nodes</a></li>
-  <li><a href="/docs/user-guide/update-demo/">Perform a rolling update on a running group of pods</a></li>
+  <li><a href="docs/user-guide/working-with-classes/">working with classes</a></li>
+  <li><a href="docs/user-guide/working-with-step-classes/">working with step classes</a></li>
 </ul>
 
 

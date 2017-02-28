@@ -6,10 +6,11 @@ This section of the IFC documentation contains pages that
 show how to do individual tasks. A task page shows how to do a
 single thing, typically by giving a short sequence of steps.
 
-#### Configuring Pods and Containers
+#### Editing file headers
 
-* [Defining Environment Variables for a Container](/docs/tasks/configure-pod-container/define-environment-variable-container/)
-* [Defining a Command and Arguments for a Container](/docs/tasks/configure-pod-container/define-command-argument-container/)
+* [Defining File Headers](/docs/tasks/editing-file-headers/defining-file-headers/)
+* [Defining Command and Arguments for a an IFC file](/docs/tasks/editing-file-headers/defining-commands-file-headers/)
+* [Defining IFC ontology](/docs/tasks/editing-file-headers/defining-ifc-ontology/)
 
 ### What's next
 
