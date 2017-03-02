@@ -1,34 +1,57 @@
-bigheader: "Reference Documentation"
+bigheader: "IFC Reference Documentation"
 abstract: "Specification for core design docs, concept definitions, and references for extensions"
 toc:
 - docs/reference.md
 
-- title: "IFC EXPRESS"
+- title: Schemas
   section:
-  - docs/reference/ifc-express/express-overview.md
-  - docs/reference/ifc-express/express-specification.md
-  - docs/reference/ifc-express/express-g-overview.md
-  - docs/reference/ifc-express/express-g-overview.md
+  - title: "IFC2."
+    section:
+    - docs/reference/schemas/ifc2.md/overview.md
+    - docs/reference/schemas/ifc2.md/ifc2.md
+  - title: "IFC2x3."
+    section:
+    - docs/reference/schemas/ifc2x3.md/ifc2x3.md
+    - docs/reference/schemas/ifc2x3.md/overview.md
+  - title: "IFC4."
+    section:
+    - docs/reference/schemas/ifc4.md/overview.md
+    - docs/reference/schemas/ifc4.md/ifc4.md
+    - docs/reference/schemas/ifc4.md/updates.md
+    - docs/reference/schemas/ifc4.md/change-log.md
+  - title: "IFC5."
+    section:
+    - docs/reference/schemas/ifc5.md/overview.md
+    - docs/reference/schemas/ifc5.md/ifc5.md
 
-- title: "IFC XML"
+- title: Mappings
   section:
-  - docs/reference/ifc-xml/xml-overview.md
-  - docs/reference/ifc-xml/xml-specification.md
+  - title: "IFC EXPRESS"
+    section:
+    - docs/reference/extensions/ifc-express/express-overview.md
+    - docs/reference/extensions/ifc-express/express-specification.md
+    - docs/reference/extensions/ifc-express/express-g-overview.md
+    - docs/reference/extensions/ifc-express/express-g-specification.md
 
-- title: "IFC STEP"
-  section:
-  - docs/reference/ifc-step/step-overview.md
-  - docs/reference/ifc-step/step-specification.md
+  - title: "IFC XML"
+    section:
+    - docs/reference/extensions/ifc-xml/xml-overview.md
+    - docs/reference/extensions/ifc-xml/xml-specification.md
 
-- title: "IFC OWL"
-  section:
-  - docs/reference/ifc-owl/owl-overview.md
-  - docs/reference/ifc-owl/owl-specification.md
+  - title: "IFC STEP"
+    section:
+    - docs/reference/extensions/ifc-step/step-overview.md
+    - docs/reference/extensions/ifc-step/step-specification.md
 
-- title: "IFC MVD"
-  section:
-  - docs/reference/ifc-mvd/mvd-overview.md
-  - docs/reference/ifc-mvd/mvd-xml.md
+  - title: "IFC OWL"
+    section:
+    - docs/reference/extensions/ifc-owl/owl-overview.md
+    - docs/reference/extensions/ifc-owl/owl-specification.md
+
+  - title: "IFC MVD"
+    section:
+    - docs/reference/extensions/ifc-mvd/mvd-overview.md
+    - docs/reference/extensions/ifc-mvd/mvd-xml.md
 
 - title: Glossary
   section:
