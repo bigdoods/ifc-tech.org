@@ -5,37 +5,37 @@ toc:
 
 - title: "IFC EXPRESS"
   section:
-  - docs/ifc-express/express-overview.md
-  - docs/ifc-express/express-specification.md
-  - docs/ifc-express/express-g-overview.md
-  - docs/ifc-express/express-g-overview.md
+  - docs/reference/ifc-express/express-overview.md
+  - docs/reference/ifc-express/express-specification.md
+  - docs/reference/ifc-express/express-g-overview.md
+  - docs/reference/ifc-express/express-g-overview.md
 
 - title: "IFC XML"
   section:
-  - docs/ifc-xml/xml-overview.md
-  - docs/ifc-xml/xml-specification.md
+  - docs/reference/ifc-xml/xml-overview.md
+  - docs/reference/ifc-xml/xml-specification.md
 
 - title: "IFC STEP"
   section:
-  - docs/ifc-step/step-overview.md
-  - docs/ifc-step/step-specification.md
+  - docs/reference/ifc-step/step-overview.md
+  - docs/reference/ifc-step/step-specification.md
 
 - title: "IFC OWL"
   section:
-  - docs/ifc-owl/owl-overview.md
-  - docs/ifc-owl/owl-specification.md
+  - docs/reference/ifc-owl/owl-overview.md
+  - docs/reference/ifc-owl/owl-specification.md
 
 - title: "IFC MVD"
   section:
-  - docs/ifc-mvd/mvd-overview.md
-  - docs/ifc-mvd/mvd-xml.md
+  - docs/reference/ifc-mvd/mvd-overview.md
+  - docs/reference/ifc-mvd/mvd-xml.md
 
 - title: Glossary
   section:
-  - docs/glossary/ifc-kernel.md
-  - docs/glossary/ifc-object.md
-  - docs/glossary/ifc-schema.md
-  - docs/glossary/step-ap-classes.md
+  - docs/reference/glossary/ifc-kernel.md
+  - docs/reference/glossary/ifc-object.md
+  - docs/reference/glossary/ifc-schema.md
+  - docs/reference/glossary/step-ap-classes.md
 
 - title: IFC Design Docs
   section:

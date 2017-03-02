@@ -239,70 +239,102 @@
           <h1>Concepts</h1>
         
 
-        <p>The Concepts section helps you learn about the parts of the IFC system and the abstractions IFC uses to represent your cluster, and helps you obtain a deeper understanding of how IFC works.</p>
+        <p>The Concepts section helps you learn about the parts of the IFC system and the abstractions IFC uses to represent your schema, and helps you obtain a deeper understanding of how IFC works.</p>
 
 <h2 id="overview">Overview</h2>
 
-<p>To work with IFC, you use <em>IFC API objects</em> to describe your cluster’s <em>desired state</em>: what applications or other workloads you want to run, what container images they use, the number of replicas, what network and disk resources you want to make available, and more. You set your desired state by creating objects using the IFC API, typically via the command-line interface, <code class="highlighter-rouge">kubectl</code>. You can also use the IFC API directly to interact with the cluster and set or modify your desired state.</p>
-
-<p>Once you’ve set your desired state, the <em>IFC Control Plane</em> works to make the cluster’s current state match the desired state. To do so, Kuberentes performs a variety of tasks automatically–such as starting or restarting containers, scaling the number of replicas of a given application, and more. The IFC Control Plane consists of a collection processes running on your cluster:</p>
-
-<ul>
-  <li>The <strong>IFC Master</strong> is a collection of four processes that run on a single node in your cluster, which is designated as the master node.</li>
-  <li>Each individual non-master node in your cluster runs two processes:
-    <ul>
-      <li><strong>kubelet</strong>, which communicates with the IFC Master.</li>
-      <li><strong>kube-proxy</strong>, a network proxy which reflects IFC networking services on each node.</li>
-    </ul>
-  </li>
-</ul>
+<p>To work with IFC, you use IFC objects to represent the desired content to share though its mapping tooling. Any buildign or asset object that appears in a buildign will have an equivalent in the digital schema. We are constantly working towards adding new object so that the schema progresses along with technology.You can build an ifc file using mappings like IFCXML and ifcJSON.</p>
 
 <h2 id="ifc-objects">IFC Objects</h2>
 
-<p>IFC contains a number of abstractions that represent your the state of your system: deployed containerized applications and workloads, their associated network and disk resources, and other information about what your cluster is doing. These abstractions are represented by objects in the IFC API; see the <a href="/docs/concepts/abstractions/overview/">IFC Objects overview</a> for more details.</p>
+<p>IFC contains a number of abstractions that represent the different layers contanied in the schema; see the <a href="/docs/concepts/overview/">IFC Objects overview</a> for more details.</p>
 
 <p>The basic IFC objects include:</p>
 
 <ul>
-  <li><a href="/docs/concepts/abstractions/pod/">Pod</a></li>
-  <li>Service</li>
-  <li>Volume</li>
-  <li>Namespace</li>
+  <li>domain-layer</li>
+  <li>resource-layer</li>
+  <li>core-layer</li>
+  <li>interoperability-layer</li>
 </ul>
 
-<p>In addition, IFC contains a number of higher-level abstractions called Controllers. Controllers build upon the basic objects, and provide additional functionality and convenience features. They include:</p>
+<p>In addition, IFC contains a number of higher-level abstractions defined through object relationships in the schema. These abstractions build upon the basic objects, and provide additional functionality and convenience features. They include:</p>
 
 <ul>
-  <li>ReplicaSet</li>
-  <li>Deployment</li>
-  <li><a href="/docs/concepts/abstractions/controllers/statefulsets/">StatefulSet</a></li>
-  <li>DaemonSet</li>
-  <li>Job</li>
+  <li>Inheritance</li>
+  <li>Semantic relationships</li>
 </ul>
 
-<h2 id="ifc-control-plane">IFC Control Plane</h2>
+<h2 id="step">STEP</h2>
+<p>STEP introduction</p>
 
-<p>The various parts of the IFC Control Plane, such as the IFC Master and kubelet processes, govern how IFC communicates with your cluster. The Control Plane maintains a record of all of the IFC Objects in the system, and runs continuous control loops to manage those objects’ state. At any given time, the Control Plane’s control loops will respond to changes in the cluster and work to make the actual state of all the objects in the system to the desired state that you provided.</p>
+<p>In 1984, the Standards for Exchange of Product Data (STEP) project was officially created in the International Standards Organization (ISO) as an outgrowth of standardization projects in the United States and France. The objective of the
+STEP project was to develop standards for the exchange of product information among software tools that supported product engineering. It rapidly came to include support for construction engineering and manufacturing systems engineering as well.</p>
 
-<p>For example, when you use the IFC API to create a Deployment object, you provide a new desired state for the system. The IFC Control Plane records that object creation, and carries out your instructions by starting the required applications and scheduling them to cluster nodes–thus making the cluster’s actual state match the desired state.</p>
+<p>An objective of this project was to specify the information content of a product description in a way that was independent of the form of exchange, so that more than one specific exchange form could be specified, while the semantic equivalences would be retained by reference to the common model. In particular, the project members envisaged the need for both database representations and sequential file structures.</p>
 
-<h3 id="ifc-master">IFC Master</h3>
+<p>At that time, there were no standard information modeling languages, and the languages in common use were purely graphical. In order to specify the relationships between the information model (what we would now call a “platform independent model”) and the data implementation model (a “platform specific model”), it was perceived to be a requirement that the information model have a formal text form. Such a form would enable an information model to be processed by a software tool that could generate the corresponding PSM. There being no usable standard, nor any common language, with these characteristics, the STEP project developed and standardized its own information modeling language: EXPRESS.</p>
 
-<p>The IFC master is responsible for maintaining the desired state for your cluster. When you interact with IFC, such as by using the <code class="highlighter-rouge">kubectl</code> command-line interface, you’re communicating with your cluster’s IFC master.</p>
+<p>The information modeling language EXPRESS was standardized in 1994 as Part 11 of the ISO 10303 Standards for the Exchange of Product Data. It was revised in 1999 and in 2004. It was used for every information model in the STEP series, and in 3 other standards series in ISO TC184 (Industrial Data), and for information models in standards developed by other ISO Technical Committees. As of 2005, there were over 300 major information models for manufacturing and construction information that are formally specified in EXPRESS and standardized by ISO. These models, and the EXPRESS language are in wide use in the manufacturing industry, and the exchange models are supported by dozens of
+software tools.</p>
 
-<blockquote>
-  <p>The “master” refers to a collection of processes managing the cluster state.  Typically these processes are all run on a single node in the cluster, and this node is also referred to as the master. The master can also be replicated for availability and redundancy.</p>
-</blockquote>
+<p>In the more recent past, in order to make these models useful to an industry in which programmers and modelers are not commonly taught EXPRESS, further ISO projects have been undertaken to produce mappings from EXPRESS to XML Schema (ISO 10303-28) and UML (ISO 10303-25). But each of these mappings was specified entirely in text and targeted
+version 1 of XML Schema and UML respectively.</p>
 
-<h3 id="ifc-nodes">IFC Nodes</h3>
+<p>From this, many projects with the objective of applying a model-driven technologies to the “EXPRESS” problem emerged. These included metamodels for the EXPRESS language, development of a formal mapping with the goal of having a machine-processable specification and mapping the express metamodel to the metamodel of OWL specification by the w3c Organization.</p>
 
-<p>The nodes in a cluster are the machines (VMs, physical servers, etc) that run your applications and cloud workflows. The IFC master controls each node; you’ll rarely interact with nodes directly.</p>
+<p>Taken together these elements will permit automatic generation of OWL, which will neable them to be used as ontologies and tested for consistency using semantic web tooling.</p>
 
-<h4 id="object-metadata">Object Metadata</h4>
+<p>Other topics to include :</p>
 
 <ul>
-  <li><a href="/docs/concepts/object-metadata/annotations/">Annotations</a></li>
+  <li>Development of the Express metamodel</li>
+  <li>Scope and purpose of STEP</li>
 </ul>
+
+<h2 id="ifc-model-architecture">IFC model architecture</h2>
+
+<p>The IFC Object model is a minimal kernel that pre-harmonizes all partial models, but also provides for mapping mechanism to communicate with disperse models surrounding the harmonized part.</p>
+
+<p>The IFC object model architecture has been developed using a set of principles governing its organizaton and structure. These principles focus on basic requirements and can be summarized</p>
+
+<ul>
+  <li>Provide a modular structure to the model</li>
+  <li>Provide a framework for sharing information between different disciplines within the AEC/FM industry</li>
+  <li>Ease the continued maintenance and development of the model</li>
+  <li>Enable information modelers to reuse model components</li>
+  <li>Enable software authors to reuse software components</li>
+  <li>Facilitate the provision of better upward compatibility between model releases.</li>
+</ul>
+
+<p>The IFC Object model architecture provides a modular struture for the development of model components, the ‘model schemas’. There are four conceptual layers within the architecture, which use a strict referencing hierarchy. Within each conceptual layer a set of model schemas is defined. The layers can be described as follows:</p>
+
+<ol>
+  <li>Resource Layer - Resource classes used by classes in the higher levels.</li>
+  <li>Core Layer - This core contains the kernel and several core extensions</li>
+  <li>Interoperability Layer -The interoperability layer is a set of modules defining concepts or objects common across multiple application types or AEC industry domains.</li>
+  <li>Domain/applications layer - Provides a set of modules tailored for specific AEC indsutry domain or application type and model ‘adapters’ to non-IFC domain/application models.</li>
+</ol>
+
+<p>The architecture operates on a ‘ladder principle’ where at any layer, a class may reference a class at the same or lower layer but not reference a class from a higher layer. References within the same layer must be designed very carefully in order to maintain modularity in the model design.</p>
+
+<h3 id="resource-layer">Resource Layer</h3>
+<p>This section describes the evolution of resource Schemas for each IFC release</p>
+
+<h3 id="core-layer">Core Layer</h3>
+<p>This section covers topics such as IFC Kernel, Core extensions and evolution of core schemas for each version of IFC</p>
+
+<h3 id="interoperability-layer">Interoperability Layer</h3>
+<p>This section covers modules defining concepts or objects common to two or more domain/ application models with adapters.</p>
+
+<h3 id="domainapplications-layer">Domain/Applications layer</h3>
+<p>Domain/Applications models provide further model detail within the scope requirements from an AEC/FM domain process or a type of application…</p>
+
+<p>Sources:</p>
+
+<p><a href="http://iaiweb.lbl.gov/Resources/IFC_Releases/IFC_Release_2.0/BETA_Docs_for_Review/IFC_R2_ModelArch_Beta_d2.PDF">IFC model architecture guide - 1998 - T.Liebich et al</a></p>
+
+<p><a href="http://www.omg.org/spec/EXPRESS/1.1">Express metamodel - 2015 - OMG group</a></p>
 
 <h3 id="whats-next">What’s next</h3>
 
