@@ -1,6 +1,6 @@
-name: Kubernetes
-title: Kubernetes
-description: Production-Grade Container Orchestration
+name: IFC tech
+title: IFC tech site
+description: Interchanage model for construction industries
 markdown: kramdown
 kramdown:
   input: GFM
@@ -17,7 +17,7 @@ defaults:
     scope:
       path: ""
     values:
-      version: "v1.5.1"
+      ## version: "v1.5.1"
       githubbranch: "master"
       docsbranch: "master"
   -
@@ -39,7 +39,7 @@ gems:
 # SEO
 logo: /images/favicon.png
 twitter:
-  username: 
+  username: buildingSMARTln
 
 # Tables of contents, stored in the _data folder, that control the sidebar nav
 tocs:

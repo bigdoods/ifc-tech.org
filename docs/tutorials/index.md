@@ -9,7 +9,7 @@ each of which has a sequence of steps.
 
 #### IFC Basics
 
-* [IFC Basics](/docs/tutorials/kubernetes-basics/) is an in-depth interactive tutorial that helps you understand the IFC system and try out some basic IFC features.
+* [IFC Basics](/docs/tutorials/) is an in-depth interactive tutorial that helps you understand the IFC system and try out some basic IFC features.
 
 
 If you would like to write a tutorial, see
