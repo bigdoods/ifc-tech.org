@@ -3,7 +3,7 @@ abstract: "Step-by-step instructions for performing operations with IFC"
 toc:
 - docs/tasks/index.md
 
-- title: "Editing file headers"
+- title: "STEP File headers"
   section:
   - docs/tasks/editing-file-headers/defining-file-headers.md
   - docs/tasks/editing-file-headers/defining-commands-file-headers.md

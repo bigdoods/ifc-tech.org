@@ -18,18 +18,9 @@ The following topics in the IFC User Guide can help you read, write, edit and up
 1. [Editing the schema](/docs/user-guide/configuring-schema/)
 1. [Model View Definitions](/docs/user-guide/model-view-defintions/)
     1. [IFCDoc interface](/docs/user-guide/ifc-doc-interface/)
-    1. [Updating classes](/docs/user-guide/logging/overview/)
 
 
 Before running examples in the user guides, please ensure you have completed the [prerequisites](/docs/user-guide/prereqs/).
-
-## IFC Concepts
-
-[**Object relationship model**](/docs/concepts/core-layer/)
-: An IFC schema is based around an object relationship data model.
-
-[**Layers**](/docs/concepts/domain-layer/)
-: The IFC schema consists of a number of layers that enable IFC extensions.
 
 
 ## Further reading

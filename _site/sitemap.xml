@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/docs/tutorials/IFC-basics/</loc>
-</url>
-<url>
 <loc>http://localhost:4000/docs/getting-started-guides/SAMPLE/</loc>
 </url>
 <url>
@@ -115,6 +112,9 @@
 <loc>http://localhost:4000/docs/reference/extensions/ifc-express/express-specification/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/docs/tutorials/hello-wall/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/docs/tools/exporters/ifc-mvd/ifc-bcf/</loc>
 </url>
 <url>
@@ -187,10 +187,10 @@
 <loc>http://localhost:4000/docs/tutorials/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/docs/tasks/</loc>
+<loc>http://localhost:4000/docs/guides/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/docs/user-guide/</loc>
+<loc>http://localhost:4000/docs/tasks/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/docs/</loc>
@@ -398,6 +398,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/docs/api-reference/v1.5/node_modules/marked/doc/todo/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/docs/guides/getting-started/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/docs/resources-reference/v1.5/node_modules/bootstrap/CHANGELOG/</loc>

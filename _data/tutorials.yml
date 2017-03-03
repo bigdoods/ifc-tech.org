@@ -5,4 +5,9 @@ toc:
 
 - title: "getting started with IFC"
   section:
-  - docs/ifc-express/express-overview.md
+  - docs/tutorials/hello-wall.md
+
+- title: "Contributing to IFC project"
+  section:
+  - docs/contribute/write-new-topic.md
+  - docs/contribute/page-templates.md
