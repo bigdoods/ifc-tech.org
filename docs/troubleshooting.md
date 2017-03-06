@@ -45,7 +45,7 @@ If there aren't any existing questions that help, please [ask a new one](http://
 
 ### Slack
 
-The IFC team hangs out on Slack in the `#IFC-users` channel. You can participate in the IFC team [here](https://buildingsmart-team.slack.com/).  Slack requires registration, but the IFC team is open invitation to anyone to register [here](https://buildingsmart-team-slackin.herokuapp.com/).  Feel free to come and ask any and all questions.
+The IFC team hangs out on Slack in the `#IFC-users` channel. You can participate in the IFC team [here](http://slackin.bigdoods.beta.jenca.org/).  Slack requires registration, but the IFC team is open invitation to anyone to register [here](https://buildingsmart-team-slackin.herokuapp.com/).  Feel free to come and ask any and all questions.
 
 Once registered, browse the growing list of channels for various subjects of
 interest. For example, people new to IFC may also want to join the
