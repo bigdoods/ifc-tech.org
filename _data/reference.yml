@@ -28,30 +28,41 @@ toc:
   section:
   - title: "IFC EXPRESS"
     section:
-    - docs/reference/extensions/ifc-express/express-overview.md
-    - docs/reference/extensions/ifc-express/express-specification.md
-    - docs/reference/extensions/ifc-express/express-g-overview.md
-    - docs/reference/extensions/ifc-express/express-g-specification.md
+    - docs/reference/mappings/ifc-express/express-overview.md
+    - docs/reference/mappings/ifc-express/express-specification.md
+    - docs/reference/mappings/ifc-express/express-g-overview.md
+    - docs/reference/mappings/ifc-express/express-g-specification.md
 
-  - title: "IFC XML"
+  - title: "IFC XSD"
     section:
-    - docs/reference/extensions/ifc-xml/xml-overview.md
-    - docs/reference/extensions/ifc-xml/xml-specification.md
-
-  - title: "IFC STEP"
-    section:
-    - docs/reference/extensions/ifc-step/step-overview.md
-    - docs/reference/extensions/ifc-step/step-specification.md
+    - docs/reference/mappings/ifc-xsd/xsd-overview.md
+    - docs/reference/mappings/ifc-xsd/xsd-specification.md
 
   - title: "IFC OWL"
     section:
-    - docs/reference/extensions/ifc-owl/owl-overview.md
-    - docs/reference/extensions/ifc-owl/owl-specification.md
+    - docs/reference/mappings/ifc-owl/owl-overview.md
+    - docs/reference/mappings/ifc-owl/owl-specification.md
 
+- title: Subset selection
+  section:
   - title: "IFC MVD"
     section:
-    - docs/reference/extensions/ifc-mvd/mvd-overview.md
-    - docs/reference/extensions/ifc-mvd/mvd-xml.md
+    - docs/reference/subset/ifc-mvd/mvd-overview.md
+    - docs/reference/subset/ifc-mvd/mvd-xml.md
+
+- title: Instances
+  section:
+  - title: "IFC SPF"
+    section:
+    - docs/reference/instances/ifc-spf/spf-overview.md
+
+  - title: "IFC XML"
+    section:
+    - docs/reference/instances/ifc-xml/xml-overview.md
+
+  - title: "IFC RDF"
+    section:
+    - docs/reference/instances/ifc-rdf/rdf-overview.md
 
 - title: Glossary
   section:

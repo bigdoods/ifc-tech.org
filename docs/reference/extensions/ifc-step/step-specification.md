@@ -1,3 +1,0 @@
----
-title: STEP Specification
----

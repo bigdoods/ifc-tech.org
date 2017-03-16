@@ -1,7 +1,7 @@
 ---
 title: Reference Documentation
 ---
-In the reference section, you can find reference documentation for IFC model schemas and extensions aswel as our glossary and design docs.
+In the reference section, you can find reference documentation for IFC model schemas and mappings aswel as our glossary and design docs.
 
 
 ## Schemas
@@ -18,13 +18,26 @@ Documentation reference include EXPRESS and XML reference mappings for schema as
 
 ## Extension References
 
-* [IFCowl](/docs/reference/extensions/ifc-owl/owl-overview/) - IFC schema to Web ontology Language.
-* [IFCmvd](/docs/reference/extensions/ifc-mvd/mvd-overview/) - Create a subset of the IFC schema for saving more focused files.
-* [IFC EXPRESS](/docs/reference/extensions/ifc-express/express-overview/) - IFC schema in EXPRESS data modeling language
-* [IFC EXPRESS-GRAPHICAL](/docs/reference/extensions/ifc-express/express-g-overview/) - IFC schema in EXPRESS GRAPHICAL data modeling language
-* [IFC XML](/docs/reference/extensions/ifc-xml/xml-overview/) - IFC schema in XML data modeling language
-* [IFC STEP](/docs/reference/extensions/ifc-step/step-overview/) - IFC schema in STEP physical data modeling language
+The IFC schema have various representations and you can find them below.
 
+* [IFC EXPRESS](/docs/reference/mappings/ifc-express/express-overview/) - IFC schema in EXPRESS data modeling language
+* [IFC EXPRESS-G](/docs/reference/mappings/ifc-express/express-g-overview/) - IFC schema in EXPRESS-G(GRAPHICAL) data modeling language.
+* [IFC OWL](/docs/reference/mappings/ifc-owl/owl-overview/) - IFC schema to Web Ontology Language.
+* [IFC XSD](/docs/reference/mappings/ifc-xsd/xsd-overview/) - IFC schema in XSD data modeling language
+
+## Subsets
+
+Subsets can be used to create a specific schema that may be suitable for a data exhange edge use-case.
+
+* [IFC MVD](/docs/reference/subset/ifc-mvd/mvd-overview/) - IFC Model-View-Definition - This method desribes how to create a subset using the ifc-doc tool.
+
+## Instances
+
+Single individual models representing buildigns can be represented in the following formats.
+
+* [IFC RDF](/docs/reference/instances/ifc-rdf/rdf-overview/) - A building representation with semantic detail.
+* [IFC SPF](/docs/reference/instances/ifc-spf/spf-overview/) - This is the physical file-format, also known as a STEP file.
+* [IFC XML](/docs/reference/instances/ifc-xml/xml-overview/) - A format designed to be read by machine and human.
 
 
 ## Glossary
