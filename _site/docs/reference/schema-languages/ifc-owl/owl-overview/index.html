@@ -56,9 +56,10 @@
     <script src="/js/script.js"></script>
     <script src="/js/sweetalert.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <!-- Begin Jekyll SEO tag v2.1.0 -->
-<title>OWL Overview - IFC tech site</title>
+    <!-- Begin Jekyll SEO tag v2.2.2 -->
+<title>OWL Overview | IFC tech site</title>
 <meta property="og:title" content="OWL Overview" />
+<meta property="og:locale" content="en_US" />
 <meta name="description" content="Interchanage model for construction industries" />
 <meta property="og:description" content="Interchanage model for construction industries" />
 <link rel="canonical" href="http://localhost:4000/docs/reference/schema-languages/ifc-owl/owl-overview/" />
@@ -67,14 +68,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@buildingSMARTln" />
 <script type="application/ld+json">
-{"@context": "http://schema.org",
-"@type": "WebPage",
-"headline": "OWL Overview",
-"description": "Interchanage model for construction industries",
-"publisher": {"@type": "Organization",
-"logo": {"@type": "ImageObject",
-"url": "http://localhost:4000/images/favicon.png"}},
-"url": "http://localhost:4000/docs/reference/schema-languages/ifc-owl/owl-overview/"}</script>
+{"@context":"http://schema.org","@type":"WebPage","headline":"OWL Overview","description":"Interchanage model for construction industries","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/images/favicon.png"}},"url":"http://localhost:4000/docs/reference/schema-languages/ifc-owl/owl-overview/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -597,9 +591,61 @@
           <h1>OWL Overview</h1>
         
 
-        <p>EXPRESS to OWL is a set of reusable Java components that allows to parse EXPRESS files and convert them into OWL ontologies in the context of the Industry Foundation Classes (IFC).</p>
+        <p>IfcOWL provides a Web Ontology Language (OWL) representation of the Industry Foundation Classes (IFC) schema. The goal of the project is to make IFC available as an OWL ontology to allow the usage of semantic web technologies.</p>
 
-<p>https://github.com/pipauwel/EXPRESStoOWL</p>
+<p>Using the ifcOWL ontology, one can represent building data using semantic web and linked data technologies. IFC data becomes available in directed labelled graphs (RDF). This graph model and the underlying web technology stack allows building data to be easily linked to material data, GIS data, product manufacturer data, sensor data, classification schemas, social data, and so forth. The result is a web of linked building data for data management and exchange in the construction industry.</p>
+
+<div class="image-wrapper">
+<img src="/images/expressxsdowl-768x492.png" />
+</div>
+
+<p>The ifcOWL ontology is a standard for exchange in linked and semantic data across the lifecycle of buildings. It is developed around a list of recommended use cases for linked data based applications.</p>
+
+<p>Organisations who use data from building information modelling applications and other data related to the building life cycle (sensor data, GIS data, material data, geographical data, and so forth) can achieve their business processes and will benefit from greater integration of data and interoperability between their data sets and the wider linked data communities.</p>
+
+<h2 id="sample-use-case">Sample Use Case</h2>
+
+<p>Benefit may be obtained by publishing and combining localised data on new cheaper building materials, energy efficient building devices and systems, along with real time data on weather patterns, energy prices and geodata. By making this data available to applications, they will be better able to support decision makers during the whole of the building life cycle, which includes design, construction, commissioning, operation, retrofitting/refurbishment/reconfiguration, demolition, and recycling of buildings.</p>
+
+<p>One feature of this language is to support interoperability between software applications, including Web services and intelligent agents. Linked Data tooling can be developed in accordance with this open standard.</p>
+
+<h2 id="ifcowl-structure">ifcOWL structure</h2>
+
+<p>The entire IFC EXPRESS schema (IFC entities and types and properties and so forth) is made available in one large ifcOWL ontology. In addition, the ifcOWL ontology uses some OWL classes and properties that are defined elsewhere. Namely, data types that are specific to EXPRESS (not to IFC) and to the representation of lists are defined in the following locations:</p>
+
+<p><a href="http://w3id.org/express#">Express ontology</a></p>
+
+<p><a href="http://w3id.org/list#">List ontology</a></p>
+
+<p>The ifcOWL ontology only imports the EXPRESS ontology. The EXPRESS ontology in turn imports the LIST ontology.</p>
+
+<div class="image-wrapper">
+<img src="/images/express_basics_1.png" />
+</div>
+
+<h2 id="ifcowl-extensions">ifcOWL extensions</h2>
+
+<p>At the moment, one extension is available for the ifcOWL ontology. This extension represents the WR RULES defined in the original IFC schemas. The extension imports the ifcOWL ontology. It thus provides a more complete version of the ifcOWL ontology.</p>
+
+<p>Click <a href="/docs/reference/schema-languages/ifc-owl/owl-specification/">here</a> for a complete list of extensions.</p>
+
+<div class="image-wrapper">
+<img src="/images/express_rules1.png" />
+</div>
+
+<h2 id="tooling">Tooling</h2>
+
+<p>(tbc)</p>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>Get started with some common tasks associated with ifcOWL by choosing a task from below;</p>
+
+<p><a href="">Generating ifcOWL</a></p>
+
+<p><a href="">Converting IFC files to RDF graphs</a></p>
+
+<p><a href="">Using ifcOWL-based RDF graphs</a></p>
 
 
         <p><a href=""><img src="https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/docs/reference/schema-languages/ifc-owl/owl-overview.md?pixel" alt="Analytics" /></a>
