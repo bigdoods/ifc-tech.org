@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/bigdoods/ifc-tech.org.png?label=ready&title=Ready)](https://waffle.io/bigdoods/ifc-tech.org?utm_source=badge)
 ## Instructions for Contributing to the IFC Documentation
 
 Welcome! We are very pleased you want to contribute to the IFC documentation.
