@@ -86,5 +86,3 @@ next upcoming release. It's automatically updated as new PRs get merged.
 * Learn about [using page templates](/docs/contribute/page-templates/).
 * Learn about [staging your changes](/docs/contribute/stage-documentation-changes).
 {% endcapture %}
-
-{% include templates/task.md %}

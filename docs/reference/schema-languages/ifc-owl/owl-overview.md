@@ -50,8 +50,9 @@ Click [here](/docs/reference/schema-languages/ifc-owl/owl-specification/) for a 
 
 ## Getting started
 
-Get started with some common tasks associated with ifcOWL by choosing a task from below;
+Get started with some common tasks associated with ifcOWL by choosing a tutorial from below;
 
+<!-- (tbc) links to actual tutorials -->
 [Generating ifcOWL]()
 
 [Converting IFC files to RDF graphs]()

@@ -32,7 +32,7 @@ is the best fit for your content:
 
   <tr>
     <td>Concept</td>
-    <td>A concept page explains some aspect of IFC. For example, a concept page might describe the IFC Deployment object and explain the role it plays as an application is deployed, scaled, and updated. Typically, concept pages don't include sequences of steps, but instead provide links to tasks or tutorials.</td>
+    <td>A concept page explains some aspect of IFC. For example, a concept page might describe the IFC Deployment object and explain the role it plays as an application is deployed, scaled, and updated. Typically, concept pages don't include sequences of steps, but instead provide links to tutorials.</td>
   </tr>
 
 </table>
@@ -46,13 +46,9 @@ Using templates helps ensure consistency among topics of a given type.
 
 Choose a title that has the keywords you want search engines to find.
 Create a filename that uses the words in your title separated by hyphens.
-For example, the topic with title
-[Using a object meta-model to abstract IFC data](/docs/tasks/sample-task.md)
-has filename `data extraction using library`. You don't need to put
-"ifc" in the filename, because "ifc" is already in the
-URL for the topic, for example:
-
-       http://kubernetes.io/docs/tasks/accessing-ifc-classes/data extraction/
+For example, the tutorial with title
+[Building an IFC file from source](/docs/tutorials/building-file-from-source.md)
+has filename `building-file-from-source`.
 
 ## Adding the topic title to the front matter
 
@@ -69,7 +65,6 @@ triple-dashed lines at the top of the page. Here's an example:
 
 Depending on your page type, put your new file in a subdirectory of one of these:
 
-* /docs/tasks/
 * /docs/tutorials/
 * /docs/concepts/
 
@@ -80,13 +75,12 @@ subdirectory.
 
 Depending page type, create an entry in one of these files:
 
-* /_data/tasks.yaml
 * /_data/tutorials.yaml
 * /_data/concepts.yaml
 
-Here's an example of an entry in /_data/tasks.yaml:
+Here's an example of an entry in /_data/tutorials.yaml:
 
-    - docs/tasks/configure-pod-container/configure-volume-storage.md
+    - docs/tutorials/building-file-from-source.md
 
 ## Including code from another file
 
@@ -139,5 +133,3 @@ image format is SVG.
 * Learn about [staging your changes](/docs/contribute/stage-documentation-changes).
 * Learn about [creating a pull request](/docs/contribute/create-pull-request/).
 {% endcapture %}
-
-{% include templates/task.md %}

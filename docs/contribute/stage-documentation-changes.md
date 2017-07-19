@@ -80,5 +80,3 @@ web server:
 * Learn about [using page templates](/docs/contribute/page-templates/).
 * Learn about [creating a pull request](/docs/contribute/create-pull-request/).
 {% endcapture %}
-
-{% include templates/task.md %}

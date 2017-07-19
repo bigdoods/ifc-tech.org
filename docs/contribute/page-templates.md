@@ -1,29 +1,24 @@
 ---
-title: Using Page Templates
+title: Using User-guide Templates
 ---
 
-<!--<html>
-<body>-->
 
-<p>These page templates are available for writers who would like to contribute new topics to the IFC docs:</p>
+<p>These page templates are available for writers who would like to contribute new user guide content to the IFC docs:</p>
 
-<ul>
-    <li><a href="#task_template">Task</a></li>
+ <ul>
     <li><a href="#tutorial_template">Tutorial</a></li>
     <li><a href="#concept_template">Concept</a></li>
-</ul>
+</ul> 
 
-<p>The page templates are in the <a href="https://github.com/bigdoods/bigdoods.github.com/tree/master/_includes/templates" target="_blank">_includes/templates</a> directory of the <a href="https://github.com/bigdoods/bigdoods.github.com">bigdoods.github.io</a> repository.
-
-<h2 id="task_template">Task template</h2>
-
-<p>A task page shows how to do a single thing, typically by giving a short
-sequence of steps. Task pages have minimal explanation, but often provide links
+<p>The page template is in the <a href="https://github.com/bigdoods/ifc-tech.org/tree/master/_includes/templates" target="_blank">_includes/templates</a> directory of the <a href="https://github.com/bigdoods/ifc-tech.org/">ifc-tech.org</a> repository.
+  
+<p>A tutorial page shows how to do a single thing, typically by giving a short
+sequence of steps. Tutorial pages have minimal explanation, but often provide links
 to conceptual topics that provide related background and knowledge.</p>
 
-<p>To write a new task page, create a Markdown file in a subdirectory of the
-/docs/tasks directory. In your Markdown file, provide values for these
-variables, and then include templates/task.md:</p>
+<p>To write a new tutorial page, create a Markdown file in a subdirectory of the
+/docs/user-guides directory. In your Markdown file, provide values for these
+variables, and then include templates/tutorial.md:</p>
 
 <ul>
     <li>overview - required</li>
@@ -37,7 +32,7 @@ variables, and then include templates/task.md:</p>
 use <code>###</code> and <code>####</code> as needed. Similarly, if you choose to have a <code>discussion</code> section,
 start the section with a level-two heading.</p>
 
-<p>Here's an example of a Markdown file that uses the task template:</p>
+<p>Here's an example of a Markdown file that uses the tutorial template:</p>
 
 {% raw %}
 <pre>---
@@ -71,7 +66,6 @@ Here's an interesting thing to know about the steps you just did.
 * See this [related task](...).
 {% endcapture %}
 
-{% include templates/task.md %}
 </pre>
 {% endraw %}
 
@@ -141,30 +135,26 @@ This page shows how to ...
 Here's something interesting about the code you ran in the preceding steps.
 {% endcapture %}
 
-{% capture cleanup %}
-* Delete this.
-* Stop this.
-{% endcapture %}
-
 {% capture whatsnext %}
 * Learn more about [this](...).
 * See this [related tutorial](...).
 {% endcapture %}
 
-{% include templates/tutorial.md %}
+{% include user-guides/tutorial.md %}
 </pre>
 {% endraw %}
 
-<p>Here's an example of a published topic that uses the tutorial template:</p>
+<p>Here's an example of a published tutorial that uses the tutorial template:</p>
 
-<p><a href="/docs/tutorials/stateless-application/run-stateless-application-deployment/">Running a Stateless Application Using a Deployment</a></p>
+<!-- (tbc) update link to example page  -->
+<p><a href="/docs/concepts/object-metadata/annotations">Building an IFC file from source</a></p>
 
 <h2 id="concept_template">Concept template</h2>
 
 <p>A concept page explains some aspect of IFC. For example, a concept
-page might describe the IFC Deployment object and explain the role it
-plays as an application is deployed, scaled, and updated. Typically, concept
-pages don't include sequences of steps, but instead provide links to tasks or
+page might describe an IFC schema object and explain the role it
+plays as a schema is built and updated. Typically, concept
+pages don't include sequences of steps, but instead provide links to
 tutorials.
 
 <p>To write a new concept page, create a Markdown file in a subdirectory of the
@@ -210,9 +200,7 @@ To use ...
 </pre>
 {% endraw %}
 
-<p>Here's an example of a published topic that uses the concept template:</p>
+<p>Here's an example of a published concept that uses the concept template:</p>
 
-<p><a href="/docs/concepts/object-metadata/annotations">Annotations</a></p>
-
-<!--</body>
-</html>-->
+<!-- (tbc) update link to example page  -->
+<p><a href="/docs/concepts/object-metadata/annotations">The IFC schema object</a></p>
