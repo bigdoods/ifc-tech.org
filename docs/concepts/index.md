@@ -5,7 +5,7 @@ title: Concepts
 The Concepts section helps you learn about the parts of the IFC system and the abstractions IFC uses to represent your schema, and helps you obtain a deeper understanding of how IFC works.
 
 ## Overview
-jects to represent the desired content to share though its mapping tooling. Any buildign or asset object that appears in a buildign will have an equivalent in the digital schema. We are constantly working towards adding new object so that the schema progresses along with technology.You can build an ifc file using mappings like IFCXML and ifcJSON.
+To work with IFC, you use IFC objects to represent the desired content to share though its mapping tooling. Any buildign or asset object that appears in a buildign will have an equivalent in the digital schema. We are constantly working towards adding new object so that the schema progresses along with technology.You can build an ifc file using mappings like IFCXML and ifcJSON.
 
 ## IFC Objects
 
