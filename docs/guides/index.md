@@ -5,7 +5,7 @@ title: User Guide
 The IFC **Guides** can help you work with various aspects of the IFC system.
 
 * The IFC [User Guide](#user-guide-internal) can help you read IFC files.
-* The [Developer Guide](https://github.com/bigdoods/bigdoods.github.io/tree/{{page.githubbranch}}/docs/devel) can help you either write code to directly access IFC, or to contribute directly to the IFC project.
+* The [Developer Guide](https://github.com/bigdoods/ifc-tech.org/tree/{{page.githubbranch}}/docs/devel) can help you either write code to directly access IFC, or to contribute directly to the IFC project.
 
 
 * (idea) gather all tooling that is used for accessing, querying, editing and updating IFC files that are independent of vendor influence and include them in user guide to promote usage.

@@ -38,7 +38,7 @@ When you create a pull request, either against the master or &lt;vnext&gt;
 branch, your changes are staged in a custom version of the docs site to ensure that nothing breaks.(perhaps integrate netlify CI to custom domain& stage)
 
 1. In your GitHub account, in your new branch, submit a pull request to the
-bigdoods/bigdoods.github.io repository. This opens a page that shows the
+bigdoods/ifc-tech.org repository. This opens a page that shows the
 status of your pull request.
 
 ## Staging locally

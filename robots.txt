@@ -6,4 +6,4 @@ Disallow: /v1.1/
 Disallow: /404/
 Disallow: 404.html
 
-SITEMAP: http://bigdoods.github.io/sitemap.xml
+SITEMAP: http://ifc-tech.org/sitemap.xml

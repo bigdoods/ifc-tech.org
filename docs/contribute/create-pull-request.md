@@ -5,7 +5,7 @@ title: Creating a Documentation Pull Request
 {% capture overview %}
 
 To contribute to the IFC documentation, create a pull request against the
-[bigdoods/bigdoods.github.io](https://github.com/bigdoods/bigdoods.github.io){: target="_blank"}
+[bigdoods/ifc-tech.org](https://github.com/bigdoods/ifc-tech.org){: target="_blank"}
 repository. This page shows how to create a pull request.
 
 {% endcapture %}
@@ -26,7 +26,7 @@ Documentation will be published under the [Apache v2](https://github.com/bigdood
 ## Creating a fork of the IFC documentation repository
 
 1. Go to the
-[bigdoods/bigdoods.github.io](https://github.com/bigdoods/bigdoods.github.com){: target="_blank"}
+[bigdoods/ifc-tech.org](https://github.com/bigdoods/ifc-tech.org){: target="_blank"}
 repository.
 
 1. In the upper-right corner, click **Fork**. This creates a copy of the
@@ -51,7 +51,7 @@ create a pull request against the master branch of the IFC
 documentation repository.
 
 1. In your GitHub account, in your new branch, create a pull request
-against the master branch of the bigdoods/bigdoods.github.io
+against the master branch of the bigdoods/ifc-tech.org
 repository. This opens a page that shows the status of your pull request.
 
 1. During the next few days, check your pull request for reviewer comments.
@@ -66,7 +66,7 @@ of the IFC documentation repository. The &lt;vnext&gt; branch has the
 form `release-<version-number>`, for example release-IFC-5.
 
 1. In your GitHub account, in your new branch, create a pull request
-against the &lt;vnext&gt; branch of the bigdoods/bigdoods.github.io
+against the &lt;vnext&gt; branch of the bigdoods/ifc-tech.org
 repository. This opens a page that shows the status of your pull request.
 
 1. During the next few days, check your pull request for reviewer comments.

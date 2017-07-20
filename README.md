@@ -7,12 +7,12 @@ You can click the **Fork** button in the upper-right area of the screen to creat
 
 For more information about contributing to the IFC documentation, see:
 
-* [Contributing to the IFC Documentation](http://bigdoods.github.io/editdocs/)
-* [Creating a Documentation Pull Request](http:/bigdoods.github.io/docs/contribute/create-pull-request/)
-* [Writing a New Topic](http://bigdoods.github.io/docs/contribute/write-new-topic/)
-* [Staging Your Documentation Changes](http://bigdoods.github.io/docs/contribute/stage-documentation-changes/)
-* [Using Page Templates](http://bigdoods.github.io/docs/contribute/page-templates/)
-* [Documentation Style Guide](http://bigdoods.github.io/docs/contribute/style-guide/)
+* [Contributing to the IFC Documentation](http://ifc-tech.org/editdocs/)
+* [Creating a Documentation Pull Request](http:/ifc-tech.org/docs/contribute/create-pull-request/)
+* [Writing a New Topic](http://ifc-tech.org/docs/contribute/write-new-topic/)
+* [Staging Your Documentation Changes](http://ifc-tech.org/docs/contribute/stage-documentation-changes/)
+* [Using Page Templates](http://ifc-tech.org/docs/contribute/page-templates/)
+* [Documentation Style Guide](http://ifc-tech.org/docs/contribute/style-guide/)
 
 ## Thank you!
 

@@ -4,7 +4,7 @@ title: Reviewing Documentation Issues
 
 {% capture overview %}
 
-This page explains how documentation issues are reviewed and prioritized for the [bigdoods/bigdoods.github.io](https://github.com/bigdoods/bigdoods.github.io){: target="_blank"} repository. The purpose is to provide a way to organize issues and make it easier to contribute to IFC documentation. The following should be used as the standard way of prioritizing, labeling, and interacting with issues.
+This page explains how documentation issues are reviewed and prioritized for the [bigdoods/ifc-tech.org](https://github.com/bigdoods/ifc-tech.org){: target="_blank"} repository. The purpose is to provide a way to organize issues and make it easier to contribute to IFC documentation. The following should be used as the standard way of prioritizing, labeling, and interacting with issues.
 {% endcapture %}
 
 {% capture body %}
