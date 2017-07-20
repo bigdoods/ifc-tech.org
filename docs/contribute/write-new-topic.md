@@ -16,7 +16,7 @@ Create a fork of the IFC documentation repository as described in
 ## Choosing a page type
 
 As you prepare to write a new topic, think about which of these page types
-is the best fit for your content:
+is the best fit for your contents
 
 <table>
 
