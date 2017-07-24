@@ -3,26 +3,57 @@ abstract: "Specification for core design docs, concept definitions, and referenc
 toc:
 - docs/reference.md
 
-- title: Schemas
+- title: schema
   section:
-  - title: "IFC2."
+  - title: "IFC2"
     section:
-    - docs/reference/schemas/ifc2.md/overview.md
-    - docs/reference/schemas/ifc2.md/ifc2.md
-  - title: "IFC2x3."
-    section:
-    - docs/reference/schemas/ifc2x3.md/ifc2x3.md
-    - docs/reference/schemas/ifc2x3.md/overview.md
+    - docs/reference/schema/ifc2/overview.md
+    - docs/reference/schema/ifc2/ifc2.md
+    - docs/reference/schema/ifc2/change-log.md
+
+    - title: "history"
+      section:
+
+      - title: "IFC2x"
+        section:
+        - docs/reference/schema/history/ifc2x/overview.md
+        - docs/reference/schema/history/ifc2x/ifc2.md
+        - docs/reference/schema/history/ifc2x/change-log.md
+
+      - title: "IFC2x-Add1"
+        section:
+        - docs/reference/schema/history/ifc2x-Add1/overview.md
+        - docs/reference/schema/history/ifc2x-Add1/ifc2.md
+        - docs/reference/schema/history/ifc2x-Add1/change-log.md
+
+      - title: "IFC2x2"
+        section:
+        - docs/reference/schema/history/ifc2x2/overview.md
+        - docs/reference/schema/history/ifc2x2/ifc2.md
+        - docs/reference/schema/history/ifc2x2/change-log.md
+
+      - title: "IFC2x2-Add1"
+        section:
+        - docs/reference/schema/history/ifc2x2-Add1/overview.md
+        - docs/reference/schema/history/ifc2x2-Add1/ifc2.md
+        - docs/reference/schema/history/ifc2x2-Add1/change-log.md
+        
+      - title: "IFC2x3"
+        section:
+        - docs/reference/schema/history/ifc2x3/overview.md
+        - docs/reference/schema/history/ifc2x3/ifc2.md
+        - docs/reference/schema/history/ifc2x3/change-log.md
+      
   - title: "IFC4."
     section:
-    - docs/reference/schemas/ifc4.md/overview.md
-    - docs/reference/schemas/ifc4.md/ifc4.md
-    - docs/reference/schemas/ifc4.md/updates.md
-    - docs/reference/schemas/ifc4.md/change-log.md
+    - docs/reference/schema/ifc4/overview.md
+    - docs/reference/schema/ifc4/ifc4.md
+    - docs/reference/schema/ifc4/updates.md
+    - docs/reference/schema/ifc4/change-log.md
   - title: "IFC5."
     section:
-    - docs/reference/schemas/ifc5.md/overview.md
-    - docs/reference/schemas/ifc5.md/ifc5.md
+    - docs/reference/schema/ifc5/overview.md
+    - docs/reference/schema/ifc5/ifc5.md
 
 - title: Schema Languages
   section:

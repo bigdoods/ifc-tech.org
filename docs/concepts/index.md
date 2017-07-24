@@ -62,7 +62,7 @@ The IFC object model architecture has been developed using a set of principles g
 * Enable software authors to reuse software components
 * Facilitate the provision of better upward compatibility between model releases.
 
-The IFC Object model architecture provides a modular struture for the development of model components, the 'model schemas'. There are four conceptual layers within the architecture, which use a strict referencing hierarchy. Within each conceptual layer a set of model schemas is defined. The layers can be described as follows:
+The IFC Object model architecture provides a modular struture for the development of model components, the 'model schema'. There are four conceptual layers within the architecture, which use a strict referencing hierarchy. Within each conceptual layer a set of model schema is defined. The layers can be described as follows:
 
 1. Resource Layer - Resource classes used by classes in the higher levels.
 2. Core Layer - This core contains the kernel and several core extensions
@@ -72,10 +72,10 @@ The IFC Object model architecture provides a modular struture for the developmen
 The architecture operates on a 'ladder principle' where at any layer, a class may reference a class at the same or lower layer but not reference a class from a higher layer. References within the same layer must be designed very carefully in order to maintain modularity in the model design.
 
 ### Resource Layer
-This section describes the evolution of resource Schemas for each IFC release
+This section describes the evolution of resource schema for each IFC release
 
 ### Core Layer
-This section covers topics such as IFC Kernel, Core extensions and evolution of core schemas for each version of IFC
+This section covers topics such as IFC Kernel, Core extensions and evolution of core schema for each version of IFC
 
 ### Interoperability Layer
 This section covers modules defining concepts or objects common to two or more domain/ application models with adapters.

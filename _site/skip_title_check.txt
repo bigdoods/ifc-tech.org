@@ -1,3 +1,0 @@
-# Put files you want to skip "title:" check here:
-docs/sitemap.md
-docs/getting-started-guides/docker.md
