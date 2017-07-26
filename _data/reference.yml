@@ -34,12 +34,66 @@ toc:
         - docs/reference/schema/history/ifc2x2-Add1/ifc2x2-Add1.md
         - docs/reference/schema/history/ifc2x2-Add1/change-log.md        
 
-      
-  - title: "IFC4"
+
+  - title: "IFC4_Add2"
     section:
-    - docs/reference/schema/ifc4/overview.md
-    - docs/reference/schema/ifc4/ifc4.md
-    - docs/reference/schema/ifc4/change-log.md
+    - docs/reference/schema/ifc4_Add2/overview.md
+    - docs/reference/schema/ifc4_Add2/ifc4.md
+    - docs/reference/schema/ifc4_Add2/change-log.md
+
+    - title: "History"
+      section:
+      - title: "IFC4_Alpha"
+        section:
+        - docs/reference/schema/history/ifc4_alpha/overview.md
+        - docs/reference/schema/history/ifc4_alpha/ifc4_alpha.md
+        - docs/reference/schema/history/ifc4_alpha/change-log.md
+      - title: "IFC4_BETA1"
+        section:
+        - docs/reference/schema/history/ifc4_beta1/overview.md
+        - docs/reference/schema/history/ifc4_beta1/ifc4_beta1.md
+        - docs/reference/schema/history/ifc4_beta1/change-log.md
+      - title: "IFC4_BETA2"
+        section:
+        - docs/reference/schema/history/ifc4_beta2/overview.md
+        - docs/reference/schema/history/ifc4_beta2/ifc4_beta2.md
+        - docs/reference/schema/history/ifc4_beta2/change-log.md
+      - title: "IFC4_BETA3"
+        section:
+        - docs/reference/schema/history/ifc4_beta3/overview.md
+        - docs/reference/schema/history/ifc4_beta3/ifc4_beta3.md
+        - docs/reference/schema/history/ifc4_beta3/change-log.md  
+      - title: "IFC4_RC1"
+        section:
+        - docs/reference/schema/history/ifc4_rc1/overview.md
+        - docs/reference/schema/history/ifc4_rc1/ifc4_rc1.md
+        - docs/reference/schema/history/ifc4_rc1/change-log.md  
+      - title: "IFC4_RC2"
+        section:
+        - docs/reference/schema/history/ifc4_rc2/overview.md
+        - docs/reference/schema/history/ifc4_rc2/ifc4_rc2.md
+        - docs/reference/schema/history/ifc4_rc2/change-log.md  
+      - title: "IFC4_RC3"
+        section:
+        - docs/reference/schema/history/ifc4_rc3/overview.md
+        - docs/reference/schema/history/ifc4_rc3/ifc4_rc3.md
+        - docs/reference/schema/history/ifc4_rc3/change-log.md
+      - title: "IFC4_RC4"
+        section:
+        - docs/reference/schema/history/ifc4_rc4/overview.md
+        - docs/reference/schema/history/ifc4_rc4/ifc4_rc4.md
+        - docs/reference/schema/history/ifc4_rc4/change-log.md  
+      - title: "IFC4"
+        section:
+        - docs/reference/schema/history/ifc4/overview.md
+        - docs/reference/schema/history/ifc4/ifc4.md
+        - docs/reference/schema/history/ifc4/change-log.md  
+      - title: "IFC4_Add1"
+        section:
+        - docs/reference/schema/history/ifc4_Add1/overview.md
+        - docs/reference/schema/history/ifc4_Add1/ifc4_Add1.md
+        - docs/reference/schema/history/ifc4_Add1/change-log.md  
+
   - title: "IFC5"
     section:
     - docs/reference/schema/ifc5/overview.md

@@ -1,8 +1,8 @@
 ---
-title: IFC2x3-TC1 Overview 
+title: IFC2x3-TC1 (latest) Overview 
 ---
 
-## IFC2x3 TC1
+## IFC2x3 TC1 (last IFC release)
 
 <p>  IFC2x Edition 3 - third release of the IFC2x Platform, published in Feb 2006, mainly quality improvement of IFC2x2 </p>
 
@@ -12,3 +12,6 @@ Since July 2007 the IFC2x3 release has been superseded by the IFC2x3 Technical C
 
 <p> IFC2x3 Tc1 is the most up to date version of the IFC2 platform release and is the reference for implementers using the IFC2 standard. Documentation for releases prior to the IFC2x3 tc1 can be found <a href="/docs/reference/schema/history/overview.md"> here</a> but are no longer officially supported. </p>
 
+<p>IFC2x3-TC1 - IFC2x Edition 3 Technical Corrigendum 1 - documentation and constraint only corrigendum to update of IFC2x3, published in July 2007
+the IFC2x3 release and IFC2x3-TC1 update are equal in terms of the IFC exchange file and both are used for IFC2x3 implementation and certification
+the IFC2x3 release and IFC2x3-TC1 are now strongly recommended for implementation</p>
