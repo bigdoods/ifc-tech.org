@@ -10,10 +10,8 @@ Below you will find links to the schema documentation. The documentation is writ
 
 Documentation reference include EXPRESS and XML reference schema-languages for schema as standard. This is in accordance with ISO specification but other schema-languages can be seen in the Extension references section below.
 
-* [IFC 2](/docs/reference/schema/ifc2.md/overview/) - Current Schema for IFC 2. (latest)
-* [IFC4](/docs/reference/schema/ifc4.md/overview/) - Current Schema for IFC4 (latest)
-* [IFC5](/docs/reference/schema/ifc5.md/overview/) - Schema for IFC5 (WIP)
-* [IFC HISTORY](/docs/reference/schema/history/overview/) - A complete history of IFC schema issued
+* [IFC 2](/docs/reference/schema/ifc2x3-tc1/overview.md) - Current Schema for IFC 2. (latest)
+* [IFC4](/docs/reference/schema/ifc4_Add2/overview.md) - Current Schema for IFC4 (latest)
 
 ## Extension References
 

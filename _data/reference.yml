@@ -16,23 +16,22 @@ toc:
       section:
       - title: "IFC2x"
         section:
-        - docs/reference/schema/history/ifc2x/overview.md
-        - docs/reference/schema/history/ifc2x/ifc2x.md
+        - docs/reference/schema/history/ifc2x3-tc1/ifc2x/overview.md
       - title: "IFC2x-Add1"
         section:
-        - docs/reference/schema/history/ifc2x-Add1/overview.md
-        - docs/reference/schema/history/ifc2x-Add1/ifc2x-Add1.md
-        - docs/reference/schema/history/ifc2x-Add1/change-log.md
+        - docs/reference/schema/history/ifc2x3-tc1/ifc2x-Add1/overview.md
+        - docs/reference/schema/history/ifc2x3-tc1/ifc2x-Add1/ifc2x-Add1.md
+        - docs/reference/schema/history/ifc2x3-tc1/ifc2x-Add1/change-log.md
       - title: "IFC2x2"
         section:
-        - docs/reference/schema/history/ifc2x2/overview.md
-        - docs/reference/schema/history/ifc2x2/ifc2x2.md
-        - docs/reference/schema/history/ifc2x2/change-log.md
+        - docs/reference/schema/history/ifc2x3-tc1/ifc2x2/overview.md
+        - docs/reference/schema/history/ifc2x3-tc1/ifc2x2/ifc2x2.md
+        - docs/reference/schema/history/ifc2x3-tc1/ifc2x2/change-log.md
       - title: "IFC2x2-Add1"
         section:
-        - docs/reference/schema/history/ifc2x2-Add1/overview.md
-        - docs/reference/schema/history/ifc2x2-Add1/ifc2x2-Add1.md
-        - docs/reference/schema/history/ifc2x2-Add1/change-log.md        
+        - docs/reference/schema/history/ifc2x3-tc1/ifc2x2-Add1/overview.md
+        - docs/reference/schema/history/ifc2x3-tc1/ifc2x2-Add1/ifc2x2-Add1.md
+        - docs/reference/schema/history/ifc2x3-tc1/ifc2x2-Add1/change-log.md        
 
 
   - title: "IFC4_Add2"

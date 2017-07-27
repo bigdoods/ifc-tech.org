@@ -15,7 +15,7 @@ The basic IFC objects include:
 
 * domain-layer
 * resource-layer
-* core-layer
+* core-model
 * interoperability-layer
 
 In addition, IFC contains a number of higher-level abstractions defined through object relationships in the schema. These abstractions build upon the basic objects, and provide additional functionality and convenience features. They include:

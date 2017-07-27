@@ -9,5 +9,5 @@ toc:
   section:
   - docs/concepts/domain-layer.md
   - docs/concepts/resource-layer.md
-  - docs/concepts/core-layer.md
+  - docs/concepts/core-model.md
   - docs/concepts/interoperability-layer.md
