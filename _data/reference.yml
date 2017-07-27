@@ -94,11 +94,6 @@ toc:
         - docs/reference/schema/history/ifc4_Add1/ifc4_Add1.md
         - docs/reference/schema/history/ifc4_Add1/change-log.md  
 
-  - title: "IFC5"
-    section:
-    - docs/reference/schema/ifc5/overview.md
-    - docs/reference/schema/ifc5/ifc5.md
-
 - title: Schema Languages
   section:
   - title: "IFC EXPRESS"
