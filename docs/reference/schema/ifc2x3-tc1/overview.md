@@ -1,5 +1,5 @@
 ---
-title: IFC2x3-TC1 (latest) Overview 
+title: IFC2x3-TC1 (Latest) Overview 
 ---
 
 IFC2x3 TC1, published in July 2007, is the third and final release belong to the IFC2x platform. This is the recommended specification for implementing the IFC2x platform.

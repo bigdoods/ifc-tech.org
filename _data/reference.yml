@@ -102,10 +102,10 @@ toc:
     - docs/reference/schema-languages/ifc-express/express-g-overview.md
     - docs/reference/schema-languages/ifc-express/express-g-specification.md
 
-  - title: "IFC XSD"
+  - title: "IFC XML"
     section:
-    - docs/reference/schema-languages/ifc-xsd/xsd-overview.md
-    - docs/reference/schema-languages/ifc-xsd/xsd-specification.md
+    - docs/reference/schema-languages/ifc-xml/xml-overview.md
+    - docs/reference/schema-languages/ifc-xml/xml-specification.md
 
   - title: "IFC OWL"
     section:
@@ -117,7 +117,17 @@ toc:
   - title: "IFC MVD"
     section:
     - docs/reference/subset/ifc-mvd/mvd-overview.md
-    - docs/reference/subset/ifc-mvd/mvd-xml.md
+    - title: "MVD XML Specifications"
+      section:
+      - title: "MVD XML 1.0"
+        section:
+        - docs/reference/subset/ifc-mvd/mvdXML1.0/overview.md
+        - docs/reference/subset/ifc-mvd/mvdXML1.0/mvdXML1.0.md
+      - title: "MVD XML 1.1"
+        section:
+        - docs/reference/subset/ifc-mvd/mvdXML1.1/overview.md
+        - docs/reference/subset/ifc-mvd/mvdXML1.1/mvdXML1.1.md
+        - docs/reference/subset/ifc-mvd/mvdXML1.1/change-log.md
 
 - title: Data Formats
   section:

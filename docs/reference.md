@@ -20,7 +20,7 @@ The IFC schema have various representations and you can find them below.
 * [IFC EXPRESS](/docs/reference/schema-languages/ifc-express/express-overview/) - IFC schema in EXPRESS data modeling language
 * [IFC EXPRESS-G](/docs/reference/schema-languages/ifc-express/express-g-overview/) - IFC schema in EXPRESS-G(GRAPHICAL) data modeling language.
 * [IFC OWL](/docs/reference/schema-languages/ifc-owl/owl-overview/) - IFC schema to Web Ontology Language.
-* [IFC XSD](/docs/reference/schema-languages/ifc-xsd/xsd-overview/) - IFC schema in XSD data modeling language
+* [IFC XSD](/docs/reference/schema-languages/ifc-xml/xml-overview/) - IFC schema in XSD data modeling language
 
 ## Subsets
 
