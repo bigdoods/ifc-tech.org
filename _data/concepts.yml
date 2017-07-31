@@ -11,3 +11,8 @@ toc:
   - docs/concepts/resource-layer.md
   - docs/concepts/core-model.md
   - docs/concepts/interoperability-layer.md
+
+- title: IFC Design Docs
+  section:
+  - docs/design/architecture.md
+  - docs/design/design-overview.md

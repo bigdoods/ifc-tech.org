@@ -1,3 +1,3 @@
 ---
-title: IFC-XML Overview
+title: IFC-XML-XSD Overview
 ---
