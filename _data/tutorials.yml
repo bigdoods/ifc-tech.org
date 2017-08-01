@@ -3,9 +3,7 @@ abstract: "Detailed walkthroughs of common IFC operations and workflows."
 toc:
 - docs/tutorials/index.md
 
-- title: "getting started with IFC"
-  section:
-  - docs/tutorials/hello-wall.md
+- docs/tutorials/hello-wall.md
 
 - title: "Contributing to User-guides"
   section:
