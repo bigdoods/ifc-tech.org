@@ -3,58 +3,27 @@ abstract: "A collection of tools and resources for working with IFC"
 toc:
 - docs/tools/index.md
 
-- title: Adopted tools
+- title: Vendor Specific Exporters
   section:
-    - docs/tools/adopted/ifcdoc/overview.md
-    - docs/tools/adopted/ifcdoc/user-guide.md
-
-- title: Converters
-  section:
-  - docs/tools/convertors/ifc-bsdd.md
-  - docs/tools/convertors/ifc-owl.md
-  - docs/tools/convertors/ifc-ifcxml.md
-  - docs/tools/convertors/ifc-json.md
-  - docs/tools/convertors/ifc-pset.md
-
-- title: Exporters
-  section:
-  - title: IFC-MVD
+  - title: Autodesk
     section:
-    - docs/tools/exporters/ifc-mvd/overview.md
-    - docs/tools/exporters/ifc-mvd/mvd-generators.md
-    - docs/tools/exporters/ifc-mvd/ifc-bcf.md
-
-  - title: Vendor Specific
+    - docs/tools/application-specific/autodesk/revit.md
+    - docs/tools/application-specific/autodesk/navisworks.md
+  - title: Bentley
     section:
-    - docs/tools/application-specific/overview.md
-    - title: Autodesk
-      section:
-      - docs/tools/application-specific/autodesk/revit.md
-      - docs/tools/application-specific/autodesk/navisworks.md
-    - title: Bentley
-      section:
-      - docs/tools/application-specific/bentley/aecosim.md
-      - docs/tools/application-specific/bentley/bentley-infrastructure.md
-    - title: Graphisoft
-      section:
-      - docs/tools/application-specific/graphisoft/archicad.md
-    - title: Rhinocerous
-      section:
-      - docs/tools/application-specific/rhinocerous/rhinocerous.md
-    - title: Sketch-up
-      section:
-      - docs/tools/application-specific/sketch-up/sketch-up.md
-    - title: Tekla
-      section:
-      - docs/tools/application-specific/tekla/tekla-structures.md
-      - docs/tools/application-specific/tekla/bimsight.md
+    - docs/tools/application-specific/bentley/aecosim.md
+    - docs/tools/application-specific/bentley/bentley-infrastructure.md
+  - title: Graphisoft
+    section:
+    - docs/tools/application-specific/graphisoft/archicad.md
+  - title: Rhinocerous
+    section:
+    - docs/tools/application-specific/rhinocerous/rhinocerous.md
+  - title: Sketch-up
+    section:
+    - docs/tools/application-specific/sketch-up/sketch-up.md
+  - title: Tekla
+    section:
+    - docs/tools/application-specific/tekla/tekla-structures.md
+    - docs/tools/application-specific/tekla/bimsight.md
 
-- title: Validators
-  section:
-  - docs/tools/validators/ifc-json.md
-  - docs/tools/validators/ifc-xml.md
-
-
-- title: Third-Party Tools
-  section:
-  - docs/tools/third-paty/overview.md
