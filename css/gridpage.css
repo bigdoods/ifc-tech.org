@@ -40,14 +40,6 @@
     margin: 0;
 }
 
-.case-studies {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 50px;
-}
-
 .case-study {
     position: relative;
     width: 50%;
