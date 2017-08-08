@@ -27,3 +27,8 @@ toc:
     - docs/tools/application-specific/tekla/tekla-structures.md
     - docs/tools/application-specific/tekla/bimsight.md
 
+- title: Sample files
+  section:
+    - docs/tools/sample-files/ifc.md
+    - docs/tools/sample-files/bcf.md
+
