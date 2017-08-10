@@ -12,9 +12,9 @@ Companies or people who want other products to be added to the list should [cont
 The list is based on information that had been made available to us, and we as the publisher of this site make this information available as-is, i.e. without any guarantee of completeness, correctness and whether the information is up-to-date.
 
 ## Sample Files
-* Sample files for <a href="sample-files/ifc.md"> IFC can be found here</a>
-* Sample files for <a href="sample-files/bcf.md"> BCF can be found here</a>
-
+* Sample files for <a href="sample-files/ifc.md">IFC can be found here</a>
+* Sample files for <a href="sample-files/bcf.md">BCF can be found here</a>
+* Sample files for <a href="sample-files/cobie.md">COBie can be found here</a>
 
 #### Below is a list of known tools in the ecosystem.
 
