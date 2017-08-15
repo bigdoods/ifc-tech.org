@@ -1,0 +1,7 @@
+	Ziggurat	Import Export	http://www.zigguratsystems.com/
+Constructivity Model Editor	Import Export	http://www.constructivity.com/cmeditor.htm
+ggRhinoIFC	Import Export	http://www.geometrygym.com/downloads
+SolidWorks Premium	Import Export	http://www.solidworks.com/sw/products/10141_ENU_HTML.htm
+FreeCAD	Import Export	http://www.freecadweb.org
+Solid Edge	Import Export	http://www.plm.automation.siemens.com/en_us/products/solid-edge/
+SketchUp	Export	http://www.sketchup.com

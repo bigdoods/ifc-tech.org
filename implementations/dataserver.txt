@@ -1,0 +1,17 @@
+bimsync	Import Export	https://bimsync.com.
+Constructivity Model Server	Import Export	http://www.constructivity.com/cmserver.htm.
+EDMserver	Import	http://www.epmtech.jotne.com/index.php?id=562520.
+BIM Collaboration Hub	Import	http://www.eurostep.com/global/solutions/bim-collaboration-hub.aspx.
+cBIM Manager	Import	http://www.asite.com/index.php/applications/category/application-cbim-manager/.
+BIMserver	Import Export	http://bimserver.org/.
+ActiveFacility	Import Export	http://www.activefacility.com/.
+IfcWebServer	Import Export	http://code.google.com/p/ifcwebserver/.
+Business Collaborator CDE	Import	http://www.groupbc.com/software-releases/business-collaborator/6-4/.
+Trimble Connect	Import	http://connect.trimble.com.
+ArchiBIM Server	Import	http://www.solideos.com/english/solution/solution_06.jsp.
+CESABIM	Export	http://www.cesabim.com.
+GliderBIM	Import Export	https://gliderbim.com.
+BIM Track	Import	https://bimtrack.co/en.
+IFChub	Import Export	http://ifchub.com/.
+Aconex	Import	http://www.aconex.com.
+Adoddle	Import	http://www.asite.com/adoddle/corporate-collaboration.

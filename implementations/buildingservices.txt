@@ -1,0 +1,20 @@
+PipeDesigner 3D	Export	http://mep.trimble.com/products/design-detailing/trimble-pipedesigner-3d
+CADduct	Export	http://www.autodesk.com/products/fabrication-products/overview
+CADiE Sähäkkä	Import	http://www.cad-q.fi/index.php/koulutus/1772
+4M FineSANI		http://www.4msa.com/FineSaniENG.html
+DDS-CAD MEP	Export	http://www.dds-cad.net/130x2x0.xhtml
+AutoCAD MEP	Import Export	http://usa.autodesk.com/autocad-mep/
+Design Master HVAC	Import Export	http://www.designmaster.biz/products/hvac/index.html
+Design Master Plumbing	Import Export	http://www.designmaster.biz/plumbing/index.html
+Design Master Electrical	Import Export	http://www.designmaster.biz/products/electrical/index.html
+DuctDesigner 3D	Export	http://mep.trimble.com/products/design-detailing/trimble-ductdesigner-3d
+Benchmark		http://www.sheetmetal-iti.org/BM-FAQ.pdf
+CADS Planner Electric	Export	http://www.cadsplanner.com/products/?page=cads_planner_electric
+MagiCAD	Export	http://www.magicad.com/
+Revit MEP	Import Export	http://usa.autodesk.com/revit-mep/
+CADmep+	Export	http://www.autodesk.com/products/fabrication-products/overview
+4M FineELEC		http://www.4msa.com/FineElecENG.html
+4M FineHVAC		http://www.4msa.com/FineHvacENG.html
+Raumtool 3D	Import Export	http://www.solar-computer.de
+Plancal nova	Export	http://www.plancal.com/en/node/23
+AECOsim Building Designer V8i	Import Export	https://www.bentley.com/en/products/product-line/building-design-software/aecosim-building-designer

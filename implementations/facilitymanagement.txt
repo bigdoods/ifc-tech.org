@@ -1,0 +1,10 @@
+		FaMe	Import	http://www.fame-online.de/en
+MORADA		http://www.smbag.de/gf/software.htm
+IBM TRIRIGA Facilities Manager	Import	http://www-03.ibm.com/software/products/en/ibmtrirfacimana
+EcoDomus FM	Import	http://www.ecodomus.com/
+DaluxFM	Import	http://dalux.com/daluxfm/
+ACTIVe3D	Import	http://www.active3d.soprasteria.com
+openMAINT	Import	http://www.openmaint.org
+performa Asset Management System	Import	http://www.quartzsys.co.kr/products
+ArchiFMS	Import	http://www.solideos.com/english/solution/solution_05.jsp
+Modelspace FM	Import	http://www.gravicon.fi/modelspace/facility-management

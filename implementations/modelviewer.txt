@@ -1,0 +1,31 @@
+bimsync	Import Export	https://bimsync.com
+Dalux Building View	Import	http://dalux.dudal.com/flx/dk/produkter/dalux_building_view/
+Constructivity Model Viewer	Import Export	http://www.constructivity.com/cmviewer.htm
+IFC2SKP plugin	Import	http://www.ohyeahcad.com/ifc2skp/index.php
+Nemetschek IFC Viewer	Import	http://www.nemetschek.com/en/home/the_company/strategy_philosophy/innovation.html
+DDS-CAD BIM-Enhancer	Import Export	http://www.dds-cad.net/127x2x0.xhtml
+IFC File Analyzer	Import	http://www.nist.gov/el/msid/infotest/ifc-file-analyzer.cfm
+DDS-CAD Viewer	Import Export	http://www.dds-cad.net/132x2x0.xhtml
+Solibri Model Checker	Import	http://www.solibri.com/
+BIMReview evolution	Import	http://www.bim-review.com/
+Dalux BIM Checker	Import	http://dalux.dudal.com/flx/dk/produkter/dalux_bim_checker/
+FZK Viewer	Import	http://www.iai.fzk.de/ifc
+IFC Quick Browser	Import	http://www.team-solutions.de/?page_id=18
+simplebim	Import Export	http://www.datacubist.com/
+AutoVue 3D Professional Advanced	Import	http://www.oracle.com/us/products/applications/autoVue/autovue-3d-professional-advanced/054166.html
+Tetra4D Converter	Import	http://www.tetra4d.com/products.html
+StruWalker	Import	http://www.acecadsoftware.com/bim_modeling
+IFC Engine Viewer	Import	http://www.ifcbrowser.com/ifcengineviewer.html
+Solibri Model Viewer	Import	http://www.solibri.com/solibri-model-viewer.html
+RxView	Import	http://www.rasterex.com
+ArchiBIM Viewer	Import	http://www.solideos.com/english/solution/solution_06.jsp
+ArchiBIM Analyzer	Import	http://www.solideos.com/english/solution/solution_06.jsp
+performa Manager	Import	http://www.quartzsys.com/#!products/xq6pi
+performa Urbanscape	Import	http://www.quartzsys.com/#!performa-urbanscape/eli1x
+NaviTouch	Import	http://quartzsys.wixsite.com/navitouch
+BIM Vision	Import	http://www.bimvision.eu
+MicroStation V8i	Import	http://www.bentley.com/en-US/Products/MicroStation/
+MicroStation View V8i	Import	http://www.bentley.com/en-US/Products/Bentley+View/
+MicroStation PowerDraft V8i	Import	http://www.bentley.com/en-US/Products/MicroStation+PowerDraft/
+Bentley Navigator V8i	Import	http://www.bentley.com/en-US/Products/ProjectWise+Navigator/
+Revu	Import	http://www.bluebeam.com/us/products/revu/index.asp

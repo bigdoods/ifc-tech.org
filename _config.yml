@@ -1,7 +1,7 @@
 name: IFC tech
 title: IFC tech site
 
-description: Interchanage model for construction industries
+description: Interchange model for construction related industries
 markdown: kramdown
 kramdown:
   input: GFM
@@ -38,9 +38,9 @@ gems:
   - jekyll-include-cache
 
 # SEO
-logo: /images/favicon.png
+logo: /images/rose.png
 twitter:
-  username: buildingSMARTln
+  username: buildingSMART
 
 # Tables of contents, stored in the _data folder, that control the sidebar nav
 tocs:
@@ -50,7 +50,6 @@ tocs:
   - concepts
   - reference
   - tools
-  - samples
   - support
 
 url: http://localhost:4000

@@ -1,0 +1,42 @@
+		
+(AutoCAD Architecture)X	(Import Export)Z	(http://usa.autodesk.com/autocad-architecture/)Y
+ViCADo.arc	Import Export	http://www.mbaec.de/vicado/vicado/architektur/
+NTItools Arkitekt (Revit plug-ins)	Export	http://www.nestor.no/loesninger-for-bim-og-baerekraftig-design/arkitekt/ntitools-arkitekt.aspx
+cadwork wood	Import Export	http://www.cadwork.com/indexL1.jsp?neid=10209
+Vectorworks Architect	Import Export	http://www.vectorworks.net/architect/index.php
+Digital Project	Import Export	http://www.digitalproject3d.com
+ArchiCAD	Import Export	http://www.graphisoft.com/products/archicad/
+Allplan Architecture	Import Export	http://www.nemetschek.eu/solutions/architecture.html
+VisualARQ	Export	http://www.visualarq.com/?page_id=697
+DDS-CAD Architect	Export	http://www.dds-cad.net/63x2x0.xhtml
+Bentley speedikon V8i (SELECTseries4)	Export	http://www.bentley.com/en-US/Products/Bentley+speedikon+Architectural/
+Revit Architecture	Import Export	http://usa.autodesk.com/revit/architectural-design-software/
+IFC-to-RDF Web Service	Import	http://smartlab2.elis.ugent.be/smartlabportal/Research/IFCRDFWebService.aspx
+SPIRIT	Import Export	http://www.softtech.com/
+EliteCAD AR	Import Export	http://www.elitecad.co.uk/products/eliteCAD-AR/index.php
+4MCAD PRO	Import Export	http://www.4msa.com/4MCADENG.html
+Edificius	Import	http://www.accasoftware.com/en/bim-software/
+AutoScheme	Export	https://www.autoscheme.com
+Renga Architecture	Import Export	http://rengacad.com/en/
+AECOsim Building Designer V8i	Import Export	https://www.bentley.com/en/products/product-line/building-design-software/aecosim-building-designer
+BricsCAD	Import Export	https://www.bricsys.com/en_INTL/bricscad/
+ARCHLine.XP	Import Export	
+
+      <tr>
+        <td class="name">4M IDEA Architecture</td>
+        <td class="link"><a href="http://www.bim-architecture.com" target="_blank">GO</a></td>
+        <td class="desc">Import Export</td>
+        <td class="category">architectural</td>
+      </tr>
+
+
+(AutoCAD Architecture)X	(Import Export)Z	(http://usa.autodesk.com/autocad-architecture/)Y
+AutoCAD Architecture Import Export http://usa.autodesk.com/autocad-architecture/
+
+
+      <tr>
+        <td class="name">X</td>
+        <td class="link"><a href="Y" target="_blank">GO</a></td>
+        <td class="desc">Z</td>
+        <td class="category">architectural</td>
+      </tr>
