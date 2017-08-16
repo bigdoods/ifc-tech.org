@@ -18,49 +18,52 @@ The list is based on information that had been made available to us, and we as t
 
 #### Below is a list of known tools in the ecosystem.
 
-
 <div id="users">
-  <input class="search" placeholder="Search..." />
+  <input class="search" placeholder="Search tools..." />
 
+<div class="filter">
 Select a filter:  
-  <!-- buttons -->
-  <button class="sort" id="name">
-    Architectural
-  </button>
-  <button class="sort" id="name2">
-    Building Performance
-  </button>
-  <button class="sort" id="name3">
-    Building Services
-  </button>
-  <button class="sort" id="name4">
-    Construction Management
-  </button>
-  <button class="sort" id="name5">
-    Data Server
-  </button>
-  <button class="sort" id="name6">
-    Development Tools
-  </button>
-  <button class="sort" id="name7">
-    Facility Management
-  </button>
-  <button class="sort" id="name8">
-    General Modelling
-  </button>
-  <button class="sort" id="name9">
-    Geographic Information Systems
-  </button>
-  <button class="sort" id="name10">
-    Model Viewer
-  </button>
-  <button class="sort" id="name11">
-    Other
-  </button>
-  <button class="sort" id="clear">
-    Clear Filter
-  </button>
+</div>
 
+  <!-- buttons -->
+  <div>
+    <button class="sort button" id="name">
+      Architectural
+    </button>
+    <button class="sort button" id="name2">
+      Building Performance
+    </button>
+    <button class="sort button" id="name3">
+      Building Services
+    </button>
+    <button class="sort button" id="name4">
+      Construction Management
+    </button>
+    <button class="sort button" id="name5">
+      Data Server
+    </button>
+    <button class="sort button" id="name6">
+      Development Tools
+    </button>
+    <button class="sort button" id="name7">
+      Facility Management
+    </button>
+    <button class="sort button" id="name8">
+      General Modelling
+    </button>
+    <button class="sort button" id="name9">
+      Geographic Information Systems
+    </button>
+    <button class="sort button" id="name10">
+      Model Viewer
+    </button>
+    <button class="sort button" id="name11">
+      Other
+    </button>
+    <button class="sort button" id="clear">
+      Clear Filter
+    </button>
+  </div>
 <!-- table content -->
   <table>
     <tr>
@@ -281,7 +284,7 @@ Select a filter:
     valueNames: [ 'name', 'link', 'desc', 'category' ]
   };
   var userList = new List('users', options);
-  $("#name").click(function(){ 
+  $("#name .nav-buttons").click(function(){ 
     userList.search("architecture");
   })
   $("#name2").click(function(){ 
