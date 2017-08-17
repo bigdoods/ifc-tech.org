@@ -1,5 +1,0 @@
-IDA ICE	Import	http://www.equa-solutions.co.uk/
-RIUSKA	Import Export	http://www.granlund.fi/en/services/granlund-software-applications/riuska/
-Simergy	Import	http://simergy.lbl.gov/index.html
-OpenStudio	Import	https://www.openstudio.net
-IES-VE	Import	http://www.iesve.com/software

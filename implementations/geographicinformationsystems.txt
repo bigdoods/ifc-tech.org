@@ -1,3 +1,0 @@
-ArcGIS Desktop	Import	http://www.esri.com/products/index.html#desktop_gis_panel
-FME	Import	http://www.safe.com/fme/fme-technology/
-Bentley Map V8i	Import	http://www.bentley.com/en-GB/Products/Bentley+Map/
