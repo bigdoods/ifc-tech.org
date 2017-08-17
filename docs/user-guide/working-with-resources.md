@@ -1,3 +1,0 @@
----
-title: working with resources
----

@@ -41,10 +41,10 @@ $( document ).ready(function() {
 
 <br/>
 
-For more information about contributing to the Kubernetes documentation, see:
+For more information about contributing to the ifc-tech documentation, see:
 
-* [Creating a Documentation Pull Request](https://github.com/bigdoods/ifc-tech.org/docs/contribute/create-pull-request/)
-* [Writing a New Topic](https://github.com/bigdoods/ifc-tech.org/docs/contribute/write-new-topic/)
-* [Staging Your Documentation Changes](https://github.com/bigdoods/ifc-tech.org/docs/contribute/stage-documentation-changes/)
-* [Using Page Templates](https://github.com/bigdoods/ifc-tech.org/docs/contribute/page-templates/)
-* [Documentation Style Guide](https://github.com/bigdoods/ifc-tech.org/docs/contribute/style-guide/)
+* [Creating a Documentation Pull Request](https://ifc-tech.org/docs/contribute/create-pull-request/)
+* [Writing a New Topic](https://ifc-tech.org/docs/contribute/write-new-topic/)
+* [Staging Your Documentation Changes](https://ifc-tech.org/docs/contribute/stage-documentation-changes/)
+* [Using Page Templates](https://ifc-tech.org/docs/contribute/page-templates/)
+* [Documentation Style Guide](https://ifc-tech.org/docs/contribute/style-guide/)

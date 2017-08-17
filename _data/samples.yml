@@ -1,4 +1,4 @@
 bigheader: "Samples"
-abstract: "A collection of example applications that show how to use IFC."
+abstract: "A collection of example files."
 toc:
-- docs/samples.md
+- docs/samples/index.md

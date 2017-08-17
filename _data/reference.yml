@@ -1,4 +1,4 @@
-bigheader: "IFC Reference Documentation"
+bigheader: "IFC Specifications"
 abstract: "Specification for core design docs, concept definitions, and references for extensions"
 toc:
 - docs/reference.md

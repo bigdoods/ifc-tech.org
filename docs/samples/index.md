@@ -1,15 +1,10 @@
 ---
-assignees:
-- bgrant0607
 title: Samples
 ---
 
 We have a wide variety of samples to choose from.
 
-## Recently updated samples
-
-The IFC team is highlighting these samples as being the most up-to-date. Active upkeep is being done or has recently been done
-on these samples to ensure they are high quality and work on IFC {{page.version}}.
+### <b>buildingSMART cannot guarantee the quality of these files as they are contributed by the community.</b>
 
 <p>&nbsp;</p>
 
@@ -76,21 +71,19 @@ h2, h3, h4 {
 .shadowbox img {
     min-width: 150px;
     max-width: 150px;
-    max-height: 50px;
+    max-height: 150px;
 }
 </style>
 
 <div id="samples" class="colContainer">
-<a href="/docs/getting-started-guides/meanstack/" class="shadowbox">
-  <img src="/images/docs/meanstack/image_0.png"><br/>MEAN Stack
-</a>
-<a href="https://github.com/kubernetes/kubernetes/tree/{{page.githubbranch}}/examples/guestbook" target="_blank" class="shadowbox">
-  <img src="/images/docs/redis.svg"><br/>Guestbook + Redis
-</a>
-<a href="https://github.com/kubernetes/kubernetes/tree/{{page.githubbranch}}/examples/storage/cassandra" target="_blank" class="shadowbox">
-  <img src="/images/docs/cassandra.svg"><br/>Cloud Native Cassandra
-</a>
-<a href="https://github.com/kubernetes/kubernetes/tree/{{page.githubbranch}}/examples/mysql-wordpress-pd/" target="_blank" class="shadowbox">
-  <img src="/images/docs/wordpress.svg"><br/>WordPress + MySQL
-</a>
+  <a href="/docs/samples/ifc/exampleIFC2x3.ifc" class="shadowbox">
+    <img src="/images/bs-logo.png"><br/>IFC 2x3
+  </a>
+  <a href="/docs/samples/ifc/exampleIFC4.ifc" target="_blank" class="shadowbox">
+    <img src="/images/bs-logo.png"><br/>IFC4
+  </a>
+  <a href="/docs/samples/cobie/2012-03-23-Duplex-Design.xlsx" target="_blank" class="shadowbox">
+    <img src="/images/bs-logo.png"><br/>COBie
+  </a>
 </div>
+

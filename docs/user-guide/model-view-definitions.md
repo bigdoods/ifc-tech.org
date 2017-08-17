@@ -1,3 +1,0 @@
----
-title: model-view-defintions
----
