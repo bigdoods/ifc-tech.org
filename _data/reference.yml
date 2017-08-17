@@ -104,8 +104,8 @@ toc:
 
   - title: "IFC XML XSD"
     section:
-    - docs/reference/schema-languages/ifc-xml-xsd/xml-xsd-overview.md
-    - docs/reference/schema-languages/ifc-xml-xsd/xml-xsd-specification.md
+    - docs/reference/schema-languages/ifc-xml-xsd/overview.md
+    - docs/reference/schema-languages/ifc-xml-xsd/specification.md
 
   - title: "IFC OWL"
     section:
