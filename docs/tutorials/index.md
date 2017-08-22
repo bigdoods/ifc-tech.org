@@ -12,6 +12,7 @@ A tutorial page shows how to accomplish a goal each of which has a sequence of s
 
 * [String Encoding](/docs/tutorials/stringEncoding) is an tutorial to support the encoding and the decoding of any character to and from the IFC step physical file structure.
 
+* [IFC GUID](/docs/tutorials/ifcGuid.md) is a tutorial to encode and decode the IFC GUID specification. 
 
 If you would like to write a tutorial, see
 [Using Page Templates](/docs/contribute/page-templates/)

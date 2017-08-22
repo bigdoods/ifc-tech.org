@@ -5,6 +5,10 @@ toc:
 
 - docs/tutorials/hello-wall.md
 
+- docs/tutorials/stringEncoding.md
+
+- docs/tutorials/ifcGuid.md
+
 - title: "Contributing to Tutorials"
   section:
   - docs/contribute/write-new-topic.md

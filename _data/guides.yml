@@ -3,6 +3,4 @@ abstract: "How to get started, and accomplish tasks, using IFC."
 toc:
 - docs/guides/index.md
 
-- title: "Getting started"
-  section:
-  - docs/guides/helloWall.md
+- docs/guides/implementerAgreements.md

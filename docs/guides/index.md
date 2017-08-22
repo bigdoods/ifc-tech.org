@@ -1,5 +1,5 @@
 ---
-title: User Guide
+title: Guides
 ---
 
 The IFC **Guides** can help you work with various aspects of IFC standards.

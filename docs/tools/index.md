@@ -6,7 +6,7 @@ The IFC ecosystem has produced many tools for working with the schema and schema
 
 Each tool is included for its functional application within the IFC ecosystem. Tool suites are deconstructed into their component functions for categorization.  
 
-Companies or people who want other products to be added to the list should [contact us](webmaster@buildingsmart.org). 
+Companies or people who want other products to be added to the list should submit a PR. 
 
 ### NOTE:  
 The list is based on information that had been made available to us, and we as the publisher of this site make this information available as-is, i.e. without any guarantee of completeness, correctness and whether the information is up-to-date.
