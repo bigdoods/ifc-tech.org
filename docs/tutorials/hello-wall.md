@@ -5,7 +5,7 @@ title: HelloWall
 
 ### export of a basic IFC file with wall, opening and window, including property sets and base quantities
 
-The [HelloWall miniExample](http://www.buildingsmart-tech.org/downloads/accompanying-tools/hello-wall/HelloWall-miniExample-20080731.zip) is a small application build to export valid ifc files, following the already agreed view definition "Coordination View" and a proposed view definition "Presentation View". The latest version includes the export of property sets (as part of the "Coordination View" and "Presentation View"), and the export of base quantities as part of the proposed "Quantity Take-off Addon View". The export can be configured by a range of shape parameters and options. The source code is provided so that developers can follow the algorithms used.
+The [HelloWall miniExample](/docs/tutorials/HelloWall_miniExample_20080731.zip) is a small application build to export valid ifc files, following the already agreed view definition "Coordination View" and a proposed view definition "Presentation View". The latest version includes the export of property sets (as part of the "Coordination View" and "Presentation View"), and the export of base quantities as part of the proposed "Quantity Take-off Addon View". The export can be configured by a range of shape parameters and options. The source code is provided so that developers can follow the algorithms used.
 
 export of the miniExample using the coordination view setting and enabling the exchange of parameterized extrusion based geometry for all building elements.
 
@@ -34,6 +34,7 @@ It includes:
 <b> In the following sections a short analysis of the generated ifc file can be found </b>
 
 ## FILE HEADER section
+
 ```
 ISO-10303-21;
 HEADER;

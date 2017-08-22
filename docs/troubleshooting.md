@@ -7,11 +7,10 @@ title: Support
 Sometimes things go wrong. This guide is aimed at making them right. It has
 two sections:
 
-   * [Troubleshooting your .ifc as an end-user](/docs/troubleshooting/troubleshooting) - Useful for users who are deploying code into IFC and wondering why it is not working.
-   * [Troubleshooting your .ifc as a developer](/docs/troubleshooting/troubleshooting) - Useful for people using IFC for something else.
+   * [Troubleshooting your .ifc file as an end-user](/docs/troubleshooting/troubleshooting) - Useful for users who are using IFC files and wondering why it is not working.
+   * [Troubleshooting .ifc as a developer](/docs/troubleshooting/troubleshooting) - Useful for people using IFC to build new software and tools.
 
-You should also check the known issues for the [release](https://github.com/)
-you're using.
+You should also check the known issues for the release you're using. The issue database is used to report issues and to track their resolution in case of issues with a small well-defined scope. The latest issues and IFC discussions take place on the [IFC JIRA channel](http://jira.buildingsmart.org/secure/Dashboard.jspa).
 
 ### Getting help
 

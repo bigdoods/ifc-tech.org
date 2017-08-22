@@ -3,11 +3,11 @@ abstract: "Detailed walkthroughs of common IFC operations and workflows."
 toc:
 - docs/tutorials/index.md
 
-- docs/tutorials/hello-wall.md
-
-- docs/tutorials/stringEncoding.md
-
-- docs/tutorials/ifcGuid.md
+- title: "Examples"
+  section:
+  - docs/tutorials/hello-wall.md
+  - docs/tutorials/stringEncoding.md
+  - docs/tutorials/ifcGuid.md
 
 - title: "Contributing to Tutorials"
   section:
