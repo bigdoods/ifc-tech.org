@@ -3,6 +3,30 @@ title: Reference Documentation
 ---
 In the reference section, you can find reference documentation for IFC model schema, schema-languages and a glossary of design docs.
 
+Each release may be shown as a normalized version number and/or using existing notation. The table below summarizes IFC normalized version with equivalent notation in chronological order of release.
+
+<table>
+  <thead>
+    <tr>
+      <td>Version</td>
+      <td>Notation</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IFC2X3_FINAL_TC1</td>
+      <td>2.3.1.0</td>
+    </tr>
+    <tr>
+      <td>IFC4_Add2</td>
+      <td>4.0.2.0</td>
+    </tr>
+    <tr>
+      <td>IFC4X1_FINAL</td>
+      <td>4.1.0.3</td>
+    </tr>
+  </tbody>
+</table>  
 
 ## Schema
 
