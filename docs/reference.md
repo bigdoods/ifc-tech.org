@@ -3,7 +3,7 @@ title: Reference Documentation
 ---
 In the reference section, you can find reference documentation for IFC model schema, schema-languages and a glossary of design docs.
 
-Each release may be shown as a normalized version number and/or using existing notation. The table below summarizes IFC normalized version with equivalent notation in chronological order of release.
+Each release may be shown as a normalized version number and/or using existing notation. The table below summarizes IFC normalized version with equivalent notation in chronological order of release: 
 
 <table>
   <thead>
@@ -28,18 +28,21 @@ Each release may be shown as a normalized version number and/or using existing n
   </tbody>
 </table>  
 
+Please note that 4.1.0.3 is the latest official version of the IFC platform. To support other IFC platform implementations, reference specifications can be found in the history section. Most software available for IFC export uses the latest version of the IFC schema for the platform i.e 2.3.1.0, 4.0.2.0, 4.1.0.3 and will be backward compatible with previous releases of that platform.  
+
+
 ## Schema
 
-Below you will find links to the schema documentation. The documentation is written according to specification in the EXPRESS data modeling language. Reference specifications are indexed according to the IFC platform release it belongs to.
+Below you will find links to the schema documentation. The documentation is written according to specification and indexed according to the IFC platform release it belongs to.
 
-Documentation reference include EXPRESS and XML reference schema-languages for schema as standard. This is in accordance with ISO specification but other schema-languages can be seen in the Extension references section below.
+Documentation reference includes EXPRESS and XML schema-languages as standard. This is in accordance with ISO specification but other schema-languages can be found in the Extension references section below.
 
-* [IFC 2](/docs/reference/schema/ifc2x3-tc1/overview.md) - Current Schema for IFC 2. (latest)
-* [IFC4](/docs/reference/schema/ifc4_Add2/overview.md) - Current Schema for IFC4 (latest)
+* [IFC 2](/docs/reference/schema/ifc2x3-tc1/overview.md) - Schema for IFC2. (latest)
+* [IFC 4](/docs/reference/schema/ifc4_Add2/overview.md) - Schema for IFC4 (latest)
 
 ## Extension References
 
-The IFC schema have various representations and you can find them below.
+The IFC schema has various representations languages as follows:
 
 * [IFC EXPRESS](/docs/reference/schema-languages/ifc-express/express-overview/) - IFC schema in EXPRESS data modeling language
 * [IFC EXPRESS-G](/docs/reference/schema-languages/ifc-express/express-g-overview/) - IFC schema in EXPRESS-G(GRAPHICAL) data modeling language.
