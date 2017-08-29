@@ -1,5 +1,6 @@
 <div id="cellophane" onclick="kub.toggleMenu()"></div>
 
+
 <header>
     <a href="/" class="logo"></a>
 
@@ -9,6 +10,16 @@
             <li><a href="http://ghost.bigdoods.beta.jenca.io/">Blog</a></li>
             <li><a href="/partners/">Partners</a></li>
             <li><a href="/community/">Community</a></li>
+            <li>
+                <a href="#">
+                    {{page.version}}
+                </a>
+                <ul>
+                {% for version in page.versions %}
+                  <li><a href="{{ version.url }}">{{ version.version }}</a></li>
+                {% endfor %}
+                </ul>
+            </li>
         </ul>
         <!-- <a href="/docs/" class="button" id="viewDocs" data-auto-burger-exclude>View Documentation</a> -->
         <a href="/docs/tutorials/kubernetes-basics/" class="button" id="tryKubernetes" data-auto-burger-exclude>Try IFC</a>
@@ -51,7 +62,7 @@
                 <a href="https://calendar.google.com/calendar/embed?src=nt2tcnbtbied3l6gi2h29slvc0%40group.calendar.google.com" class="calendar"><span>Events Calendar</span></a>
             </div>
         </div>
+    
         <div class="clear" style="clear: both"></div>
-        </main>
-    </nav>
+    </main>
 </header>

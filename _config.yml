@@ -1,6 +1,6 @@
 name: IFC tech
 title: IFC tech site
-
+# url: http://ifc-tech.org
 description: Interchange model for construction related industries
 markdown: kramdown
 kramdown:
@@ -32,12 +32,12 @@ defaults:
           version: "IFC4.0.2.0"
           githubbranch: "IFC4.0.2.0"
           docsbranch: "release-4.0.2.0"
-          url: https://ifc4-0-2-0.docs.kubernetes.io/docs/home/
+          url: https://ifc4-0-2-0.ifc-tech.org/docs/home/
         - fullversion: "IFC2.3.1.0"
           version: "IFC2.3.1.0"
           githubbranch: "IFC2.3.1.0"
           docsbranch: "release-2.3.1.0"
-          url: https://ifc2-3-1-0.docs.kubernetes.io/docs/
+          url: https://ifc2-3-1-0.ifc-tech.org/docs/
       deprecated: false
       currentUrl: https://ifc-tech.org/docs/home/
   -
@@ -50,11 +50,12 @@ defaults:
 permalink: pretty
 
 gems:
-  - jekyll-redirect-from
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-include-cache
+# disabled gems
+  #  - jekyll-redirect-from
 
 # SEO
 logo: /images/rose.png

@@ -280,7 +280,7 @@ Select a filter:
     valueNames: [ 'name', 'link', 'desc', 'category' ]
   };
   var userList = new List('users', options);
-  $("#name .nav-buttons").click(function(){ 
+  $("#name").click(function(){ 
     userList.search("architecture");
   })
   $("#name2").click(function(){ 
