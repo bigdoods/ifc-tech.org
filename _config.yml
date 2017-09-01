@@ -27,12 +27,12 @@ defaults:
           version: "IFC4.1.0.3"
           githubbranch: "IFC4.1.0.3"
           docsbranch: "release-4.1.0.3"
-          url: https://ifc-tech.org/docs/home/
+          url: https://ifc-tech.org/docs/
         - fullversion: "IFC4.0.2.0"
           version: "IFC4.0.2.0"
           githubbranch: "IFC4.0.2.0"
           docsbranch: "release-4.0.2.0"
-          url: https://ifc4-0-2-0.docs.kubernetes.io/docs/home/
+          url: https://ifc4-0-2-0.docs.kubernetes.io/docs/
         - fullversion: "IFC2.3.1.0"
           version: "IFC2.3.1.0"
           githubbranch: "IFC2.3.1.0"
