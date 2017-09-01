@@ -20,16 +20,19 @@ defaults:
     values:
       fullversion: "IFC4.1.0.3"
       version: "IFC4.1.0.3"
+      aka: "IFC4X1_FINAL"
       githubbranch: "master"
       docsbranch: "master"
       versions:
         - fullversion: "IFC4.0.2.0"
           version: "IFC4.0.2.0"
+          aka: "IFC4_ADD2"
           githubbranch: "IFC4.0.2.0"
           docsbranch: "release-4.0.2.0"
           url: https://ifc4-0-2-0.ifc-tech.org/docs/
         - fullversion: "IFC2.3.1.0"
           version: "IFC2.3.1.0"
+          aka: "IFC2X3_FINAL_TC1"
           githubbranch: "IFC2.3.1.0"
           docsbranch: "release-2.3.1.0"
           url: https://ifc2-3-1-0.ifc-tech.org/docs/

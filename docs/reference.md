@@ -3,42 +3,16 @@ title: Reference Documentation
 ---
 In the reference section, you can find reference documentation for IFC model schema, schema-languages and a glossary of design docs.
 
-Each release may be shown as a normalized version number and/or using existing notation. The table below summarizes IFC normalized version with equivalent notation in chronological order of release: 
 
-<table>
-  <thead>
-    <tr>
-      <td>Version</td>
-      <td>Notation</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>IFC2X3_FINAL_TC1</td>
-      <td>2.3.1.0</td>
-    </tr>
-    <tr>
-      <td>IFC4_Add2</td>
-      <td>4.0.2.0</td>
-    </tr>
-    <tr>
-      <td>IFC4X1_FINAL</td>
-      <td>4.1.0.3</td>
-    </tr>
-  </tbody>
-</table>  
-
-Please note that 4.1.0.3 is the latest official version of the IFC platform. To support other IFC platform implementations, reference specifications can be found in the history section. Most software available for IFC export uses the latest version of the IFC schema for the platform i.e 2.3.1.0, 4.0.2.0, 4.1.0.3 and will be backward compatible with previous releases of that platform.  
-
+This is the reference documentation for the {{page.version}} platform which is also known as {{page.aka}}.
 
 ## Schema
 
-Below you will find links to the schema documentation. The documentation is written according to specification and indexed according to the IFC platform release it belongs to.
+Below you will find links to the schema documentation.
 
 Documentation reference includes EXPRESS and XML schema-languages as standard. This is in accordance with ISO specification but other schema-languages can be found in the Extension references section below.
 
-* [IFC 2](/docs/reference/schema/ifc2x3-tc1/overview.md) - Schema for IFC2. (latest)
-* [IFC 4](/docs/reference/schema/ifc4_Add2/overview.md) - Schema for IFC4 (latest)
+* [{{page.version}}](/docs/reference/schema/{{page.version}}/overview.md) - Latest schema for {{page.version}} platform.
 
 ## Extension References
 
@@ -62,12 +36,3 @@ Single individual models representing buildings can be represented in the follow
 * [IFC RDF](/docs/reference/data-formats/ifc-rdf/rdf-overview/) - A building representation with semantic detail.
 * [IFC SPF](/docs/reference/data-formats/ifc-spf/spf-overview/) - This is the physical file-format, also known as a STEP file.
 * [IFC XML](/docs/reference/data-formats/ifc-xml/xml-overview/) - A format designed to be read by machine and human.
-
-
-## Glossary
-
-Explore the glossary of essential IFC terminology. Some good starting points are the entries for [STEP](/docs/), [Object Classes](/docs/), [Domain Language](/docs/), and [Express](/docs/).
-
-## Design Docs
-
-An archive of the design docs for IFC. Good starting points are [IFC Architecture](https://github.com/) and [IFC Design Overview](https://github.com/).
