@@ -1,0 +1,14 @@
+move contents of ifc-owl/owl-specification to correct branch.
+
+Fetch documentation of owl-specification from buildingsmart-standards(pieters site) into ifc-owl
+
+create place in contents for concepts to do with ifc-express + ifc-express-g + ifc-owl + ifcMVD
+
+ask Tim what is common to all IFC platforms;
+ifcMVD, ifcXML etc. Create a table matrix that shows this.
+
+write test to check if files ar present in the repository when generating docs, if not, exclude section with content... (codementor help)
+
+Update aka field in all branches
+
+Update ifc dropdown so that the dropdown is only visible when one clicks into the docs section. Update 'burger' buttons to 'view documentation'
