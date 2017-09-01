@@ -24,6 +24,12 @@ defaults:
       githubbranch: "master"
       docsbranch: "master"
       versions:
+        - fullversion: "IFC4.1.0.3"
+          version: "IFC4.1.0.3"
+          aka: "IFC4X1_FINAL"
+          githubbranch: "IFC4.1.0.3"
+          docsbranch: "release-4.1.0.3"
+          url: https://ifc-tech.org/docs/
         - fullversion: "IFC4.0.2.0"
           version: "IFC4.0.2.0"
           aka: "IFC4_ADD2"
