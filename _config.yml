@@ -23,7 +23,7 @@ defaults:
       aka: "IFC4_ADD2"
       githubbranch: "IFC4.0.2.0"
       docsbranch: "release-4.0.2.0"
-        versions:
+      versions:
         - fullversion: "IFC4.1.0.3"
           version: "IFC4.1.0.3"
           aka: "IFC4X1_FINAL"
@@ -42,9 +42,9 @@ defaults:
           githubbranch: "IFC2.3.1.0"
           docsbranch: "release-2.3.1.0"
           url: https://ifc2-3-1-0.ifc-tech.org/docs/
-      deprecated: true
+      deprecated: false
       currentUrl: https://ifc-4-0-2-0.ifc-tech.org/docs/
-  -
+    -
     scope:
       path: "docs"
     values:
