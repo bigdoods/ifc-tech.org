@@ -43,7 +43,7 @@ defaults:
           docsbranch: "release-2.3.1.0"
           url: https://ifc2-3-1-0.ifc-tech.org/docs/
       deprecated: true
-      currentUrl: https://ifc-2-3-1-0.ifc-tech.org/docs/
+      currentUrl: https://ifc2-3-1-0.ifc-tech.org/docs/
     -
     scope:
       path: "docs"
