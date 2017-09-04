@@ -21,8 +21,8 @@ defaults:
       fullversion: "IFC4.0.2.0"
       version: "IFC4.0.2.0"
       aka: "IFC2X3_FINAL_TC1"
-      githubbranch: "master"
-      docsbranch: "master"
+      githubbranch: "IFC4.0.2.0"
+      docsbranch: "IFC4.0.2.0"
         versions:
         - fullversion: "IFC4.1.0.3"
           version: "IFC4.1.0.3"
