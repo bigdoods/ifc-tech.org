@@ -20,7 +20,6 @@ defaults:
     values:
       fullversion: "IFC2.3.1.0"
       version: "IFC2.3.1.0"
-      aka: "IFC2X3_FINAL_TC1"
       githubbranch: "master"
       docsbranch: "master"
       versions:
@@ -78,3 +77,4 @@ tocs:
   - support
 
 url: http://localhost:4000
+
