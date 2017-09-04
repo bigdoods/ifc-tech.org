@@ -21,8 +21,8 @@ defaults:
       fullversion: "IFC2.3.1.0"
       version: "IFC2.3.1.0"
       aka: "IFC2X3_FINAL_TC1"
-      githubbranch: "master"
-      docsbranch: "master"
+      githubbranch: "IFC2.3.1.0"
+      docsbranch: "release-2.3.1.0"
       versions:
         - fullversion: "IFC4.1.0.3"
           version: "IFC4.1.0.3"
@@ -42,7 +42,7 @@ defaults:
           githubbranch: "IFC2.3.1.0"
           docsbranch: "release-2.3.1.0"
           url: https://ifc2-3-1-0.ifc-tech.org/docs/
-      deprecated: false
+      deprecated: true
       currentUrl: https://ifc-2-3-1-0.ifc-tech.org/docs/
     -
     scope:
