@@ -24,7 +24,6 @@ List of implementation agreements established by the official buildingSMART Impl
 * #CV-2x3-115 matching imported styles (curve fonts, hatching patterns, text fonts, RGB colours) to system internal styles
 
 #[View]-[Schema]-[meeting number] -- [short description of agreement]
-```
 
 The implementer agreement reference is located [here](http://www.buildingsmart-tech.org/implementation/ifc-implementation/ifc-impl-agreements)
 
