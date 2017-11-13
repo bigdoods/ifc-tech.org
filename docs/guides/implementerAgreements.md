@@ -7,9 +7,9 @@ List of implementation agreements established by the official buildingSMART Impl
 <i>The following format applies to the reference links found at the link to the implementer agreement reference below: </i>
 
 * [#CV-2x3-101](ImplAgreements/CV-2x3-100.md) correct usage of IfcMaterialLayerSetUsage for IfcSlab [modified 15-12-2006]
-* #CV-2x3-101 requested support of IfcEllipse for profile definitions
-* #CV-2x3-102 no support of b-splines within current IFC implementations
-* #CV-2x3-103 independent profile geometry for doors and windows [modified 04-11-2011]
+* [#CV-2x3-101](ImplAgreements/CV-2x3-101.md) requested support of IfcEllipse for profile definitions
+* [#CV-2x3-102](ImplAgreements/CV-2x3-102.md) no support of b-splines within current IFC implementations
+* [#CV-2x3-103](ImplAgreements/CV-2x3-103.md) independent profile geometry for doors and windows [modified 04-11-2011]
 * #CV-2x3-104 number of doors and windows within one opening is restricted to max 1
 * #CV-2x3-105 export of bounding box is no longer mandatory
 * #CV-2x3-106 agreed use of geometric representation context and sub context [modified 05-05-2006 and 06-07-2011]
